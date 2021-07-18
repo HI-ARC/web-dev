@@ -4,8 +4,8 @@ import GlobalStyle from 'components/Common/GlobalStyle';
 import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 import Header from 'components/Common/Header';
+import Banner from 'components/Main/Banner';
 import Footer from 'components/Common/Footer';
-import mainImage from '../../contents/main_image.jpg';
 
 const Container = styled.div`
   display: flex;
@@ -15,34 +15,15 @@ const Container = styled.div`
   position: relative;
 `;
 
-const Banner = styled.div`
-  width: 100vw;
-  height: 900px;
-`;
-
-const MainImage = styled.img`
-  position: absolute;
-  width: 65vw;
-`;
-
-const About = styled.div`
-  position: absolute;
-  width: 65vw;
-  height: 50vw;
-  background-color: #233660;
-  margin-top: 60px;
-  margin-left: 35vw;
-`;
-
 const IndexPage: FunctionComponent = function () {
+  const aboutText =
+    'HI-ARC는 홍익대학교 컴퓨터공학과 소속 알고리즘 학회입니다.\nHI-ARC에서는 ICPC를 비롯한 각종 프로그래밍 대회를 준비하며,\n알고리즘과 문제 해결 능력을 기르기 위한 다수의 스터디를 진행하고 있습니다.';
+
   return (
     <Container>
       <GlobalStyle />
       <Header />
-      <Banner>
-        <MainImage src={mainImage} />
-        <About />
-      </Banner>
+      <Banner />
       <Footer />
     </Container>
   );
