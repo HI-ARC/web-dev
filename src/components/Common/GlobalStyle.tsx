@@ -8,7 +8,8 @@ const defaultStyle = css`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
+    //font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Apple SD Gothic Neo';
   }
 
   html,

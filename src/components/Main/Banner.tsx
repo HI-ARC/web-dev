@@ -5,8 +5,13 @@ import mainImage from '../../../contents/main_image.jpg';
 
 const BannerWrapper = styled.div`
   position: relative;
-  width: 100vw;
-  height: 900px;
+  max-width: 100%;
+  height: 47vw;
+
+  @media (max-width: 1000px) {
+    height: 60vw;
+    margin-bottom: 3vw;
+  }
 `;
 
 const MainImage = styled.img`
@@ -31,9 +36,11 @@ const About = styled.div`
   font-size: 24px;
 
   @media (max-width: 1000px) {
-    width: 100%;
+    width: 700px;
     height: 400px;
-    margin: 0;
+    float: right;
+    margin-left: 10vw;
+    margin-top: 0;
   }
 `;
 

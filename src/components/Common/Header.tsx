@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
 
 const Background = styled.div`
-  width: 100%;
+  max-width: 100%;
   background-color: white;
 `;
 

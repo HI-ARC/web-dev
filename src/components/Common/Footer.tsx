@@ -11,6 +11,7 @@ const FooterWrapper = styled.div`
   column-gap: 20px;
   height: 300px;
   background-color: #233660;
+  max-width: 100%;
 
   @media (max-width: 620px) {
     padding-top: 50px;
@@ -56,6 +57,9 @@ const Icon = styled.div`
 `;
 
 const Footer: FunctionComponent = function () {
+  const goToGithub = () => window.open('https://github.com/HI-ARC');
+  const goToFacebook = () =>
+    window.open('https://www.facebook.com/hongikuniv.hiarc');
   return (
     <FooterWrapper>
       <Info>
@@ -67,8 +71,18 @@ const Footer: FunctionComponent = function () {
         <InfoRegular>hhan14@naver.com</InfoRegular>
       </Info>
       <Icon>
-        <FontAwesomeIcon icon={faGithub} />
-        <FontAwesomeIcon icon={faFacebook} />
+        <div
+          onClick={goToGithub}
+          style={{ marginTop: '-2vh', cursor: 'pointer' }}
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </div>
+        <div
+          onClick={goToFacebook}
+          style={{ marginTop: '-2vh', cursor: 'pointer' }}
+        >
+          <FontAwesomeIcon icon={faFacebook} />
+        </div>
       </Icon>
     </FooterWrapper>
   );
