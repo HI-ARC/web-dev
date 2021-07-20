@@ -7,6 +7,7 @@ import Banner from 'components/Main/Banner';
 import Footer from 'components/Common/Footer';
 import Contents from 'components/Main/Contents';
 import ActivityCard, { ActivityType } from 'components/Main/ActivityCard';
+import Icpc from 'components/Main/Icpc';
 
 interface IndexPageProps {
   data: {
@@ -39,7 +40,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       <Banner />
       <Contents name="ACTIVITIES" />
       <ActivityCard activities={edges} />
-      <Contents name="ICPC Sinchon" />
+      <Icpc />
       <Footer />
     </Container>
   );
