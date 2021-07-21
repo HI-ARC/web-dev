@@ -22,16 +22,16 @@ interface ActivitiesProps {
 }
 
 const CardWrapper = styled.div`
-  max-width: 100%;
+  width: 100%:
   margin-top: 20px;
-  padding-left: 15vw;
-  padding-right: 15vw;
+  padding-left: auto;
+  padding-right: auto;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     height: 700px;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
@@ -47,9 +47,13 @@ const Card = styled.div`
   color: white;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     height: 230px;
     width: 500px;
+  }
+
+  @media (max-width: 600px) {
+    width: 85%;
   }
 `;
 
@@ -63,7 +67,7 @@ const Title = styled.div`
   padding-left: 30px;
   padding-top: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     height: 33%;
   }
 `;
@@ -75,7 +79,7 @@ const Introduction = styled.div`
   line-height: 2;
   font-size: 15px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     padding-top: 3px;
     height: 37%;
   }
@@ -90,7 +94,7 @@ const GoTo = styled.div`
   flex-direction: row;
   justify-content: flex-end;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     height: 30%;
     padding-bottom: 0;
   }
