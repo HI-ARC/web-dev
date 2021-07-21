@@ -93,7 +93,10 @@ const Icpc: FunctionComponent = () => {
         </IcpcIntro>
       </Upper>
       <Below>
-        <Button>
+        <Button
+          onClick={() => window.open('https://icpc-sinchon.io/')}
+          style={{ cursor: 'pointer' }}
+        >
           <div style={{ width: '100px' }}>ICPC 홈페이지</div>
           <FontAwesomeIcon icon={faArrowRight} />
         </Button>
