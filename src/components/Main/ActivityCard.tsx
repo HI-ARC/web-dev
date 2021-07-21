@@ -22,16 +22,17 @@ interface ActivitiesProps {
 }
 
 const CardWrapper = styled.div`
-  width: 100%:
+  width: 990px;
   margin-top: 20px;
-  padding-left: auto;
-  padding-right: auto;
+  margin-right: auto;
+  margin-left: auto;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
 
   @media (max-width: 1000px) {
+    width: 97vw;
     height: 700px;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
