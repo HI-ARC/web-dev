@@ -17,7 +17,14 @@ const LogoWrapper = styled.img`
 `;
 
 const Logo: FunctionComponent = function () {
-  return <LogoWrapper src={logoImage} alt="Logo" />;
+  return (
+    <div
+      onClick={() => (window.location.href = '/')}
+      style={{ cursor: 'pointer' }}
+    >
+      <LogoWrapper src={logoImage} alt="Logo" />
+    </div>
+  );
 };
 
 export default Logo;
