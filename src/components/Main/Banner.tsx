@@ -5,11 +5,18 @@ import mainImage from '../../../contents/main_image.jpg';
 
 const BannerWrapper = styled.div`
   position: relative;
-  max-width: 100%;
-  height: 47vw;
+  display: flex;
+  width: 100%;
+  height: 57vw;
+  margin-top: 75px;
+  font-size: 16px;
 
-  @media (max-width: 1000px) {
-    height: 60vw;
+  @media (min-width: 851px) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 850px) {
+    height: 55vh;
     margin-bottom: 3vw;
   }
 `;
@@ -18,29 +25,78 @@ const MainImage = styled.img`
   position: absolute;
   width: 53vw;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 850px) {
     width: 0;
     height: 0;
   }
 `;
 
-const About = styled.div`
+const AboutWrapper = styled.div`
   color: white;
-  position: absolute;
-  width: 60vw;
-  height: 40vw;
+  padding: 2em 2em 0 2em;
   background-color: #233660;
+  position: absolute;
+  width: 60%;
+  height: 40vw;
   box-shadow: -5px 7px 7px rgba(0, 0, 0, 0.3);
-  margin-top: 70px;
-  margin-left: 40vw;
   font-size: 24px;
 
-  @media (max-width: 1000px) {
-    width: 700px;
+  @media (min-width: 850px) {
+    margin-left: 40%;
+    margin-top: 70px;
+  }
+
+  @media (max-width: 850px) {
+    width: 650px;
     height: 400px;
-    float: right;
-    margin-left: 10vw;
-    margin-top: 0;
+    margin-left: calc(100% - 650px);
+    margin-top: 30px;
+  }
+
+  @media (max-width: 680px) {
+    width: 100%;
+    margin: 0;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3);
+  }
+`;
+
+const HiShort = styled.div`
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 3px;
+`;
+
+const HiLine = styled.div`
+  background-color: white;
+  width: 128px;
+  height: 3px;
+  margin-bottom: 12px;
+`;
+
+const HiLong = styled.div`
+  font-size: 22px;
+  font-weight: 350;
+  margin-bottom: 45px;
+
+  @media (min-width: 1000px) {
+    margin-bottom: 10vw;
+  }
+
+  @media (max-width: 850px) {
+    margin-bottom: 90px;
+  }
+`;
+
+const AboutHi = styled.div`
+  font-size: 20px;
+  font-weight: 300;
+
+  @media (min-width: 1000px) {
+    font-size: 44px;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 21px;
   }
 `;
 
@@ -51,7 +107,12 @@ const Banner: FunctionComponent = function () {
   return (
     <BannerWrapper>
       <MainImage src={mainImage} />
-      <About />
+      <AboutWrapper>
+        <HiShort>HI-ARC</HiShort>
+        <HiLine />
+        <HiLong>Hongik Algorithm Research Club</HiLong>
+        <AboutHi>{aboutText}</AboutHi>
+      </AboutWrapper>
     </BannerWrapper>
   );
 };

@@ -18,6 +18,10 @@ const ContentsName = styled.div`
   font-size: 36px; //2.8vw
   margin-left: 8vw;
   font-weight: 700;
+
+  @media (max-width: 600px) {
+    font-size: 32px;
+  }
 `;
 
 const Contents: FunctionComponent<ContentsProps> = function ({ name }) {

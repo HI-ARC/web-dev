@@ -4,17 +4,17 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IcpcWrapper = styled.div`
-  max-width: 100%;
+  width: 100%;
   height: 300px;
   margin-top: 30px;
   padding-top: 60px;
   padding-left: 8vw;
-  padding-right: 13vw;
+  padding-right: 9vw;
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 768px) {
-    padding-right: 20px;
+  @media (max-width: 750px) {
+    height: 320px;
   }
 `;
 
@@ -22,6 +22,22 @@ const Upper = styled.div`
   display: flex;
   flex-direction: row;
   height: 120px;
+
+  @media (max-width: 1250px) {
+    height: 16vw;
+  }
+
+  @media (max-width: 1000px) {
+    height: 23vw;
+  }
+
+  @media (max-width: 750px) {
+    height: 40vw;
+  }
+
+  @media (max-width: 600px) {
+    height: 35vw;
+  }
 `;
 
 const Below = styled.div`
@@ -37,6 +53,10 @@ const IcpcName = styled.div`
   font-weight: 700;
   width: 160px;
   height: 120px;
+
+  @media (max-width: 600px) {
+    font-size: 28px;
+  }
 `;
 
 const IcpcLine = styled.div`
@@ -44,15 +64,23 @@ const IcpcLine = styled.div`
   width: 5px;
   background-color: #233660;
   margin-right: 50px;
+
+  @media (max-width: 600px) {
+    height: 70px;
+  }
 `;
 
 const IcpcIntro = styled.div`
-  font-size: 19px;
+  font-size: 2.1vw;
   width: 770px;
   height: 120px;
   line-height: 1.5;
 
-  @media (max-width: 768px) {
+  @media (min-width: 1000px) {
+    font-size: 21px;
+  }
+
+  @media (max-width: 770px) {
     font-size: 16px;
     width: 400px;
   }
@@ -71,6 +99,20 @@ const Button = styled.div`
   color: #233660;
 `;
 
+const Hidden = styled.p`
+  display: none;
+  @media (max-width: 600px) {
+    display: block;
+  }
+`;
+
+const Shown = styled.p`
+  display: block;
+  @media (max-width: 600px) {
+    display: none;
+  }
+`;
+
 const Icpc: FunctionComponent = () => {
   return (
     <IcpcWrapper>
@@ -82,14 +124,15 @@ const Icpc: FunctionComponent = () => {
             HI-ARC는 연세대, 이화여대, 서강대, 숙명여대와 함께 운영하는 동아리
             연합 ICPC Sinchon 소속입니다.
           </p>
-          <p>
+          <Hidden>다양한 정보와 지식을 함께 교류해 나가고 있습니다.</Hidden>
+          <Shown>
             매번 방학 기간을 이용해 연합 스터디와 합동 캠프, 프로그래밍 대회
             등을 진행하고 있습니다.
-          </p>
-          <p>
+          </Shown>
+          <Shown>
             이외에도 Slack 등을 통하여 다양한 정보와 지식을 함께 교류해 나가고
             있습니다.
-          </p>
+          </Shown>
         </IcpcIntro>
       </Upper>
       <Below>

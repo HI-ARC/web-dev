@@ -7,7 +7,7 @@ const LogoWrapper = styled.img`
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  margin: 18px 0 10px 52px;
+  margin: 15px 0 10px 52px;
 
   @media (max-width: 768px) {
     margin-left: 28px;
