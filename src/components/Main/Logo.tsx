@@ -7,15 +7,24 @@ const LogoWrapper = styled.img`
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  margin: 15px 0 10px 52px;
+  margin-left: 45px;
+  margin-right: 30px;
 
   @media (max-width: 768px) {
     margin-left: 28px;
+    margin-right: 20px;
   }
 `;
 
 const Logo: FunctionComponent = function () {
-  return <LogoWrapper src={logoImage} alt="Logo" />;
+  return (
+    <div
+      onClick={() => (window.location.href = '/')}
+      style={{ cursor: 'pointer' }}
+    >
+      <LogoWrapper src={logoImage} alt="Logo" />
+    </div>
+  );
 };
 
 export default Logo;
