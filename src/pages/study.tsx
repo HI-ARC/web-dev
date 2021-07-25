@@ -1,5 +1,9 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
+import GlobalStyle from 'components/Common/GlobalStyle';
+import Header from 'components/Common/Header';
+import Footer from 'components/Common/Footer';
+import StudyTitle from 'components/Main/StudyTitle';
 
 interface InfoPageProps {
   data: {
@@ -16,8 +20,11 @@ interface InfoPageProps {
 const InfoPage: FunctionComponent<InfoPageProps> = () => {
   return (
     <>
-      <div>스터디 활동</div>
+      <GlobalStyle />
+      <Header />
+      <StudyTitle studytitle="Study" />
       <Link to="/">To Main</Link>
+      <Footer />
     </>
   );
 };
