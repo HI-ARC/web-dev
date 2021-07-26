@@ -95,7 +95,7 @@ const Footer: FunctionComponent = function () {
           <InfoRegular>hi-arc@gmail.com</InfoRegular>
         </Info>
         <Info style={{ gridArea: 'b' }}>
-          <InfoBold>학회장&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;홍길동</InfoBold>
+          <InfoBold>학회장&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;한혜원</InfoBold>
           <InfoRegular>hhan14@naver.com</InfoRegular>
         </Info>
         <IconWrapper>
