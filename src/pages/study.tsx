@@ -4,6 +4,16 @@ import GlobalStyle from 'components/Common/GlobalStyle';
 import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
 import StudyTitle from 'components/Main/StudyTitle';
+import StudyList from 'components/Main/Studylist';
+import Scroll from 'components/Common/scroll';
+import BackButton from 'components/Common/BackButton';
+
+const Study_LIST = {
+  기초프로그래밍: 1,
+  초급알고리즘: 2,
+  중급알고리즘: 3,
+  고급알고리즘: 4,
+};
 
 interface InfoPageProps {
   data: {
@@ -23,7 +33,9 @@ const InfoPage: FunctionComponent<InfoPageProps> = () => {
       <GlobalStyle />
       <Header />
       <StudyTitle studytitle="Study" />
-      <Link to="/">To Main</Link>
+      <StudyList selectedStudy="Web" StudyList={Study_LIST} />
+      <Scroll showBelow={250} />
+      <BackButton />
       <Footer />
     </>
   );
