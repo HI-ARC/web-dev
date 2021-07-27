@@ -17,6 +17,7 @@ const StudySubTitleWrapper = styled.div`
   font-weight: bolder;
   font-size: 40px;
   overflow: visible;
+  margin: 20px 0 0 0;
 `;
 
 const StudyTitle: FunctionComponent<ContentsProps> = function ({ studytitle }) {
