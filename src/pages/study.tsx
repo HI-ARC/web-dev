@@ -4,38 +4,29 @@ import GlobalStyle from 'components/Common/GlobalStyle';
 import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
 import StudyTitle from 'components/Main/StudyTitle';
-import StudyList from 'components/Main/Studylist';
 import Scroll from 'components/Common/scroll';
 import BackButton from 'components/Common/BackButton';
+import StudyList from 'components/Main/StudyList';
 
-const Study_LIST = {
-  기초프로그래밍: 1,
-  초급알고리즘: 2,
-  중급알고리즘: 3,
-  고급알고리즘: 4,
-};
-interface InfoPageProps {
-  location: {
-    search: string;
-  };
+interface StudyPageProps {
   data: {
     allMarkdownRemark: {
-      edges: PostType[];
-    };
-    file: {
-      childImageSharp: {
-        fluid: ProfileImageProps['profileImage'];
-      };
+      edges: StudyType[];
     };
   };
 }
 
-const InfoPage: FunctionComponent<InfoPageProps> = () => {
+const StudyPage: FunctionComponent<StudyPageProps> = function ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) {
   return (
     <>
       <GlobalStyle />
       <Header />
       <StudyTitle studytitle="Study" />
+      <StudyList studies={edges} />
       <Scroll showBelow={250} />
       <BackButton />
       <Footer />
@@ -43,4 +34,22 @@ const InfoPage: FunctionComponent<InfoPageProps> = () => {
   );
 };
 
-export default InfoPage;
+export default StudyPage;
+
+export const studyDataQuery = graphql`
+  query queryStudies {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            categories
+            summary
+            description
+          }
+        }
+      }
+    }
+  }
+`;
