@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useMemo } from 'react';
 import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -114,9 +114,18 @@ const Circle = styled.div`
 const ActivityCard: FunctionComponent<ActivitiesProps> = function ({
   activities,
 }) {
+  const activityData = useMemo(() =>
+    activities.filter(
+      ({
+        node: {
+          frontmatter: { categories },
+        },
+      }: ActivityType) => categories.includes('Activities'),
+    ),
+  );
   return (
     <CardWrapper>
-      {activities.map(
+      {activityData.map(
         ({
           node: {
             frontmatter: { title, introduction, url },

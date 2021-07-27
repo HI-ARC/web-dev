@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
@@ -14,14 +14,17 @@ const Study_LIST = {
   중급알고리즘: 3,
   고급알고리즘: 4,
 };
-
 interface InfoPageProps {
+  location: {
+    search: string;
+  };
   data: {
-    site: {
-      siteMetadata: {
-        title: string;
-        description: string;
-        author: string;
+    allMarkdownRemark: {
+      edges: PostType[];
+    };
+    file: {
+      childImageSharp: {
+        fluid: ProfileImageProps['profileImage'];
       };
     };
   };
@@ -33,7 +36,6 @@ const InfoPage: FunctionComponent<InfoPageProps> = () => {
       <GlobalStyle />
       <Header />
       <StudyTitle studytitle="Study" />
-      <StudyList selectedStudy="Web" StudyList={Study_LIST} />
       <Scroll showBelow={250} />
       <BackButton />
       <Footer />
