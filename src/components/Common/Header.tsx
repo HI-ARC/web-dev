@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState} from 'react';
 import { Link } from 'gatsby';
-import styled, {keyframes} from 'styled-components';
+import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
 import LogoHoriz from 'components/Main/LogoHoriz';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -72,7 +72,6 @@ const Header: FunctionComponent = function () {
 
   const [dropdown, setDropdown] = useState(false);
   const showDropdown = () => setDropdown(!dropdown);
-
 
   return (
     <>
