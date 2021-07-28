@@ -5,8 +5,9 @@ import Logo from 'components/Main/Logo';
 import LogoHoriz from 'components/Main/LogoHoriz';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { MenuData } from 'components/Main/DropdownData';
+import { MenuData } from 'components/Main/MenuData';
 import Menu from 'components/Main/Menu';
+import { useEffect } from 'react';
 
 const HeaderWrapper = styled.div`
   position: fixed;
@@ -35,21 +36,34 @@ const MenuBtn = styled.div`
   }
 `;
 
-const MenuList = styled.div`
+const SidebarWrapper = styled.div`
     position: fixed;
     z-index: 5;
-    right: 0;
-    width: 100%;
-    height: 250px;
-    background-color: rgba(255, 255, 255, 0.7);
-    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
     margin-top: 70px;
-    border-radius: 0 0 20px 20px;
 
     @media (min-width: 601px) {
-      height: 0;
+      display: none;
     }
 
+`;
+
+const Opened = {
+    right: '-50%',
+    transition: 'right 0.7s',
+};
+
+const Closed = {
+    right: '0%',
+    transition: 'right 0.7s',
+};
+
+const MenuWrapper = styled.div`
+    height: 240px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 `;
 
 const MenuItem = styled.div`
@@ -57,10 +71,9 @@ const MenuItem = styled.div`
     font-size: 20px;
     padding-left: 40px;
     font-weight: 700;
-    //box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
-    //color: white;
 
     @media (min-width: 601px) {
       display: none;
@@ -68,7 +81,7 @@ const MenuItem = styled.div`
 `;
 
 
-const Header: FunctionComponent = function () {
+const Header= function () {
 
   const [dropdown, setDropdown] = useState(false);
   const showDropdown = () => setDropdown(!dropdown);
@@ -78,27 +91,27 @@ const Header: FunctionComponent = function () {
       <HeaderWrapper>
         <Logo />
         <LogoHoriz />
+        <MenuBtn onClick={showDropdown}>
+          <FontAwesomeIcon icon={dropdown ? faTimes : faBars} />
+        </MenuBtn>
         <Menu />
       </HeaderWrapper>
-      <MenuList style={ dropdown ? {display: "grid"} : {display: "none"}}>
-        {MenuData.map((item, index) => {
-          return (
-            <MenuItem style={(index === MenuData.length - 1) ? {boxShadow: "none"} : {boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.2)"}}>
-              <Link to={item.url}>
-                {item.title}
-              </Link>
-            </MenuItem>
-          );
-        })}
-      </MenuList>
+      <SidebarWrapper style={dropdown ? Closed : Opened}>
+        <MenuWrapper>
+          {MenuData.map((item) => {
+            return (
+              <MenuItem>
+                <Link to={item.url}>
+                  {item.title}
+                </Link>
+              </MenuItem>
+            );
+          })}
+        </MenuWrapper>
+      </SidebarWrapper>
     </>
   );
 };
 
 export default Header;
 
-/*
-<MenuBtn onClick={showDropdown}>
-          <FontAwesomeIcon icon={dropdown ? faTimes : faBars} />
-        </MenuBtn>
-*/
