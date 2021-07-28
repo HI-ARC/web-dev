@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState} from 'react';
 import { Link } from 'gatsby';
-import styled, {keyframes} from 'styled-components';
+import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
 import LogoHoriz from 'components/Main/LogoHoriz';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -49,7 +49,7 @@ const MenuList = styled.div`
     @media (min-width: 601px) {
       height: 0;
     }
-    
+
 `;
 
 const MenuItem = styled.div`
