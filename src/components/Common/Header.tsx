@@ -49,7 +49,7 @@ const MenuList = styled.div`
     @media (min-width: 601px) {
       height: 0;
     }
-    
+
 `;
 
 const MenuItem = styled.div`
