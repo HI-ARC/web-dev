@@ -1,25 +1,18 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
+import Template from 'components/Common/Template';
+import Description from 'components/Common/Description';
+import Post from 'components/Common/Post';
 
-interface InfoPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-        description: string;
-        author: string;
-      };
-    };
-  };
-}
-
-const InfoPage: FunctionComponent<InfoPageProps> = () => {
+const CommunicationPage: FunctionComponent = () => {
   return (
     <>
-      <div>친목 활동</div>
-      <Link to="/">To Main</Link>
+      <Template title='Communication'>
+        <Description />
+        <Post />
+      </Template>
     </>
   );
 };
 
-export default InfoPage;
+export default CommunicationPage;
