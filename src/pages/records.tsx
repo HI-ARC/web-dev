@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
+import Header from 'components/Common/Header';
 
 interface InfoPageProps {
   data: {

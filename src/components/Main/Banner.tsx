@@ -8,16 +8,22 @@ const BannerWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 57vw;
-  margin-top: 75px;
+  margin-top: 70px;
   font-size: 16px;
 
   @media (min-width: 851px) {
     margin-top: 120px;
+    height: 49vw;
+    margin-bottom: 30px;
   }
 
   @media (max-width: 850px) {
     height: 55vh;
     margin-bottom: 3vw;
+  }
+
+  @media (max-width: 680px) {
+    height: 54vh;
   }
 `;
 
@@ -85,19 +91,30 @@ const HiLong = styled.div`
   @media (max-width: 850px) {
     margin-bottom: 90px;
   }
+  @media (max-width: 680px) {
+    margin-bottom: 75px;
+  }
 `;
 
 const AboutHi = styled.div`
   font-size: 20px;
   font-weight: 300;
+  line-height: 1.5;
 
-  @media (min-width: 1000px) {
-    font-size: 44px;
+  @media (min-width: 1400px) {
+    font-size: 27px;
   }
 
-  @media (min-width: 850px) {
-    font-size: 21px;
+  @media (max-width: 1400px) {
+    font-size: 1.8vw;
   }
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 680px) {
+    font-size: 18px;
 `;
 
 const Banner: FunctionComponent = function () {
