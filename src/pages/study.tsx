@@ -26,7 +26,7 @@ const StudyPage: FunctionComponent<StudyPageProps> = function ({
       <GlobalStyle />
       <Header />
       <StudyTitle studytitle="Study" />
-      <StudyList studies={edges} />
+      <StudyList selectedStudy={'기초프로그래밍'} studies={edges} />
       <Scroll showBelow={250} />
       <BackButton />
       <Footer />

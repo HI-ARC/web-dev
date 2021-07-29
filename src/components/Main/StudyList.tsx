@@ -1,8 +1,6 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export type StudyType = {
   node: {
@@ -17,44 +15,49 @@ export type StudyType = {
 };
 
 interface StudiesProps {
+  selectedStudy: string;
   activities: StudyType[];
 }
+const StudyListWrapper = styled.div`
+ width:1000px;
+ display:flex;
+  }
+`;
+const StudyListItem = styled.div`
+ width:250px;
+ height:50px;
+ margin: 20px;
+ border:2px solid #233660;
+ text-align: center;
+ line-height:50px;
+ font-weight:bold;
+ font-size: 24px;
 
-const CardWrapper = styled.div`
-  width: 990px;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
+ 
+  }
+`;
+const StudyItem = styled(Link)`
+  cursor: pointer;
 
-  @media (max-width: 1000px) {
-    width: 97vw;
-    height: 700px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
+  &:last-of-type {
+    margin-right: 0;
   }
 `;
 
-const Card = styled.div`
-  width: 280px;
+const StudyWrapper = styled.div`
+  width: 1000px;
+  margin-top: 20px;
+  display:flex;
+  flex-direction: column;
+  }
+`;
+
+const StudyContainer = styled.div`
+  width: 1000px;
   height: 400px;
-  border-radius: 33px;
-  background-color: #233660;
-  color: white;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
-
-  @media (max-width: 1000px) {
-    height: 230px;
-    width: 500px;
-  }
-
-  @media (max-width: 600px) {
-    width: 85%;
-  }
+  flex-direction: column;
+  display: flex;
+  color: black;
 `;
 
 const Title = styled.div`
@@ -66,27 +69,21 @@ const Title = styled.div`
   font-weight: 500;
   padding-left: 30px;
   padding-top: 10px;
-
-  @media (max-width: 1000px) {
-    height: 33%;
-  }
 `;
 
-const Introduction = styled.div`
+const Description = styled.div`
   width: 100%;
   height: 57%;
   padding: 20px 25px 0 25px;
   line-height: 2;
   font-size: 15px;
-
-  @media (max-width: 1000px) {
-    padding-top: 3px;
-    height: 37%;
-  }
 `;
 
-const StudyList: FunctionComponent<StuduesProps> = function ({ studies }) {
-  const studyData = useMemo(() =>
+const StudyList: FunctionComponent<StudiesProps> = function ({
+  selectedStudy,
+  studies,
+}) {
+  const studyListData = useMemo(() =>
     studies.filter(
       ({
         node: {
@@ -95,21 +92,50 @@ const StudyList: FunctionComponent<StuduesProps> = function ({ studies }) {
       }: StudyType) => categories.includes('Studies'),
     ),
   );
+  const studyData = useMemo(() =>
+    studies.filter(
+      ({
+        node: {
+          frontmatter: { title },
+        },
+      }: StudyType) => title.includes(selectedStudy),
+    ),
+  );
+
   return (
-    <CardWrapper>
+    <StudyWrapper>
+      <StudyListWrapper>
+        {studyListData.map(
+          ({
+            node: {
+              frontmatter: { title },
+            },
+          }: StudyType) => (
+            <StudyListItem>
+              <StudyItem
+                to={`/study/?select=${title}`}
+                active={title === selectedStudy}
+                key={title}
+              >
+                {title}
+              </StudyItem>
+            </StudyListItem>
+          ),
+        )}
+      </StudyListWrapper>
       {studyData.map(
         ({
           node: {
             frontmatter: { title, description, summary },
           },
         }: StudyType) => (
-          <Card>
-            <Title>{title}</Title>
-            <Introduction>{description}</Introduction>
-          </Card>
+          <StudyContainer>
+            <Title>{summary}</Title>
+            <Description>{description}</Description>
+          </StudyContainer>
         ),
       )}
-    </CardWrapper>
+    </StudyWrapper>
   );
 };
 
