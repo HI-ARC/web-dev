@@ -10,6 +10,7 @@ export type StudyType = {
       categories: string;
       summary: string;
       description: string;
+      studyimage: string;
     };
   };
 };
@@ -39,6 +40,10 @@ const StudyListItem = styled.div`
 const StudyItem = styled(Link)`
   cursor: pointer;
 
+  &::selection {
+    color: red;
+  }
+
   &:last-of-type {
     margin-right: 0;
   }
@@ -46,7 +51,7 @@ const StudyItem = styled(Link)`
 
 const StudyWrapper = styled.div`
   width: 1000px;
-  margin-top: 20px;
+  margin-left: 55px;
   display:flex;
   flex-direction: column;
   }
@@ -60,7 +65,7 @@ const StudyContainer = styled.div`
   color: black;
 `;
 
-const Title = styled.div`
+const Summary = styled.div`
   width: 100%;
   height: 25%;
   display: flex;
@@ -78,6 +83,13 @@ const Description = styled.div`
   line-height: 2;
   font-size: 15px;
 `;
+
+const StudyImage = styled.img`
+  height: 40px;
+  width: 40px;
+`;
+
+
 
 const StudyList: FunctionComponent<StudiesProps> = function ({
   selectedStudy,
@@ -112,7 +124,7 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
             },
           }: StudyType) => (
             <StudyListItem>
-              <StudyItem
+              <StudyItem 
                 to={`/study/?select=${title}`}
                 active={title === selectedStudy}
                 key={title}
@@ -126,12 +138,13 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
       {studyData.map(
         ({
           node: {
-            frontmatter: { title, description, summary },
+            frontmatter: { description, summary, studyimage },
           },
         }: StudyType) => (
           <StudyContainer>
-            <Title>{summary}</Title>
+            <Summary>{summary}</Summary>
             <Description>{description}</Description>
+            <StudyImage src={studyimage} />
           </StudyContainer>
         ),
       )}

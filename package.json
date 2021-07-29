@@ -15,6 +15,7 @@
     "@material-ui/icons": "^4.11.2",
     "gatsby": "^3.9.1",
     "gatsby-cli": "3.10.0",
+    "gatsby-image": "^3.10.0",
     "gatsby-plugin-emotion": "6.9.0",
     "gatsby-plugin-image": "^1.9.0",
     "gatsby-plugin-offline": "^4.9.0",

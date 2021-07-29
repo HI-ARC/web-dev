@@ -1,12 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import { graphql } from 'gatsby';
-import GlobalStyle from 'components/Common/GlobalStyle';
-import Header from 'components/Common/Header';
-import Footer from 'components/Common/Footer';
 import StudyTitle from 'components/Main/StudyTitle';
-import Scroll from 'components/Common/scroll';
 import BackButton from 'components/Common/BackButton';
 import StudyList from 'components/Main/StudyList';
+import queryString, { ParsedQuery } from 'query-string';
+import Template from 'components/Common/Template';
 
 interface StudyPageProps {
   data: {
@@ -17,19 +15,23 @@ interface StudyPageProps {
 }
 
 const StudyPage: FunctionComponent<StudyPageProps> = function ({
+  location: { search },
   data: {
     allMarkdownRemark: { edges },
   },
 }) {
+  const parsed: ParsedQuery<string> = queryString.parse(search);
+  const selectedStudy: string =
+    typeof parsed.select !== 'string' || !parsed.select
+      ? '기초프로그래밍'
+      : parsed.select;
   return (
     <>
-      <GlobalStyle />
-      <Header />
-      <StudyTitle studytitle="Study" />
-      <StudyList selectedStudy={'기초프로그래밍'} studies={edges} />
-      <Scroll showBelow={250} />
-      <BackButton />
-      <Footer />
+      <Template title="Study">
+        <StudyTitle />
+        <StudyList selectedStudy={selectedStudy} studies={edges} />
+        <BackButton />
+      </Template>
     </>
   );
 };
@@ -47,6 +49,7 @@ export const studyDataQuery = graphql`
             categories
             summary
             description
+            studyimage
           }
         }
       }
