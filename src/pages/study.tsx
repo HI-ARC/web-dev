@@ -1,25 +1,55 @@
 import React, { FunctionComponent } from 'react';
-import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import GlobalStyle from 'components/Common/GlobalStyle';
+import Header from 'components/Common/Header';
+import Footer from 'components/Common/Footer';
+import StudyTitle from 'components/Main/StudyTitle';
+import Scroll from 'components/Common/scroll';
+import BackButton from 'components/Common/BackButton';
+import StudyList from 'components/Main/StudyList';
 
-interface InfoPageProps {
+interface StudyPageProps {
   data: {
-    site: {
-      siteMetadata: {
-        title: string;
-        description: string;
-        author: string;
-      };
+    allMarkdownRemark: {
+      edges: StudyType[];
     };
   };
 }
 
-const InfoPage: FunctionComponent<InfoPageProps> = () => {
+const StudyPage: FunctionComponent<StudyPageProps> = function ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) {
   return (
     <>
-      <div>스터디 활동</div>
-      <Link to="/">To Main</Link>
+      <GlobalStyle />
+      <Header />
+      <StudyTitle studytitle="Study" />
+      <StudyList selectedStudy={'기초프로그래밍'} studies={edges} />
+      <Scroll showBelow={250} />
+      <BackButton />
+      <Footer />
     </>
   );
 };
 
-export default InfoPage;
+export default StudyPage;
+
+export const studyDataQuery = graphql`
+  query queryStudies {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            categories
+            summary
+            description
+          }
+        }
+      }
+    }
+  }
+`;
