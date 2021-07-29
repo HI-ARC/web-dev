@@ -1,6 +1,8 @@
 ---
 title: '고급알고리즘'
+order: 4
 categories: ['Studies']
-summary: '알고리즘 입문자를 위한 고급 프로그래밍 스터디'
-description: '매 학기 알고리즘 스터디를 진행합니다. 프로그래밍 입문자를 위한 기초 프로그래밍 스터디 또한 개설됩니다. 원하는 주제의 자율 스터디를 진행할 수도 있습니다.'
+summary: '고급 스터디 요약입니다.'
+description: '고급 스터디 내용입니다.'
+studyimage: './studyimagetest.png'
 ---

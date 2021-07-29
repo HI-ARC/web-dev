@@ -32,7 +32,7 @@ const BackButton = () => {
   const classes = useStyles();
 
   const handleClick = () => {
-    window.history.back();
+    window.location.href = '/';
   };
 
   return (
