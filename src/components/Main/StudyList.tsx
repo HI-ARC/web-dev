@@ -24,25 +24,19 @@ const StudyListWrapper = styled.div`
  display:flex;
   }
 `;
-const StudyListItem = styled.div`
- width:250px;
- height:50px;
- margin: 20px;
- border:2px solid #233660;
- text-align: center;
- line-height:50px;
- font-weight:bold;
- font-size: 24px;
 
- 
-  }
-`;
 const StudyItem = styled(Link)`
+width:250px;
+height:50px;
+margin: 20px;
+border:2px solid #233660;
+text-align: center;
+line-height:50px;
+font-weight:bold;
+font-size: 24px;
   cursor: pointer;
-
-  &::selection {
-    color: red;
-  }
+  color: ${({ active }) => (active ? 'white' : 'black')};
+  background-color:${({ active }) => (active ? '#233660' : 'white')};
 
   &:last-of-type {
     margin-right: 0;
@@ -60,10 +54,17 @@ const StudyWrapper = styled.div`
 const StudyContainer = styled.div`
   width: 1000px;
   height: 400px;
-  flex-direction: column;
   display: flex;
   color: black;
 `;
+const StudyDataContainer = styled.div`
+  width: 700px;
+  height: 400px;
+  display: flex;
+  color: black;
+  flex-direction: column;
+`;
+
 
 const Summary = styled.div`
   width: 100%;
@@ -113,6 +114,8 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
       }: StudyType) => title.includes(selectedStudy),
     ),
   );
+  
+  
 
   return (
     <StudyWrapper>
@@ -123,7 +126,6 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
               frontmatter: { title },
             },
           }: StudyType) => (
-            <StudyListItem>
               <StudyItem 
                 to={`/study/?select=${title}`}
                 active={title === selectedStudy}
@@ -131,7 +133,6 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
               >
                 {title}
               </StudyItem>
-            </StudyListItem>
           ),
         )}
       </StudyListWrapper>
@@ -142,12 +143,15 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
           },
         }: StudyType) => (
           <StudyContainer>
+            <StudyDataContainer>
             <Summary>{summary}</Summary>
             <Description>{description}</Description>
+            </StudyDataContainer>
             <StudyImage src={studyimage} />
           </StudyContainer>
         ),
       )}
+      
     </StudyWrapper>
   );
 };
