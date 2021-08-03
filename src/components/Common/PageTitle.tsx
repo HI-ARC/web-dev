@@ -20,7 +20,7 @@ const PageTitleWrapper = styled.div`
   }
 `;
 
-const PageTitle: FunctionComponent<ContentsProps> = function ({ title }) {
+const PageTitle: FunctionComponent<PageTitleProps> = function ({ title }) {
   return (
     <PageTitleWrapper>
       {title}

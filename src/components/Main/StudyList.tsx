@@ -1,5 +1,5 @@
-import React, { FunctionComponent, useMemo } from 'react';
-import { graphql, Link } from 'gatsby';
+import React, { FunctionComponent, useMemo, ReactNode } from 'react';
+import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 export type StudyType = {
@@ -10,30 +10,51 @@ export type StudyType = {
       categories: string;
       summary: string;
       description: string;
-      studyimage: string;
+      studyimage: {
+        publicURL: string;
+      };
     };
   };
 };
 
 interface StudiesProps {
   selectedStudy: string;
-  activities: StudyType[];
+  studies: StudyType[];
 }
+
 const StudyListWrapper = styled.div`
  width:1000px;
  display:flex;
   }
 `;
 
-const StudyItem = styled(Link)`
-width:250px;
-height:50px;
-margin: 20px;
-border:2px solid #233660;
-text-align: center;
-line-height:50px;
-font-weight:bold;
-font-size: 24px;
+const StudyListItem = styled.div`
+ width:250px;
+ height:50px;
+ margin: 20px;
+ border:2px solid #233660;
+ text-align: center;
+ line-height:50px;
+ font-weight:bold;
+ font-size: 24px;
+  }
+`;
+
+type StudyItemProps = {
+  active: boolean;
+};
+
+type GatsbyLinkProps = {
+  children: ReactNode;
+  className?: string;
+  to: string;
+} & StudyItemProps;
+
+const StudyItem = styled(({ active, to, ...props }: GatsbyLinkProps) => (
+  <Link to={to} {...props} />
+)) <StudyItemProps>`
+  font-weight: ${({ active }) => (active ? '800' : '400')};
+
   cursor: pointer;
   color: ${({ active }) => (active ? 'white' : 'black')};
   background-color:${({ active }) => (active ? '#233660' : 'white')};
@@ -90,8 +111,6 @@ const StudyImage = styled.img`
   width: 40px;
 `;
 
-
-
 const StudyList: FunctionComponent<StudiesProps> = function ({
   selectedStudy,
   studies,
@@ -103,7 +122,7 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
           frontmatter: { categories },
         },
       }: StudyType) => categories.includes('Studies'),
-    ),
+    ), []
   );
   const studyData = useMemo(() =>
     studies.filter(
@@ -112,7 +131,7 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
           frontmatter: { title },
         },
       }: StudyType) => title.includes(selectedStudy),
-    ),
+    ), []
   );
   
   
@@ -139,15 +158,20 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
       {studyData.map(
         ({
           node: {
-            frontmatter: { description, summary, studyimage },
+            frontmatter: {
+              description,
+              summary,
+              studyimage: { publicURL }
+            },
           },
         }: StudyType) => (
           <StudyContainer>
             <StudyDataContainer>
             <Summary>{summary}</Summary>
             <Description>{description}</Description>
-            </StudyDataContainer>
-            <StudyImage src={studyimage} />
+
+            <StudyImage src={publicURL} />
+
           </StudyContainer>
         ),
       )}

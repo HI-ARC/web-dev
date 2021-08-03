@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';

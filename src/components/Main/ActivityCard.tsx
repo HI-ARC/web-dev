@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useMemo } from 'react';
-import { graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -121,7 +121,7 @@ const ActivityCard: FunctionComponent<ActivitiesProps> = function ({
           frontmatter: { categories },
         },
       }: ActivityType) => categories.includes('Activities'),
-    ),
+    ),[]
   );
   return (
     <CardWrapper>
