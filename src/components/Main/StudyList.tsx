@@ -54,11 +54,10 @@ const StudyItem = styled(({ active, to, ...props }: GatsbyLinkProps) => (
   <Link to={to} {...props} />
 )) <StudyItemProps>`
   font-weight: ${({ active }) => (active ? '800' : '400')};
-  cursor: pointer;
 
-  &::selection {
-    color: red;
-  }
+  cursor: pointer;
+  color: ${({ active }) => (active ? 'white' : 'black')};
+  background-color:${({ active }) => (active ? '#233660' : 'white')};
 
   &:last-of-type {
     margin-right: 0;
@@ -76,10 +75,17 @@ const StudyWrapper = styled.div`
 const StudyContainer = styled.div`
   width: 1000px;
   height: 400px;
-  flex-direction: column;
   display: flex;
   color: black;
 `;
+const StudyDataContainer = styled.div`
+  width: 700px;
+  height: 400px;
+  display: flex;
+  color: black;
+  flex-direction: column;
+`;
+
 
 const Summary = styled.div`
   width: 100%;
@@ -127,6 +133,8 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
       }: StudyType) => title.includes(selectedStudy),
     ), []
   );
+  
+  
 
   return (
     <StudyWrapper>
@@ -137,7 +145,6 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
               frontmatter: { title },
             },
           }: StudyType) => (
-            <StudyListItem>
               <StudyItem 
                 to={`/study/?select=${title}`}
                 active={title === selectedStudy}
@@ -145,7 +152,6 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
               >
                 {title}
               </StudyItem>
-            </StudyListItem>
           ),
         )}
       </StudyListWrapper>
@@ -160,12 +166,16 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
           },
         }: StudyType) => (
           <StudyContainer>
+            <StudyDataContainer>
             <Summary>{summary}</Summary>
             <Description>{description}</Description>
+
             <StudyImage src={publicURL} />
+
           </StudyContainer>
         ),
       )}
+      
     </StudyWrapper>
   );
 };
