@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
-import { graphql } from 'gatsby';
 import mainImage from '../../../contents/main_image.jpg';
 
 const BannerWrapper = styled.div`
