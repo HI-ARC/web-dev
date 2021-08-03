@@ -1,6 +1,8 @@
 import React, { FunctionComponent, useMemo, ReactNode } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import UserList from './testList';
+
 
 export type StudyType = {
   node: {
@@ -16,6 +18,7 @@ export type StudyType = {
     };
   };
 };
+
 
 interface StudiesProps {
   selectedStudy: string;
@@ -135,6 +138,7 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
   );
   
   
+  
 
   return (
     <StudyWrapper>
@@ -171,10 +175,11 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
             <Description>{description}</Description>
 
             <StudyImage src={publicURL} />
-
+            </StudyDataContainer>
           </StudyContainer>
         ),
       )}
+      <UserList/>
       
     </StudyWrapper>
   );
