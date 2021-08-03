@@ -7,18 +7,26 @@ const BannerWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 57vw;
-  margin-top: 70px;
+  margin-top: 120px;
   font-size: 16px;
+  padding: 0 5vw;
 
-  @media (min-width: 851px) {
+  @media (min-width: 1400px) {
     margin-top: 120px;
-    height: 49vw;
+    height: calc(40vw + 70px);
     margin-bottom: 30px;
   }
 
+  @media (min-width: 1200px) {
+    padding: 0 calc(50% - 760px + 15vw);
+    // 이 값 수정해야하는데 이대로 두고 슬로건을 넣어도 될 거 같기도 함,,
+  }
+
   @media (max-width: 850px) {
+    padding: 0;
     height: 55vh;
     margin-bottom: 3vw;
+    margin-top: 70px;
   }
 
   @media (max-width: 680px) {
@@ -28,27 +36,36 @@ const BannerWrapper = styled.div`
 
 const MainImage = styled.img`
   position: absolute;
-  width: 53vw;
+  width: 60vw;
+
+  @media (min-width: 1200px) {
+    width: 750px;
+  }
 
   @media (max-width: 850px) {
-    width: 0;
-    height: 0;
+    display: none;
   }
 `;
 
 const AboutWrapper = styled.div`
   color: white;
+  width: 60vw;
+  height: 45vw;
+  margin-top: 70px;
+  margin-left: 30vw;
   padding: 2em 2em 0 2em;
   background-color: #233660;
   position: absolute;
-  width: 60%;
-  height: 40vw;
   box-shadow: -5px 7px 7px rgba(0, 0, 0, 0.3);
   font-size: 24px;
 
-  @media (min-width: 850px) {
-    margin-left: 40%;
-    margin-top: 70px;
+  @media (min-width: 1400px) {
+    //margin-left: calc(760px - 15vw);
+  }
+
+  @media (min-width: 1200px) {
+    width: 770px;
+    height: 550px;
   }
 
   @media (max-width: 850px) {

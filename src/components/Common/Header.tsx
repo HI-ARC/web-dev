@@ -34,7 +34,7 @@ const MenuBtn = styled.div`
     display: none;
   }
 `;
-
+//-------Sidebar-------//
 const SidebarWrapper = styled.div`
     position: fixed;
     z-index: 5;
