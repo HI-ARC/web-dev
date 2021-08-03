@@ -8,7 +8,7 @@ import Footer from 'components/Common/Footer';
 import Contents from 'components/Main/Contents';
 import ActivityCard, { ActivityType } from 'components/Main/ActivityCard';
 import Icpc from 'components/Main/Icpc';
-import Scroll from 'components/Common/scroll';
+import Scroll from 'components/Common/Scroll';
 
 interface IndexPageProps {
   data: {
@@ -32,9 +32,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     allMarkdownRemark: { edges },
   },
 }) {
-  const aboutText =
-    'HI-ARC는 홍익대학교 컴퓨터공학과 소속 알고리즘 학회입니다.\nHI-ARC에서는 ICPC를 비롯한 각종 프로그래밍 대회를 준비하며,\n알고리즘과 문제 해결 능력을 기르기 위한 다수의 스터디를 진행하고 있습니다.';
-
+  
   return (
     <Container>
       <GlobalStyle />

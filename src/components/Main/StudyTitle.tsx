@@ -11,7 +11,7 @@ const StudySubTitleWrapper = styled.div`
   margin-left: 75px;
 `;
 
-const StudyTitle: FunctionComponent<ContentsProps> = function ({ studytitle }) {
+const StudyTitle: FunctionComponent = function () {
   return (
     <StudySubTitleWrapper>
       <p>HI-ARC의 알고리즘 로드맵</p>

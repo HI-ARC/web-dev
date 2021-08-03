@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const MenuData = [
     {
         title: '수상 기록',

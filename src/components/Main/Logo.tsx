@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import logoImage from '../../../contents/hiarc_logo.svg';
 

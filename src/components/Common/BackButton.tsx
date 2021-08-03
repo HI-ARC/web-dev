@@ -1,10 +1,7 @@
-//------TOP 버튼 구현--------//
-import React, { useState, useEffect } from 'react';
+//------Back 버튼 구현--------//
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import IconButton from '@material-ui/core/IconButton';
-
-import StarIcon from '@material-ui/icons/Star';
 
 const useStyles = makeStyles(theme => ({
   toTop: {

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState} from 'react';
+import React, { useState} from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
@@ -7,7 +7,6 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MenuData } from 'components/Main/MenuData';
 import Menu from 'components/Main/Menu';
-import { useEffect } from 'react';
 
 const HeaderWrapper = styled.div`
   position: fixed;
@@ -47,7 +46,6 @@ const SidebarWrapper = styled.div`
     @media (min-width: 601px) {
       display: none;
     }
-
 `;
 
 const Opened = {
