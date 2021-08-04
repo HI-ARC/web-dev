@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useMemo, ReactNode } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import UserList from './testList';
 
 export type StudyType = {
   node: {
@@ -52,13 +53,12 @@ type GatsbyLinkProps = {
 
 const StudyItem = styled(({ active, to, ...props }: GatsbyLinkProps) => (
   <Link to={to} {...props} />
-)) <StudyItemProps>`
+))<StudyItemProps>`
   font-weight: ${({ active }) => (active ? '800' : '400')};
-  cursor: pointer;
 
-  &::selection {
-    color: red;
-  }
+  cursor: pointer;
+  color: ${({ active }) => (active ? 'white' : 'black')};
+  background-color: ${({ active }) => (active ? '#233660' : 'white')};
 
   &:last-of-type {
     margin-right: 0;
@@ -76,9 +76,15 @@ const StudyWrapper = styled.div`
 const StudyContainer = styled.div`
   width: 1000px;
   height: 400px;
-  flex-direction: column;
   display: flex;
   color: black;
+`;
+const StudyDataContainer = styled.div`
+  width: 700px;
+  height: 400px;
+  display: flex;
+  color: black;
+  flex-direction: column;
 `;
 
 const Summary = styled.div`
@@ -109,23 +115,27 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
   selectedStudy,
   studies,
 }) {
-  const studyListData = useMemo(() =>
-    studies.filter(
-      ({
-        node: {
-          frontmatter: { categories },
-        },
-      }: StudyType) => categories.includes('Studies'),
-    ), []
+  const studyListData = useMemo(
+    () =>
+      studies.filter(
+        ({
+          node: {
+            frontmatter: { categories },
+          },
+        }: StudyType) => categories.includes('Studies'),
+      ),
+    [],
   );
-  const studyData = useMemo(() =>
-    studies.filter(
-      ({
-        node: {
-          frontmatter: { title },
-        },
-      }: StudyType) => title.includes(selectedStudy),
-    ), []
+  const studyData = useMemo(
+    () =>
+      studies.filter(
+        ({
+          node: {
+            frontmatter: { title },
+          },
+        }: StudyType) => title.includes(selectedStudy),
+      ),
+    [],
   );
 
   return (
@@ -137,15 +147,13 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
               frontmatter: { title },
             },
           }: StudyType) => (
-            <StudyListItem>
-              <StudyItem
-                to={`/study/?select=${title}`}
-                active={title === selectedStudy}
-                key={title}
-              >
-                {title}
-              </StudyItem>
-            </StudyListItem>
+            <StudyItem
+              to={`/study/?select=${title}`}
+              active={title === selectedStudy}
+              key={title}
+            >
+              {title}
+            </StudyItem>
           ),
         )}
       </StudyListWrapper>
@@ -155,17 +163,21 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
             frontmatter: {
               description,
               summary,
-              studyimage: { publicURL }
+              studyimage: { publicURL },
             },
           },
         }: StudyType) => (
           <StudyContainer>
-            <Summary>{summary}</Summary>
-            <Description>{description}</Description>
-            <StudyImage src={publicURL} />
+            <StudyDataContainer>
+              <Summary>{summary}</Summary>
+              <Description>{description}</Description>
+
+              <StudyImage src={publicURL} />
+            </StudyDataContainer>
           </StudyContainer>
         ),
       )}
+      <UserList />
     </StudyWrapper>
   );
 };
