@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
@@ -36,51 +36,49 @@ const MenuBtn = styled.div`
 `;
 
 const SidebarWrapper = styled.div`
-    position: fixed;
-    z-index: 5;
-    height: 100%;
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin-top: 70px;
+  position: fixed;
+  z-index: 5;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 70px;
 
-    @media (min-width: 601px) {
-      display: none;
-    }
+  @media (min-width: 601px) {
+    display: none;
+  }
 `;
 
 const Opened = {
-    right: '-50%',
-    transition: 'right 0.7s',
+  right: '-50%',
+  transition: 'right 0.7s',
 };
 
 const Closed = {
-    right: '0%',
-    transition: 'right 0.7s',
+  right: '0%',
+  transition: 'right 0.7s',
 };
 
 const MenuWrapper = styled.div`
-    height: 240px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+  height: 240px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
 `;
 
 const MenuItem = styled.div`
-    height: 100%;
-    font-size: 20px;
-    padding-left: 40px;
-    font-weight: 700;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
+  height: 100%;
+  font-size: 20px;
+  padding-left: 40px;
+  font-weight: 700;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
 
-    @media (min-width: 601px) {
-      display: none;
-    }
+  @media (min-width: 601px) {
+    display: none;
+  }
 `;
 
-
-const Header= function () {
-
+const Header = function () {
   const [dropdown, setDropdown] = useState(false);
   const showDropdown = () => setDropdown(!dropdown);
 
@@ -96,12 +94,10 @@ const Header= function () {
       </HeaderWrapper>
       <SidebarWrapper style={dropdown ? Closed : Opened}>
         <MenuWrapper>
-          {MenuData.map((item) => {
+          {MenuData.map(item => {
             return (
               <MenuItem>
-                <Link to={item.url}>
-                  {item.title}
-                </Link>
+                <Link to={item.url}>{item.title}</Link>
               </MenuItem>
             );
           })}
@@ -112,4 +108,3 @@ const Header= function () {
 };
 
 export default Header;
-
