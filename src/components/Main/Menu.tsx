@@ -1,7 +1,6 @@
-import React, { FunctionComponent} from 'react';
+import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-
 
 const MenuList = styled.div`
   width: 40%;
@@ -23,25 +22,16 @@ const MenuList = styled.div`
   }
 `;
 
-const Menu: FunctionComponent =  function () {
-    return (
-        <>
-            <MenuList>
-                <Link to='/records'>
-                    기록
-                </Link>
-                <Link to='/study/'>
-                스터디
-                </Link>
-                <Link to='/communication'>
-                친목
-                </Link>
-            </MenuList>
-        </>
-    )
+const Menu: FunctionComponent = function () {
+  return (
+    <>
+      <MenuList>
+        <Link to="/records2021">기록</Link>
+        <Link to="/study/">스터디</Link>
+        <Link to="/communication">친목</Link>
+      </MenuList>
+    </>
+  );
 };
 
 export default Menu;
-
-
-

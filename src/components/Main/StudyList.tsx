@@ -138,7 +138,7 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
             },
           }: StudyType) => (
             <StudyListItem>
-              <StudyItem 
+              <StudyItem
                 to={`/study/?select=${title}`}
                 active={title === selectedStudy}
                 key={title}
