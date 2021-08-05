@@ -31,11 +31,14 @@ const RecordListWrapper = styled.div`
 
 const Divider = styled.div`
   margin-top: 4px;
-  margin-left: 8%;
+  margin-left: 8vw;
   border-radius: 60px;
-  width: 80%;
+  width: 80vw;
   height: 2px;
   background-color: #233660;
+  @media (max-width: 750px) {
+    margin-left: 12vw;
+  }
 `;
 
 const RecordList: FunctionComponent = function () {

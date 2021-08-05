@@ -31,6 +31,10 @@ const Title = styled.div`
   padding-top: 10px;
   margin-left: 20px;
   margin-bottom: 20px;
+  @media (max-width: 750px) {
+    font-size: 24px;
+    white-space: nowrap;
+  }
 `;
 
 const Problem = styled.div`
@@ -43,6 +47,9 @@ const Problem = styled.div`
   :hover {
     color: black;
   }
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 const Scoreboard = styled.div`
@@ -54,6 +61,9 @@ const Scoreboard = styled.div`
   color: gray;
   :hover {
     color: black;
+  }
+  @media (max-width: 750px) {
+    display: none;
   }
 `;
 
