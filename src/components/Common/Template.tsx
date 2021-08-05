@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
-import PageTitle from 'components/Common/PageTitle'
-import Scroll from 'components/Common/Scroll';
+import PageTitle from 'components/Common/PageTitle';
+import Scroll from 'components/Common/scroll';
 
 interface TemplateProps {
   title: string;
@@ -25,7 +25,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
     <Container>
       <GlobalStyle />
       <Header />
-      <PageTitle title = {title}/>
+      <PageTitle title={title} />
       {children}
       <Scroll showBelow={250} />
       <Footer />

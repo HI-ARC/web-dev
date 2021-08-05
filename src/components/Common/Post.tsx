@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 
-interface PostProps {
-}
+interface PostProps {}
 
 const PostWrapper = styled.div`
   display: flex;
@@ -12,10 +11,7 @@ const PostWrapper = styled.div`
 `;
 
 const Post: FunctionComponent<PostProps> = function () {
-  return (
-    <PostWrapper>
-    </PostWrapper>
-  );
+  return <PostWrapper></PostWrapper>;
 };
 
 export default Post;
