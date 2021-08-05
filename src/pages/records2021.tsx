@@ -6,33 +6,45 @@ import RecordContent from 'components/Main/RecordContent';
 import TableTemplate from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
-  width: 1000px;
-  height: 250px;
-  margin-left: 125px;
-  padding-top: 3%;
-  padding-bottom: -10%;
+  width: 80%;
+  height: 60vh;
+  margin-left: 8vw;
+  padding-top: 3vh;
+  padding-bottom: -10vh;
   display: flex;
   flex-direction: row;
+  @media (max-width: 750px) {
+    height: 40vh;
+    margin-left: 10%;
+    display: grid;
+  }
 `;
-
 const TableWrapper = styled.div`
-  width: 700px;
-  margin-left: 80px;
+  width: 60vw;
+  margin-left: 1vw;
   margin-top: 10px;
-  height: 175px;
+  height: 40vh;
   color: black;
+  font-size: 21px;
   table {
+    border-top: 1.25px solid #444444;
     table-layout: fixed;
-    width: 100%;
+    width: 95%;
   }
   td {
     text-align: center;
-    font-size: 21px;
     padding-top: 2px;
     padding-bottom: 2.5px;
-    border-bottom: 1.25px solid #444444;
+
     border-collapse: collapse;
     white-space: normal;
+  }
+  @media (max-width: 750px) {
+    width: 100%;
+    height: 40vh;
+    margin-left: 3vw;
+    margin-top: -10vh;
+    font-size: 20px;
   }
 `;
 
@@ -60,11 +72,13 @@ const RecordPage: FunctionComponent = () => {
               team="불건전한 소환사명 123 "
               member="김경민, 김도현, 권찬"
             ></TableTemplate>
+
             <TableTemplate
               prize="13"
               team="민초의 난"
               member="김기선, 김효원, 정재현"
             ></TableTemplate>
+
             <TableTemplate
               prize="24"
               team="역시 형이야 구하러 왔구나 아니 나도 잡혔어"
