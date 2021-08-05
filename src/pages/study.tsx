@@ -24,7 +24,7 @@ const StudyPage: FunctionComponent =  ()=>{
       <Template title="Study">
         <StudyTitle />
         <StudyList />
-        <BackButton />
+        <BackButton showBelow={250} />
       </Template>
     </>
   );

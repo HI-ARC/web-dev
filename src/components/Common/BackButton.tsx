@@ -1,4 +1,5 @@
-//------Back 버튼 구현--------//
+
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import IconButton from '@material-ui/core/IconButton';
@@ -25,25 +26,42 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const BackButton = () => {
+const BackButton = ({ showBelow }: {showBelow:any}) => {
   const classes = useStyles();
+
+  const [show, setShow] = useState(showBelow ? false : true);
+
+  const handleScroll = () => {
+    if (window.pageYOffset <= showBelow) {
+      if (!show) setShow(true);
+    } else {
+      if (show) setShow(false);
+    }
+  };
 
   const handleClick = () => {
     window.location.href = '/';
   };
 
+  useEffect(() => {
+    if (showBelow) {
+      window.addEventListener(`scroll`, handleScroll);
+      return () => window.removeEventListener(`scroll`, handleScroll);
+    }
+  });
+
   return (
     <div>
-      {
+      {show && (
         <IconButton
           onClick={handleClick}
           className={classes.toTop}
-          aria-label="star"
+          aria-label="to top"
           component="span"
         >
           <ArrowBackIcon />
         </IconButton>
-      }
+      )}
     </div>
   );
 };
