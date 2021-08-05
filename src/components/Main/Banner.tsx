@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import mainImage from '../../../contents/main_image.jpg';
+import GlobalFonts from '../../fonts/fonts';
 
 const BannerWrapper = styled.div`
   position: relative;
@@ -26,28 +27,31 @@ const BannerWrapper = styled.div`
 
   @media (max-width: 850px) {
     padding: 0;
-    height: 55vh;
-    margin-bottom: 3vw;
+    height: 450px;
+    margin-bottom: 50px;
     margin-top: 70px;
   }
 
   @media (max-width: 680px) {
-    height: 54vh;
+    margin-bottom: 20px;
   }
 `;
 
 const Slogan = styled.div`
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-size: 50px;
+  //background-color: rgba(0, 0, 0, 0.7);
+  color: #233660;
+  font-size: 36px;
   z-index: 4;
-  margin-top: 480px;
+  margin-top: 510px;
   margin-left: -40px;
+  font-weight: 500;
+  font-family: "IBM Plex Mono", monospace;
 
   @media (max-width: 1350px) {
     display: none;
   }
+
 `;
 
 const MainImage = styled.img`
@@ -155,7 +159,8 @@ const Banner: FunctionComponent = function () {
 
   return (
     <BannerWrapper>
-      <Slogan>Solve with Us!</Slogan>
+      <GlobalFonts />
+      <Slogan>/* Solve with Us! */</Slogan>
       <MainImage src={mainImage} />
       <AboutWrapper>
         <HiShort>HI-ARC</HiShort>
