@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IcpcWrapper = styled.div`
   width: 100%;
-  margin-top: 40px;
+  margin-top: 60px;
   padding-top: 60px;
   padding-left: 8vw;
   padding-right: 9vw;
