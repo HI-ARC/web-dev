@@ -10,6 +10,7 @@ const BannerWrapper = styled.div`
   margin-top: 120px;
   font-size: 16px;
   padding: 0 5vw;
+  margin-bottom: 30px;
 
   @media (min-width: 1400px) {
     margin-top: 120px;
@@ -20,6 +21,7 @@ const BannerWrapper = styled.div`
   @media (min-width: 1200px) {
     padding: 0 calc(50% - 760px + 15vw);
     // 이 값 수정해야하는데 이대로 두고 슬로건을 넣어도 될 거 같기도 함,,
+    height: 660px;
   }
 
   @media (max-width: 850px) {
@@ -31,6 +33,20 @@ const BannerWrapper = styled.div`
 
   @media (max-width: 680px) {
     height: 54vh;
+  }
+`;
+
+const Slogan = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 50px;
+  z-index: 4;
+  margin-top: 480px;
+  margin-left: -40px;
+
+  @media (max-width: 1350px) {
+    display: none;
   }
 `;
 
@@ -98,7 +114,7 @@ const HiLine = styled.div`
 const HiLong = styled.div`
   font-size: 22px;
   font-weight: 350;
-  margin-bottom: 45px;
+  margin-bottom: 80px;
 
   @media (min-width: 1000px) {
     margin-bottom: 10vw;
@@ -139,6 +155,7 @@ const Banner: FunctionComponent = function () {
 
   return (
     <BannerWrapper>
+      <Slogan>Solve with Us!</Slogan>
       <MainImage src={mainImage} />
       <AboutWrapper>
         <HiShort>HI-ARC</HiShort>

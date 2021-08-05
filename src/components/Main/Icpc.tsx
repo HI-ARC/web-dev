@@ -5,19 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IcpcWrapper = styled.div`
   width: 100%;
-  margin-top: 30px;
+  margin-top: 40px;
   padding-top: 60px;
   padding-left: 8vw;
   padding-right: 9vw;
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 `;
 
 const Upper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 const Below = styled.div`
