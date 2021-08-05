@@ -17,47 +17,19 @@ interface StudyPageProps {
   };
 }
 
-const StudyPage: FunctionComponent<StudyPageProps> = function ({
-  location: { search },
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) {
-  const parsed: ParsedQuery<string> = queryString.parse(search);
-  const selectedStudy: string =
-    typeof parsed.select !== 'string' || !parsed.select
-      ? '기초프로그래밍'
-      : parsed.select;
+const StudyPage: FunctionComponent =  ()=>{
+ 
   return (
     <>
       <Template title="Study">
         <StudyTitle />
-        <StudyList selectedStudy={selectedStudy} studies={edges} />
+        <StudyList />
         <BackButton />
       </Template>
     </>
   );
 };
 
+
 export default StudyPage;
 
-export const studyDataQuery = graphql`
-  query queryStudies {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            categories
-            summary
-            description
-            studyimage{
-              publicURL
-            }
-          }
-        }
-      }
-    }
-  }
-`;
