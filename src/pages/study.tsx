@@ -1,15 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import { graphql } from 'gatsby';
 import StudyTitle from 'components/Main/StudyTitle';
-import BackButton from 'components/Common/BackButton';
 import StudyList, { StudyType } from 'components/Main/StudyList';
-import queryString, { ParsedQuery } from 'query-string';
 import Template from 'components/Common/Template';
 
 interface StudyPageProps {
-  location: {
-    search: string;
-  };
+ 
   data: {
     allMarkdownRemark: {
       edges: StudyType[];
@@ -17,19 +13,41 @@ interface StudyPageProps {
   };
 }
 
-const StudyPage: FunctionComponent =  ()=>{
- 
+const StudyPage: FunctionComponent<StudyPageProps> = function ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) {
+
   return (
     <>
       <Template title="Study">
         <StudyTitle />
-        <StudyList />
-        <BackButton showBelow={250} />
+        <StudyList   studies={edges} />
       </Template>
     </>
   );
 };
 
-
 export default StudyPage;
 
+export const studyDataQuery = graphql`
+  query queryStudies {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            categories
+            summary
+            description
+            studyimage{
+              publicURL
+            }
+          }
+        }
+      }
+    }
+  }
+`;
