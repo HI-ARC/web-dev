@@ -4,7 +4,7 @@ import GlobalStyle from 'components/Common/GlobalStyle';
 import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
 import PageTitle from 'components/Common/PageTitle';
-import Scroll from 'components/Common/scroll';
+import Scroll from 'components/Common/Scroll';
 
 interface TemplateProps {
   title: string;
