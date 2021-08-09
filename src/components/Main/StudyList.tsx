@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useMemo, ReactNode } from 'react';
-import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { useState } from 'react';
+import Img, { FluidObject } from 'gatsby-image';
 
 export type StudyType = {
   node: {
@@ -12,7 +12,9 @@ export type StudyType = {
       summary: string;
       description: string;
       studyimage: {
-        publicURL: string;
+        childImageSharp: {
+          fluid: FluidObject;
+        };
       };
     };
   };
@@ -53,15 +55,8 @@ width:250px;
   }
 `;
 
-type StudyItemProps = {
-  active: boolean;
-};
 
-type GatsbyLinkProps = {
-  children: ReactNode;
-  className?: string;
-  to: string;
-} & StudyItemProps;
+
 
 
 
@@ -100,9 +95,10 @@ const Description = styled.div`
   font-size: 15px;
 `;
 
-const StudyImage = styled.img`
-  height: 40px;
-  width: 40px;
+const StudyImage = styled(Img)`
+width: 100%;
+height: 200px;
+border-radius: 10px 10px 0 0;
 `;
 
 const StudyList: FunctionComponent<StudiesProps> = function ({
@@ -162,20 +158,11 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
         <SubStudyItem onClick={setjoonggeup}>중급알고리즘</SubStudyItem>
         <SubStudyItem onClick={setgogeup}>고급알고리즘</SubStudyItem>
       </StudyListWrapper>
-      {studyData.map(
-        ({
-          node: {
-            frontmatter: {
-              description,
-              summary,
-              studyimage: { publicURL }
-            },
-          },
-        }: StudyType) => (
+      {studyData.map(({ node: { id, frontmatter } }: StudyType) => (
           <StudyContainer>
-            <Summary>{summary}</Summary>
-            <Description>{description}</Description>
-            <StudyImage src={publicURL} />
+            <Summary>{frontmatter.summary}</Summary>
+            <Description>{frontmatter.description}</Description>
+            <StudyImage fluid={frontmatter.studyimage.childImageSharp.fluid} />
           </StudyContainer>
         ),
       )}
@@ -183,20 +170,11 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
         <SubStudyItem onClick={setMogakko}>모각코</SubStudyItem>
         <SubStudyItem onClick={setfree}>자율스터디</SubStudyItem>
       </StudyListWrapper>
-      {subStudyData.map(
-        ({
-          node: {
-            frontmatter: {
-              description,
-              summary,
-              studyimage: { publicURL }
-            },
-          },
-        }: StudyType) => (
+      {subStudyData.map(({ node: { id, frontmatter } }: StudyType) => (
           <StudyContainer>
-            <Summary>{summary}</Summary>
-            <Description>{description}</Description>
-            <StudyImage src={publicURL} />
+            <Summary>{frontmatter.summary}</Summary>
+            <Description>{frontmatter.description}</Description>
+            <StudyImage fluid={frontmatter.studyimage.childImageSharp.fluid} />
           </StudyContainer>
         ),
       )}

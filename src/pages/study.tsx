@@ -43,7 +43,16 @@ export const studyDataQuery = graphql`
             summary
             description
             studyimage{
-              publicURL
+              childImageSharp {
+                fluid(
+                  maxWidth: 768
+                  maxHeight: 200
+                  fit: INSIDE
+                  quality: 100
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
