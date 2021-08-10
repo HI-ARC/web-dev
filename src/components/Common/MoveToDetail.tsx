@@ -6,7 +6,11 @@ import DetailsIcon from '@material-ui/icons/Details';
 const useStyles = makeStyles((theme) => ({
   icon: {
     '& > *': {
-      margin: theme.spacing(2),
+      margin: theme.spacing(1),
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      ["@media (max-width: 600px)"]: { marginLeft: 80 },
     },
     color: '#233660',
     '&:hover': {
@@ -15,22 +19,19 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "transparent"
     },
     //textAlign: "center",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    ["@media (max-width: 600px)"]: { marginLeft: 80 },
+    //display: "flex",
+    //flexDirection: "column",
+    //alignItems: "center",
+    //["@media (max-width: 600px)"]: { marginLeft: 80 },
   },
 }));
 
-const handleClick = () => {
-};
-
-export default function IconButtons() {
+export default function IconButtons({ onClick }: {onClick:any}) {
     const classes = useStyles();
 
     return (
       <IconButton
-        onClick={handleClick}
+        onClick={onClick}
         className={classes.icon}
         aria-label="to detail"
         disableRipple
