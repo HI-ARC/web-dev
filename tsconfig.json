@@ -26,8 +26,7 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/**/*.tsx"
-  ],
+    "src/**/*.tsx", "src/pages/fullpage.js"],
   "exclude": [
     "node_modules"
   ]

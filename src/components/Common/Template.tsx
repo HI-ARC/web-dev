@@ -5,6 +5,7 @@ import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
 import PageTitle from 'components/Common/PageTitle';
 import Scroll from 'components/Common/Scroll';
+import BackButton from 'components/Common/BackButton';
 
 interface TemplateProps {
   title: string;
@@ -28,6 +29,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
       <PageTitle title={title} />
       {children}
       <Scroll showBelow={250} />
+      <BackButton showBelow={250} />
       <Footer />
     </Container>
   );

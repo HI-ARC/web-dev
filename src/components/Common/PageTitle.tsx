@@ -9,11 +9,11 @@ const PageTitleWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 80px;
+  height: 70px;
   color: #233660;
   font-weight: bolder;
-  font-size: 45px;
-  margin: 2.5em 75px 40px;
+  font-size: 42px;
+  margin: 2.0em 75px 10px;
 
   @media (max-width: 700px) {
     font-size: 35px;
