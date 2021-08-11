@@ -15,7 +15,7 @@ const PageTitleWrapper = styled.div`
   font-size: 42px;
   margin: 2.0em 75px 10px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 710px) {
     font-size: 37px;
   }
 `;
