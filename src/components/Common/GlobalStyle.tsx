@@ -23,6 +23,11 @@ const defaultStyle = css`
     text-decoration: none;
     cursor: pointer;
   }
+
+  span {
+    //color: #233660;
+    font-weight: 700;
+  }
 `;
 
 const GlobalStyle: FunctionComponent = function () {

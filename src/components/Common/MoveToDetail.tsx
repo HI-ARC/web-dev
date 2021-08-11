@@ -8,9 +8,9 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
       display: "flex",
-      flexDirection: "column",
+      flexDirection: "row",
+      justifyContent: "center",
       alignItems: "center",
-      ["@media (max-width: 600px)"]: { marginLeft: 80 },
     },
     color: '#233660',
     '&:hover': {
@@ -18,11 +18,6 @@ const useStyles = makeStyles((theme) => ({
       color: '#397BA6',
       backgroundColor: "transparent"
     },
-    //textAlign: "center",
-    //display: "flex",
-    //flexDirection: "column",
-    //alignItems: "center",
-    //["@media (max-width: 600px)"]: { marginLeft: 80 },
   },
 }));
 
