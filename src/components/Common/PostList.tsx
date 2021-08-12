@@ -31,6 +31,7 @@ const PostListWrapper = styled.div`
 
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
+    grid-gap: 70px;
     width: 500px;
     padding: 50px 20px;
   }

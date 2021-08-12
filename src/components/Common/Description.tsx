@@ -7,13 +7,10 @@ const DescriptionWrapper = styled.div`
   justify-content: center;
   align-items: center;
   color: black;
-  font-size: 30px;
+  font-size: 27px;
   line-height: 2;
   margin: 20px 120px;
-
-  @media (max-width: 1070px) {
-    font-size: 27px;
-  }
+  
   @media (max-width: 980px) {
     font-size: 25px;
   }
@@ -25,7 +22,7 @@ const Hidden = styled.p`
     display: block;
   }
   @media (max-width: 710px) {
-    font-size: 23px;
+    font-size: 22px;
     width: 430px;
   }
 `;

@@ -29,8 +29,12 @@ const Title = styled.div`
   margin: 10px auto;
   text-overflow: ellipsis;
   overflow-wrap: break-word;
-  font-size: 27px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 500;
+
+  @media (max-width: 980px) {
+    font-size: 20px;
+  }
 `;
 
 const Image = styled(Img)`

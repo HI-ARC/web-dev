@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
+import styled from '@emotion/styled';
 import ReactFullpage from "@fullpage/react-fullpage";
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Description from 'components/Common/Description';
@@ -12,6 +13,10 @@ import PostList from 'components/Common/PostList';
 import { graphql } from 'gatsby';
 
 import "../../src/styles.css";
+
+const FooterWrapper = styled.div`
+  text-align: initial;
+`;
 
 const anchors = ["firstPage", "secondPage", "thirdPage"];
 const pluginWrapper = () => {
@@ -48,7 +53,9 @@ const CommunicationPage = ({
           </div>
           <div className="section">       
             <PostList posts={edges} />
-            <Footer/>
+            <FooterWrapper>
+              <Footer/>
+            </FooterWrapper>
           </div>
         </div>
       );
