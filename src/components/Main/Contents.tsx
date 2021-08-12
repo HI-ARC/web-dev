@@ -19,6 +19,10 @@ const ContentsName = styled.div`
   margin-left: 8vw;
   font-weight: 700;
 
+  @media (min-width: 1400px) {
+    margin-left: calc(50% - 580px);
+  }
+
   @media (max-width: 680px) {
     font-size: 32px;
   }
