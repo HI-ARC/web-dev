@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
@@ -16,12 +16,17 @@ const HeaderWrapper = styled.div`
   z-index: 6;
   max-width: 100%;
   height: 70px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  //box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  transition: 'top 1s';
+  &.hide {
+    top: -70px;
+    transition: 'top 5s';
+  }
 `;
 
 const MenuBtn = styled.div`
@@ -78,13 +83,44 @@ const MenuItem = styled.div`
   }
 `;
 
-const Header = function () {
+const throttle = (callback, waitTime) => {
+  let timerId = null;
+  return e => {
+    if (timerId) return;
+    timerId = setTimeout(() => {
+      callback.call(this, e);
+      timerId = null;
+    }, waitTime);
+  };
+};
+
+const Header: FunctionComponent = () => {
+  const [hide, setHide] = useState(false);
+  const [pageY, setPageY] = useState(0);
+  const documentRef = useRef(document);
+
+  const handleScroll = () => {
+    const { pageYOffset } = window;
+    const deltaY = pageYOffset - pageY;
+    const hide = pageYOffset !== 0 && deltaY >= 0;
+    setHide(hide);
+    setPageY(pageYOffset);
+  };
+
+  const throttleScroll = throttle(handleScroll, 50);
+
+  useEffect(() => {
+    documentRef.current.addEventListener('scroll', throttleScroll);
+    return () =>
+      documentRef.current.removeEventListener('scroll', throttleScroll);
+  }, [pageY]);
+
   const [dropdown, setDropdown] = useState(false);
   const showDropdown = () => setDropdown(!dropdown);
 
   return (
     <>
-      <HeaderWrapper>
+      <HeaderWrapper className={hide ? 'hide' : ''}>
         <Logo />
         <LogoHoriz />
         <MenuBtn onClick={showDropdown}>
