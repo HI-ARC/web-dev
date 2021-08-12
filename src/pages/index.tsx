@@ -32,7 +32,6 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     allMarkdownRemark: { edges },
   },
 }) {
-  
   return (
     <Container>
       <GlobalStyle />

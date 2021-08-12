@@ -7,7 +7,8 @@ interface ContentsProps {
 
 const ContentsWrapper = styled.div`
   max-width: 100%;
-  height: 8vw;
+  height: 50px;
+  margin-bottom: 2.5vw;
   position: relative;
   display: flex;
   align-items: center;

@@ -1,16 +1,16 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
-import mainImage from '../../../contents/main_image.jpg';
+import mainImage from '../../../contents/main_image3.png';
 import GlobalFonts from '../../fonts/fonts';
 
 const BannerWrapper = styled.div`
   position: relative;
   display: flex;
-  width: 100%;
+  width: 60vw;
   height: 57vw;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 120px;
-  font-size: 16px;
-  padding: 0 5vw;
   margin-bottom: 30px;
 
   @media (min-width: 1400px) {
@@ -20,13 +20,13 @@ const BannerWrapper = styled.div`
   }
 
   @media (min-width: 1200px) {
-    padding: 0 calc(50% - 760px + 15vw);
-    // 이 값 수정해야하는데 이대로 두고 슬로건을 넣어도 될 거 같기도 함,,
+    width: 750px;
     height: 660px;
   }
 
   @media (max-width: 850px) {
     padding: 0;
+    margin-right: 0;
     height: 450px;
     margin-bottom: 50px;
     margin-top: 70px;
@@ -34,31 +34,32 @@ const BannerWrapper = styled.div`
 
   @media (max-width: 680px) {
     margin-bottom: 20px;
+    width: 100%;
   }
 `;
 
 const Slogan = styled.div`
   position: absolute;
-  //background-color: rgba(0, 0, 0, 0.7);
   color: #233660;
   font-size: 36px;
   z-index: 4;
   margin-top: 510px;
-  margin-left: -40px;
+  margin-left: -200px;
   font-weight: 500;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
 
   @media (max-width: 1350px) {
     display: none;
   }
-
 `;
 
 const MainImage = styled.img`
   position: absolute;
+  margin-left: -20%;
   width: 60vw;
 
   @media (min-width: 1200px) {
+    margin-left: -180px;
     width: 750px;
   }
 
@@ -72,7 +73,7 @@ const AboutWrapper = styled.div`
   width: 60vw;
   height: 45vw;
   margin-top: 70px;
-  margin-left: 30vw;
+  margin-left: 20%;
   padding: 2em 2em 0 2em;
   background-color: #233660;
   position: absolute;
@@ -84,8 +85,9 @@ const AboutWrapper = styled.div`
   }
 
   @media (min-width: 1200px) {
-    width: 770px;
+    width: 750px;
     height: 550px;
+    margin-left: 180px;
   }
 
   @media (max-width: 850px) {
@@ -118,30 +120,31 @@ const HiLine = styled.div`
 const HiLong = styled.div`
   font-size: 22px;
   font-weight: 350;
-  margin-bottom: 80px;
+  margin-bottom: 15%;
 
-  @media (min-width: 1000px) {
-    margin-bottom: 10vw;
+  @media (min-width: 1080px) {
+    margin-bottom: 139px;
   }
 
   @media (max-width: 850px) {
     margin-bottom: 90px;
   }
   @media (max-width: 680px) {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
   }
 `;
 
 const AboutHi = styled.div`
-  font-size: 20px;
+  letter-spacing: 0.3px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.8;
 
-  @media (min-width: 1400px) {
-    font-size: 27px;
+  @media (min-width: 1200px) {
+    font-size: 24px;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1200px) {
     font-size: 1.8vw;
   }
 
