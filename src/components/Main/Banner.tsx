@@ -44,7 +44,7 @@ const Slogan = styled.div`
   font-size: 36px;
   z-index: 4;
   margin-top: 510px;
-  margin-left: -200px;
+  margin-left: -265px;
   font-weight: 500;
   font-family: 'IBM Plex Mono', monospace;
 
