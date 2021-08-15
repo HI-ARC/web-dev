@@ -25,8 +25,10 @@ interface StudiesProps {
 }
 
 const StudyListWrapper = styled.div`
- width:1000px;
+ width:80%;
  display:flex;
+ place-items: center;
+ //background-color:yellow;
   }
 `;
 
@@ -41,10 +43,35 @@ width:250px;
  line-height:50px;
  font-weight:bold;
  font-size: 24px;
+ font-weight:600;
+ :hover{
+   color:white;
+   background-color:#233660;
+   
+ }
  color:${({ active }) => (active ? 'white' : 'black')};
  background-color:${({ active }) => (active ? '#233660' : 'white')};
  cursor: pointer;
- font-weight: ${({ active }) => (active ? '600' : '400')};
+ @media (max-width: 1200px) {
+  font-size: 22px;
+}
+@media (max-width: 1000px) {
+  font-size: 18px;
+}
+@media (max-width: 750px) {
+  width:56px;
+ height:56px;
+ border-radius: 28px;
+ color:white;
+ background-color:white;
+ font-size:0;
+ :hover{
+  background-color:#233660;
+  color:#233660;
+}
+color:${({ active }) => (active ? 'white' : 'black')};
+ background-color:${({ active }) => (active ? '#233660' : 'white')};
+}
   }
 `;
 
@@ -54,10 +81,14 @@ width:250px;
 
 
 const StudyWrapper = styled.div`
-  width: 1000px;
-  margin-left: 55px;
+  width: 100%;
+  height:100%;
+  margin-right: auto;
+  margin-left: auto;
   display:flex;
   flex-direction: column;
+ // background-color:red;
+  place-items: center;
   }
 `;
 
@@ -67,12 +98,14 @@ const StudyContainer = styled.div`
   flex-direction: column;
   display: flex;
   color: black;
+  //background-color:green;
 `;
 const StudyDataContainer = styled.div`
-  width: 1200px;
+  width: 80%;
   height: 400px;
   display: flex;
   color: black;
+ // background-color:blue;
 `;
 
 const Summary = styled.div`
@@ -80,29 +113,51 @@ const Summary = styled.div`
   height: 25%;
   display: flex;
   align-items: center;
-  font-size: 26px;
-  font-weight: 500;
-  padding-left: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  padding-left: 20px;
   padding-top: 10px;
+  @media (max-width: 1200px) {
+    font-size: 26px;
+  }
+  @media (max-width: 1100px) {
+    font-size: 22px;
+  }
+  
 `;
 
 const Description = styled.div`
   width: 100%;
-  height: 57%;
+  height: 60%;
   padding: 20px 25px 0 25px;
   line-height: 2;
-  font-size: 15px;
+  font-size: 25px;
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+  @media (max-width: 1100px) {
+    font-size: 18px;
+  }
+  
+  
 `;
 
 const StudyImageContainer = styled.div`
-width: 200px;
-height: 200px;
+width: 30%;
+margin: auto auto auto auto;
+height: 60%;
+@media (max-width: 1000px) {
+  display: none;
+}
+@media (max-width: 1200px) {
+  width: 500px;
+  height:240px;
+}
 `;
 
 const StudyImage = styled(Img)`
-width: 100%;
+width: 300px;
 height: 100%;
-border-radius: 10px 10px 0 0;
 `;
 
 const StudyList: FunctionComponent<StudiesProps> = function ({
