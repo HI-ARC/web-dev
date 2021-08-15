@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import logoImage from '../../../contents/hiarc_logo.svg';
 
 const LogoWrapper = styled.img`
-        background-color: black;
+  background-color: black;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -18,6 +18,12 @@ const LogoWrapper = styled.img`
 
   @media (min-width: 681px) {
     display: none;
+  }
+
+  @media (max-width: 500px) {
+    height: 9vw;
+    width: 9vw;
+    margin-left: 5vw;
   }
 `;
 
