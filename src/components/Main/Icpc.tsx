@@ -11,6 +11,10 @@ const IcpcWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   margin-bottom: 80px;
+
+  @media (max-width: 499px) {
+    margin-bottom: 15vw;
+  }
 `;
 
 const IcpcBox = styled.div`
@@ -45,6 +49,12 @@ const IcpcName = styled.div`
     font-size: 28px;
     height: 70px;
   }
+
+  @media (max-width: 499px) {
+    font-size: 6vw;
+    height: 15vw;
+    border-right: solid 3px #233660;
+  }
 `;
 
 const IcpcIntro = styled.div`
@@ -63,6 +73,10 @@ const IcpcIntro = styled.div`
   @media (max-width: 600px) {
     width: 65%;
   }
+
+  @media (max-width: 499px) {
+    font-size: 3.5vw;
+  }
 `;
 
 const Button = styled.div`
@@ -76,6 +90,12 @@ const Button = styled.div`
   justify-content: center;
   font-weight: 600;
   color: #233660;
+
+  @media (max-width: 499px) {
+    font-size: 3.3vw;
+    width: 38vw;
+    height: 45px;
+  }
 `;
 
 const Hidden = styled.p`
@@ -119,7 +139,7 @@ const Icpc: FunctionComponent = () => {
             onClick={() => window.open('https://icpc-sinchon.io/')}
             style={{ cursor: 'pointer' }}
           >
-            <div style={{ width: '100px' }}>ICPC 홈페이지</div>
+            <div>ICPC 홈페이지&nbsp;&nbsp;&nbsp;</div>
             <FontAwesomeIcon icon={faArrowRight} />
           </Button>
         </Below>

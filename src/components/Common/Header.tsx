@@ -28,7 +28,7 @@ const HeaderWrapper = styled.div`
     transition: 'top 5s';
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 499px) {
     height: 14vw;
   }
 `;

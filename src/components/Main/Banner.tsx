@@ -37,9 +37,9 @@ const BannerWrapper = styled.div`
     width: 100%;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 499px) {
     margin-top: 14vw;
-    height: 100vw;
+    height: 95vw;
   }
 `;
 
@@ -97,7 +97,7 @@ const AboutWrapper = styled.div`
 
   @media (max-width: 850px) {
     width: 650px;
-    height: 400px;
+    height: 420px;
     margin-left: calc(100% - 650px);
     margin-top: 30px;
   }
@@ -108,8 +108,9 @@ const AboutWrapper = styled.div`
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3);
   }
 
-  @media (max-width: 500px) {
-    height: 93vw;
+  @media (max-width: 499px) {
+    height: 87vw;
+    padding: 1.5em 1.5em 0 1.5em;
   }
 `;
 
@@ -118,19 +119,20 @@ const HiShort = styled.div`
   font-weight: 600;
   margin-bottom: 3px;
 
-  @media (max-width: 500px) {
-    font-size: 9vw;
+  @media (max-width: 499px) {
+    font-size: 8vw;
   }
 `;
 
 const HiLine = styled.div`
   background-color: white;
-  width: 128px;
+  width: 136px;
   height: 3px;
   margin-bottom: 12px;
 
-  @media (max-width: 500px) {
-    width: 31vw;
+  @media (max-width: 499px) {
+    width: 27.5vw;
+    height: 2.5px;
   }
 `;
 
@@ -150,8 +152,9 @@ const HiLong = styled.div`
     margin-bottom: 60px;
   }
 
-  @media (max-width: 500px) {
-    font-size: 4.5vw;
+  @media (max-width: 499px) {
+    margin-bottom: 15%;
+    font-size: 4.4vw;
   }
 `;
 
@@ -177,8 +180,8 @@ const AboutHi = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 500px) {
-    font-size: 3.8vw;
+  @media (max-width: 499px) {
+    font-size: 3.5vw;
   }
 `;
 
