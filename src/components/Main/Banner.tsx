@@ -36,6 +36,11 @@ const BannerWrapper = styled.div`
     margin-bottom: 20px;
     width: 100%;
   }
+
+  @media (max-width: 500px) {
+    margin-top: 14vw;
+    height: 100vw;
+  }
 `;
 
 const Slogan = styled.div`
@@ -102,12 +107,20 @@ const AboutWrapper = styled.div`
     margin: 0;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3);
   }
+
+  @media (max-width: 500px) {
+    height: 93vw;
+  }
 `;
 
 const HiShort = styled.div`
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 3px;
+
+  @media (max-width: 500px) {
+    font-size: 9vw;
+  }
 `;
 
 const HiLine = styled.div`
@@ -115,6 +128,10 @@ const HiLine = styled.div`
   width: 128px;
   height: 3px;
   margin-bottom: 12px;
+
+  @media (max-width: 500px) {
+    width: 31vw;
+  }
 `;
 
 const HiLong = styled.div`
@@ -131,6 +148,10 @@ const HiLong = styled.div`
   }
   @media (max-width: 680px) {
     margin-bottom: 60px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 4.5vw;
   }
 `;
 
@@ -154,6 +175,11 @@ const AboutHi = styled.div`
 
   @media (max-width: 680px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 3.8vw;
+  }
 `;
 
 const Banner: FunctionComponent = function () {
