@@ -12,6 +12,11 @@ const ContentsWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+
+  @media (max-width: 499px) {
+    height: 8vw;
+    margin-bottom: 4.5vw;
+  }
 `;
 
 const ContentsName = styled.div`
@@ -26,6 +31,10 @@ const ContentsName = styled.div`
 
   @media (max-width: 680px) {
     font-size: 32px;
+  }
+
+  @media (max-width: 499px) {
+    font-size: 7vw;
   }
 `;
 

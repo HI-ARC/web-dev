@@ -36,6 +36,11 @@ const BannerWrapper = styled.div`
     margin-bottom: 20px;
     width: 100%;
   }
+
+  @media (max-width: 499px) {
+    margin-top: 14vw;
+    height: 95vw;
+  }
 `;
 
 const Slogan = styled.div`
@@ -92,7 +97,7 @@ const AboutWrapper = styled.div`
 
   @media (max-width: 850px) {
     width: 650px;
-    height: 400px;
+    height: 420px;
     margin-left: calc(100% - 650px);
     margin-top: 30px;
   }
@@ -102,19 +107,33 @@ const AboutWrapper = styled.div`
     margin: 0;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3);
   }
+
+  @media (max-width: 499px) {
+    height: 87vw;
+    padding: 1.5em 1.5em 0 1.5em;
+  }
 `;
 
 const HiShort = styled.div`
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 3px;
+
+  @media (max-width: 499px) {
+    font-size: 8vw;
+  }
 `;
 
 const HiLine = styled.div`
   background-color: white;
-  width: 128px;
+  width: 136px;
   height: 3px;
   margin-bottom: 12px;
+
+  @media (max-width: 499px) {
+    width: 27.5vw;
+    height: 2.5px;
+  }
 `;
 
 const HiLong = styled.div`
@@ -131,6 +150,11 @@ const HiLong = styled.div`
   }
   @media (max-width: 680px) {
     margin-bottom: 60px;
+  }
+
+  @media (max-width: 499px) {
+    margin-bottom: 15%;
+    font-size: 4.4vw;
   }
 `;
 
@@ -154,6 +178,11 @@ const AboutHi = styled.div`
 
   @media (max-width: 680px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 499px) {
+    font-size: 3.5vw;
+  }
 `;
 
 const Banner: FunctionComponent = function () {

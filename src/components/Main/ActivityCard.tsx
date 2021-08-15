@@ -38,6 +38,10 @@ const CardWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
   }
+
+  @media (max-width: 499px) {
+    height: 670px;
+  }
 `;
 
 const Card = styled.div`
@@ -71,6 +75,11 @@ const Title = styled.div`
   @media (max-width: 1000px) {
     height: 33%;
   }
+
+  @media (max-width: 499px) {
+    font-size: 5.2vw;
+    font-weight: bold;
+  }
 `;
 
 const Introduction = styled.div`
@@ -83,6 +92,12 @@ const Introduction = styled.div`
   @media (max-width: 1000px) {
     padding-top: 3px;
     height: 37%;
+  }
+
+  @media (max-width: 499px) {
+    font-size: 3.2vw;
+    margin-bottom: 10px;
+    padding-top: 2%;
   }
 `;
 
@@ -99,29 +114,40 @@ const GoTo = styled.div`
     height: 30%;
     padding-bottom: 0;
   }
+
+  @media (max-width: 499px) {
+    font-size: 20px;
+  }
 `;
 
 const Circle = styled.div`
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: solid white;
+  border: 0.13em solid white;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 499px) {
+    width: 38px;
+    height: 38px;
+  }
 `;
 
 const ActivityCard: FunctionComponent<ActivitiesProps> = function ({
   activities,
 }) {
-  const activityData = useMemo(() =>
-    activities.filter(
-      ({
-        node: {
-          frontmatter: { categories },
-        },
-      }: ActivityType) => categories.includes('Activities'),
-    ),[]
+  const activityData = useMemo(
+    () =>
+      activities.filter(
+        ({
+          node: {
+            frontmatter: { categories },
+          },
+        }: ActivityType) => categories.includes('Activities'),
+      ),
+    [],
   );
   return (
     <CardWrapper>

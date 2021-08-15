@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect, useRef } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
@@ -27,6 +27,10 @@ const HeaderWrapper = styled.div`
     top: -70px;
     transition: 'top 5s';
   }
+
+  @media (max-width: 499px) {
+    height: 14vw;
+  }
 `;
 
 const MenuBtn = styled.div`
@@ -37,6 +41,11 @@ const MenuBtn = styled.div`
 
   @media (min-width: 601px) {
     display: none;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 5vw;
+    margin-right: 5vw;
   }
 `;
 //-------Sidebar-------//
@@ -50,6 +59,10 @@ const SidebarWrapper = styled.div`
 
   @media (min-width: 601px) {
     display: none;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 14vw;
   }
 `;
 
@@ -67,6 +80,10 @@ const MenuWrapper = styled.div`
   height: 240px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+
+  @media (max-width: 500px) {
+    height: 50vw;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -81,46 +98,19 @@ const MenuItem = styled.div`
   @media (min-width: 601px) {
     display: none;
   }
+
+  @media (max-width: 500px) {
+    font-size: 4.5vw;
+  }
 `;
 
-const throttle = (callback, waitTime) => {
-  let timerId = null;
-  return e => {
-    if (timerId) return;
-    timerId = setTimeout(() => {
-      callback.call(this, e);
-      timerId = null;
-    }, waitTime);
-  };
-};
-
 const Header: FunctionComponent = () => {
-  const [hide, setHide] = useState(false);
-  const [pageY, setPageY] = useState(0);
-  const documentRef = useRef(document);
-
-  const handleScroll = () => {
-    const { pageYOffset } = window;
-    const deltaY = pageYOffset - pageY;
-    const hide = pageYOffset !== 0 && deltaY >= 0;
-    setHide(hide);
-    setPageY(pageYOffset);
-  };
-
-  const throttleScroll = throttle(handleScroll, 50);
-
-  useEffect(() => {
-    documentRef.current.addEventListener('scroll', throttleScroll);
-    return () =>
-      documentRef.current.removeEventListener('scroll', throttleScroll);
-  }, [pageY]);
-
   const [dropdown, setDropdown] = useState(false);
   const showDropdown = () => setDropdown(!dropdown);
 
   return (
     <>
-      <HeaderWrapper className={hide ? 'hide' : ''}>
+      <HeaderWrapper>
         <Logo />
         <LogoHoriz />
         <MenuBtn onClick={showDropdown}>
