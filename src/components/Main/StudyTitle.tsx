@@ -14,7 +14,7 @@ const StudySubTitleWrapper = styled.div`
 const StudyTitle: FunctionComponent = function () {
   return (
     <StudySubTitleWrapper>
-      <p>HI-ARC의 알고리즘 로드맵</p>
+      <p>HI-ARC의 스터디</p>
     </StudySubTitleWrapper>
   );
 };
