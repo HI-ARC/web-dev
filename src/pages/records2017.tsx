@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import Template from 'components/Common/Template';
 import RecordList from 'components/Main/RecordList';
 import RecordContent from 'components/Main/RecordContent';
-import TableTemplate from 'components/Common/TableTemplate';
+import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80%;
-  height: 62vh;
-  margin-left: 8vw;
-  padding-top: 3vh;
+  height: 60vh;
+  margin-left: 10vw;
+  margin-top: 7vh;
   padding-bottom: -10vh;
   display: flex;
   flex-direction: row;
@@ -20,22 +20,23 @@ const RecordWrapper = styled.div`
   }
 `;
 const TableWrapper = styled.div`
-  width: 60vw;
-  margin-left: 1vw;
-  margin-top: 10px;
-  height: 55vh;
+  width: 65vw;
+  margin: 2vh 0px 0px 3vw;
+  height: 40vh;
   color: black;
   font-size: 21px;
   table {
     border-top: 1.25px solid #444444;
     table-layout: fixed;
     width: 95%;
+    margin-left: 1vw;
+    vertical-align : middle;
+    text-align: center;
+    
   }
   td {
-    text-align: center;
     padding-top: 2px;
     padding-bottom: 2.5px;
-
     border-collapse: collapse;
     white-space: normal;
   }
@@ -43,7 +44,7 @@ const TableWrapper = styled.div`
     width: 100%;
     height: 40vh;
     margin-left: 3vw;
-    margin-top: -10vh;
+    margin-top: -8vh;
     font-size: 20px;
   }
 `;
@@ -61,11 +62,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
               prize="Honorable Mention"

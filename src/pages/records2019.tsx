@@ -3,26 +3,25 @@ import styled from '@emotion/styled';
 import Template from 'components/Common/Template';
 import RecordList from 'components/Main/RecordList';
 import RecordContent from 'components/Main/RecordContent';
-import TableTemplate from 'components/Common/TableTemplate';
+import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80%;
   height: 40vh;
-  margin-left: 8vw;
-  padding-top: 3vh;
+  margin-left: 10vw;
+  margin-top: 7vh;
   padding-bottom: -10vh;
   display: flex;
   flex-direction: row;
   @media (max-width: 750px) {
-    height: 40vh;
+    height: 35vh;
     margin-left: 10%;
     display: grid;
   }
 `;
 const TableWrapper = styled.div`
-  width: 60vw;
-  margin-left: 1vw;
-  margin-top: 10px;
+  width: 65vw;
+  margin: 2vh 0px 0px 3vw;
   height: 40vh;
   color: black;
   font-size: 21px;
@@ -30,9 +29,12 @@ const TableWrapper = styled.div`
     border-top: 1.25px solid #444444;
     table-layout: fixed;
     width: 95%;
+    margin-left: 1vw;
+    vertical-align : middle;
+    text-align: center;
+    
   }
   td {
-    text-align: center;
     padding-top: 2px;
     padding-bottom: 2.5px;
     border-collapse: collapse;
@@ -42,10 +44,11 @@ const TableWrapper = styled.div`
     width: 100%;
     height: 40vh;
     margin-left: 3vw;
-    margin-top: -10vh;
+    margin-top: -8vh;
     font-size: 20px;
   }
 `;
+
 
 const RecordPage: FunctionComponent = () => {
   return (
@@ -61,11 +64,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
               prize="35"
@@ -83,11 +82,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
               prize="32"
@@ -105,11 +100,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
               prize="16"
