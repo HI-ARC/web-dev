@@ -20,19 +20,23 @@ const TitleWrapper = styled.div`
   width: 180px;
   display: flex;
   flex-direction: row;
+  @media (max-width: 750px) {
+    margin-left:4vw;
+  }
 `;
 
 const Title = styled.div`
   width: 90%;
   height: 30%;
   display: flex;
-  font-size: 26px;
-  font-weight: 475;
+  font-size: 27px;
+  font-weight: 600;
   padding-top: 10px;
   margin-left: 20px;
   margin-bottom: 20px;
+  color: #233660;
   @media (max-width: 750px) {
-    font-size: 24px;
+    font-size: 26px;
     white-space: nowrap;
   }
 `;

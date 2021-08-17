@@ -3,28 +3,56 @@ import styled from '@emotion/styled';
 import Template from 'components/Common/Template';
 import RecordList from 'components/Main/RecordList';
 import RecordContent from 'components/Main/RecordContent';
-import TableTemplate from 'components/Common/TableTemplate';
+import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80%;
-  height: 40vh;
-  margin-left: 8vw;
-  padding-top: 3vh;
+  height: 35vh;
+  margin-left: 10vw;
+  margin-top: 7vh;
   padding-bottom: -10vh;
   display: flex;
   flex-direction: row;
   @media (max-width: 750px) {
-    height: 40vh;
-    margin-left: 10%;
+    height: 30vh;
+    margin-left: 10vw;
     display: grid;
   }
 `;
-
+const TableWrapper = styled.div`
+  width: 65vw;
+  margin: 2vh 0px 0px 3vw;
+  height: 40vh;
+  color: black;
+  font-size: 21px;
+  table {
+    border-top: 1.25px solid #444444;
+    table-layout: fixed;
+    width: 95%;
+    margin-left: 1vw;
+    vertical-align : middle;
+    text-align: center;
+    
+  }
+  td {
+    padding-top: 2px;
+    padding-bottom: 2.5px;
+    border-collapse: collapse;
+    white-space: normal;
+  }
+  @media (max-width: 750px) {
+    width: 100%;
+    height: 40vh;
+    margin-left: 3vw;
+    margin-top: -8vh;
+    font-size: 20px;
+  }
+`;
 const RecordWrapperExtra = styled.div`
-  width: 80%;
+  width: 80%;  
   height: 60vh;
-  margin-left: 8vw;
-  padding-top: 3vh;
+  margin-left: 10vw;
+  margin-top: 5vh;
   padding-bottom: -10vh;
   display: flex;
   flex-direction: row;
@@ -35,33 +63,6 @@ const RecordWrapperExtra = styled.div`
   }
 `;
 
-const TableWrapper = styled.div`
-  width: 60vw;
-  margin-left: 1vw;
-  margin-top: 10px;
-  height: 55vh;
-  color: black;
-  font-size: 21px;
-  table {
-    table-layout: fixed;
-    width: 95%;
-    border-top: 1.25px solid #444444;
-  }
-  td {
-    text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2.5px;
-    border-collapse: collapse;
-    white-space: normal;
-  }
-  @media (max-width: 750px) {
-    width: 100%;
-    height: 40vh;
-    margin-left: 3vw;
-    margin-top: -10vh;
-    font-size: 20px;
-  }
-`;
 
 const RecordPage: FunctionComponent = () => {
   return (
@@ -77,11 +78,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
               prize="28"
@@ -99,11 +96,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
 
             <TableTemplate
@@ -122,11 +115,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
               prize="8"
@@ -144,11 +133,7 @@ const RecordPage: FunctionComponent = () => {
           ></RecordContent>
           <TableWrapper>
             <tr>
-              <TableTemplate
-                prize="🏆"
-                team="TEAM"
-                member="MEMBER"
-              ></TableTemplate>
+            <CreateHeader></CreateHeader>
             </tr>
 
             <TableTemplate
@@ -160,7 +145,7 @@ const RecordPage: FunctionComponent = () => {
             <TableTemplate
               prize="6 "
               team="안녕히계세요여러분전이세상의모든굴레와속박을벗어던지고제행복을찾아떠납니다여러분도행복하세요 "
-              member="고민재, 권예빈, 권찬"
+              member= "고민재, 권예빈, 권찬"
             ></TableTemplate>
 
             <TableTemplate
