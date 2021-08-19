@@ -64,7 +64,7 @@ const MainImage = styled.img`
   width: 60vw;
 
   @media (min-width: 1200px) {
-    margin-left: -180px;
+    margin-left: -175px;
     width: 750px;
   }
 
@@ -92,7 +92,7 @@ const AboutWrapper = styled.div`
   @media (min-width: 1200px) {
     width: 750px;
     height: 550px;
-    margin-left: 180px;
+    margin-left: 185px;
   }
 
   @media (max-width: 850px) {
