@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import DetailsIcon from '@material-ui/icons/Details';
+import DetailsRoundedIcon from '@material-ui/icons/DetailsRounded';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
     '& > *': {
-      margin: theme.spacing(1),
+      margin: theme.spacing(3),
       display: "flex",
       flexDirection: "row",
       justifyContent: "center",
@@ -31,7 +31,7 @@ export default function IconButtons({ onClick }: {onClick:any}) {
         aria-label="to detail"
         disableRipple
       >
-        <DetailsIcon style={{ fontSize: 65 }}/>
+        <DetailsRoundedIcon style={{ fontSize: 65 }}/>
       </IconButton>
     );
 }
