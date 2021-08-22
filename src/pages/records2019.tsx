@@ -49,6 +49,21 @@ const TableWrapper = styled.div`
   }
 `;
 
+const TableDivider = styled.div`
+  margin-top: 3vh;
+  margin-left: -18vw;
+  width: 80vw;
+  height: 0.25px;
+  background-color: #233660;
+  @media (max-width: 750px) {
+    width: 95%;
+    background-color: white;
+    border-bottom: 1.5px dashed;
+    margin-left: 1vw;
+    margin-top: 3vh;
+  }
+`;
+
 
 const RecordPage: FunctionComponent = () => {
   return (
@@ -71,6 +86,7 @@ const RecordPage: FunctionComponent = () => {
               team=" 삼성님들충성충성^^7 "
               member="김종욱, 정연두, 정윤석"
             ></TableTemplate>
+           <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*UCPC 2019 본선*/}
@@ -89,6 +105,7 @@ const RecordPage: FunctionComponent = () => {
               team=" 삼성님들충성충성^^7 "
               member="김종욱, 정연두, 정윤석"
             ></TableTemplate>
+            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*ACM-ICPC Seoul Regional*/}

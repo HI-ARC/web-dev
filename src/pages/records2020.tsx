@@ -63,6 +63,20 @@ const RecordWrapperExtra = styled.div`
   }
 `;
 
+const TableDivider = styled.div`
+  margin-top: 3vh;
+  margin-left: -18vw;
+  width: 80vw;
+  height: 0.25px;
+  background-color: #233660;
+  @media (max-width: 750px) {
+    width: 95%;
+    background-color: white;
+    border-bottom: 1.5px dashed;
+    margin-left: 1vw;
+    margin-top: 3vh;
+  }
+`;
 
 const RecordPage: FunctionComponent = () => {
   return (
@@ -85,6 +99,7 @@ const RecordPage: FunctionComponent = () => {
               team="율촌 "
               member="정연두, 김효원, 정재현"
             ></TableTemplate>
+            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*UCPC 2020 본선*/}
@@ -104,6 +119,7 @@ const RecordPage: FunctionComponent = () => {
               team="율촌 "
               member="정연두, 김효원, 정재현"
             ></TableTemplate>
+            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*SUAPC 2020 Summer - Div. 1*/}
@@ -122,6 +138,7 @@ const RecordPage: FunctionComponent = () => {
               team="사과는 맛있어 "
               member="김경근, 정재현, 백지웅"
             ></TableTemplate>
+            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*SUAPC 2020 Summer - Div. 2*/}

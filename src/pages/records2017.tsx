@@ -49,6 +49,21 @@ const TableWrapper = styled.div`
   }
 `;
 
+const TableDivider = styled.div`
+  margin-top: 3vh;
+  margin-left: -18vw;
+  width: 80vw;
+  height: 0.25px;
+  background-color: #233660;
+  @media (max-width: 750px) {
+    background-color: white;
+    border-bottom: 1.5px dashed;
+    margin-left: 1vw;
+    margin-top: 3vh;
+  }
+`;
+
+
 const RecordPage: FunctionComponent = () => {
   return (
     <>
@@ -65,10 +80,12 @@ const RecordPage: FunctionComponent = () => {
             <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
-              prize="Honorable Mention"
+              prize="HM"
               team=" Hon Gik Univ "
               member="장영석, 정윤석, 문준오"
             ></TableTemplate>
+            <br/>
+            <p style={{color:`gray`}}> &nbsp;&nbsp;&nbsp;&nbsp;* HM = Honorable Mention</p>
           </TableWrapper>
         </RecordWrapper>
       </Template>

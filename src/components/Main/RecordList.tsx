@@ -22,7 +22,9 @@ const RecordsDescription=styled.div`
   font-size:22px;
   letter-spacing:1.5px;
   line-height:150%;
-
+  @media (max-width: 1030px) {
+    font-size: 18px;
+  }
   @media (max-width: 750px) {
     display: none;
   }
