@@ -49,6 +49,22 @@ const TableWrapper = styled.div`
   }
 `;
 
+const TableDivider = styled.div`
+  margin-top: 3vh;
+  margin-left: -18vw;
+  width: 80vw;
+  height: 0.25px;
+  background-color: #233660;
+  @media (max-width: 750px) {
+    width: 95%;
+    background-color: white;
+    border-bottom: 1.5px dashed;
+    margin-left: 1vw;
+    margin-top: 3vh;
+  }
+`;
+
+
 const RecordPage: FunctionComponent = () => {
   return (
     <>
@@ -70,6 +86,7 @@ const RecordPage: FunctionComponent = () => {
               team=" 개인 "
               member="정연두"
             ></TableTemplate>
+            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*카카오 코드 페스티벌*/}
@@ -88,6 +105,7 @@ const RecordPage: FunctionComponent = () => {
               team=" 개인 "
               member="정연두"
             ></TableTemplate>
+            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*UCPC 예선*/}
@@ -106,6 +124,7 @@ const RecordPage: FunctionComponent = () => {
               team=" KodingWarrior Squad "
               member="이재열, 문준오, 정연두"
             ></TableTemplate>
+            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
         {/*ACM-ICPC Seoul Regional*/}
@@ -120,10 +139,12 @@ const RecordPage: FunctionComponent = () => {
             <CreateHeader></CreateHeader>
             </tr>
             <TableTemplate
-              prize="Honorable Mention"
+              prize="HM"
               team=" bye-arc "
               member="김민균, 김형석, 유지혁 "
-            ></TableTemplate>
+            ></TableTemplate> 
+            <br/>
+            <p style={{color:`gray`}}> &nbsp;&nbsp;&nbsp;&nbsp;* HM = Honorable Mention</p>
           </TableWrapper>
         </RecordWrapper>
       </Template>

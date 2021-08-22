@@ -7,7 +7,7 @@ import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80%;
-  height: 60vh;
+  height: 40vh;
   margin-left: 10vw;
   margin-top: 7vh;
   padding-bottom: -10vh;
@@ -18,6 +18,7 @@ const RecordWrapper = styled.div`
     margin-left: 10%;
     display: grid;
   }
+
 `;
 const TableWrapper = styled.div`
   width: 65vw;
@@ -25,6 +26,7 @@ const TableWrapper = styled.div`
   height: 40vh;
   color: black;
   font-size: 21px;
+  
   table {
     border-top: 1.25px solid #444444;
     table-layout: fixed;
@@ -45,6 +47,21 @@ const TableWrapper = styled.div`
     margin-left: 3vw;
     margin-top: -8vh;
     font-size: 20px;
+  }
+`;
+
+const TableDivider = styled.div`
+  margin-top: 3vh;
+  margin-left: -18vw;
+  width: 80vw;
+  height: 0.25px;
+  background-color: #233660;
+  @media (max-width: 750px) {
+    width: 95;
+    background-color: white;
+    border-bottom: 1.5px dashed;
+    margin-left: 1vw;
+    margin-top: 3vh;
   }
 `;
 

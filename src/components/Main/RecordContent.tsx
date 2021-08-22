@@ -38,6 +38,7 @@ const Title = styled.div`
   @media (max-width: 750px) {
     font-size: 26px;
     white-space: nowrap;
+    width: 30vh;
   }
 `;
 
@@ -61,7 +62,7 @@ const Scoreboard = styled.div`
   height: 30%;
   font-size: 22px;
   padding-top: 12px;
-  margin-left: -80px;
+  margin-left: -3vw;
   color: gray;
   :hover {
     color: black;

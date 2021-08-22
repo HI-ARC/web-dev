@@ -1,0 +1,27 @@
+{
+    "year": 2020,
+    "contests":[
+        {
+            "contest_title":"SUAPC 2021 Summer",
+            "records":[
+                {
+                    "prize": 1,
+                    "team":"안녕히계세요여러분",
+                    "member":"김홍익, 이컴공, 박개츠비"
+                }
+            ]
+        },
+        {
+            "contest_title":"테스트용",
+            "records":[
+                {
+                    "prize":2,
+                    "team": "테스트용 팀입니다",
+                    "member": "ajkfj,akjfoqijfoi,a라ㅐ버ㅏㅐ절"
+                }
+            ]
+        }
+    ]
+    [{
+    "year:  "
+},]}
