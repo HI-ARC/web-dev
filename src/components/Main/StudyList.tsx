@@ -28,8 +28,10 @@ const StudyListWrapper = styled.div`
  width:80%;
  display:flex;
  place-items: center;
+ 
  //background-color:yellow;
   }
+  
 `;
 
 
@@ -61,13 +63,11 @@ width:250px;
 @media (max-width: 750px) {
   width:56px;
  height:56px;
- border-radius: 28px;
- color:white;
+ border-radius: 16px;
  background-color:white;
- font-size:0;
  :hover{
   background-color:#233660;
-  color:#233660;
+  color:white;
 }
 color:${({ active }) => (active ? 'white' : 'black')};
  background-color:${({ active }) => (active ? '#233660' : 'white')};
@@ -75,9 +75,24 @@ color:${({ active }) => (active ? 'white' : 'black')};
   }
 `;
 
+const StudyLine = styled.div`
+  width: 80%;
+  height:1px;
+  border: 2px solid #233660;
+  margin-bottom:60px;
+  
+`;
+
+const StudyCategory = styled.div`
+  width:80%;
+  height:30px;
+  font-size:28px;
+  color:#233660;
+  font-weight:bold;
+  margin:0 0 20px 40px;
 
 
-
+`;
 
 
 const StudyWrapper = styled.div`
@@ -102,14 +117,13 @@ const StudyContainer = styled.div`
 `;
 const StudyDataContainer = styled.div`
   width: 80%;
-  height: 400px;
+  height: 500px;
   display: flex;
   color: black;
- // background-color:blue;
+ // background-color:blue; 
 `;
 
-const Summary = styled.div`
-  width: 100%;
+const Summary = styled.div` 
   height: 25%;
   display: flex;
   align-items: center;
@@ -154,6 +168,17 @@ height: 60%;
   height:240px;
 }
 `;
+const StudyTitleLong = styled.div`
+@media (max-width: 750px) {
+  display: none;
+}
+`;
+const StudyTitleShort = styled.div`
+@media (min-width: 750px) {
+  display: none;
+}
+`;
+
 
 const StudyImage = styled(Img)`
 width: 300px;
@@ -211,11 +236,13 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
 
   return (
     <StudyWrapper>
+      <StudyCategory>Algorithm</StudyCategory>
       <StudyListWrapper>
-        <SubStudyItem onClick={setgicho} active={Study==="기초프로그래밍"}>기초프로그래밍</SubStudyItem>
-        <SubStudyItem onClick={setchogeup} active={Study==="초급알고리즘"}>초급알고리즘</SubStudyItem>
-        <SubStudyItem onClick={setjoonggeup} active={Study==="중급알고리즘"}>중급알고리즘</SubStudyItem>
-        <SubStudyItem onClick={setgogeup} active={Study==="고급알고리즘"}>고급알고리즘</SubStudyItem>
+        
+        <SubStudyItem onClick={setgicho} active={Study==="기초프로그래밍"}><StudyTitleLong>기초프로그래밍</StudyTitleLong><StudyTitleShort>기초</StudyTitleShort></SubStudyItem>
+        <SubStudyItem onClick={setchogeup} active={Study==="초급알고리즘"}><StudyTitleLong>초급알고리즘</StudyTitleLong><StudyTitleShort>초급</StudyTitleShort></SubStudyItem>
+        <SubStudyItem onClick={setjoonggeup} active={Study==="중급알고리즘"}><StudyTitleLong>중급알고리즘</StudyTitleLong><StudyTitleShort>중급</StudyTitleShort></SubStudyItem>
+        <SubStudyItem onClick={setgogeup} active={Study==="고급알고리즘"}><StudyTitleLong>고급알고리즘</StudyTitleLong><StudyTitleShort>고급</StudyTitleShort></SubStudyItem>
       </StudyListWrapper>
       {studyData.map(({ node: { id, frontmatter } }: StudyType) => (
         <StudyDataContainer>
@@ -229,9 +256,11 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
           </StudyDataContainer>
         ),
       )}
+      <StudyLine/>
+      <StudyCategory>Other Study</StudyCategory>
       <StudyListWrapper>
         <SubStudyItem onClick={setMogakko} active={subStudy==="모각코"}>모각코</SubStudyItem>
-        <SubStudyItem onClick={setfree} active={subStudy==="자율스터디"}>자율스터디</SubStudyItem>
+        <SubStudyItem onClick={setfree} active={subStudy==="자율스터디"}><StudyTitleLong>자율스터디</StudyTitleLong><StudyTitleShort>자율</StudyTitleShort></SubStudyItem>
       </StudyListWrapper>
       {subStudyData.map(({ node: { id, frontmatter } }: StudyType) => (
         <StudyDataContainer>

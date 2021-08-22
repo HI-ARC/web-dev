@@ -9,10 +9,17 @@ const DescriptionWrapper = styled.div`
   color: black;
   font-size: 27px;
   line-height: 2;
-  margin: 20px 120px;
+  margin: 130px 120px 40px;
   
   @media (max-width: 980px) {
     font-size: 25px;
+    margin: 140px 120px 50px;
+  }
+  @media (max-width: 920px) {
+    margin: 100px 120px 40px;
+  }
+    @media (max-width: 710px) {
+    margin: 140px 120px 60px;
   }
 `;
 

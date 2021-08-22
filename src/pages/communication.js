@@ -5,7 +5,6 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Description from 'components/Common/Description';
 import MoveToDetail from 'components/Common/MoveToDetail';
-//import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
 import PageTitle from 'components/Common/PageTitle';
@@ -30,12 +29,10 @@ const CommunicationPage = ({
 }) => (
   <ReactFullpage
     scrollOverflow={true}
-    //scrollingSpeed={700}
     pluginWrapper={pluginWrapper}
     anchors={anchors}
     navigation
     navigationTooltips={anchors}
-    //sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
     onLeave={(origin, destination, direction) => {
       console.log("onLeave event", { origin, destination, direction });
     }}
@@ -43,7 +40,7 @@ const CommunicationPage = ({
       console.log("render prop change", state, fullpageApi); // eslint-disable-line no-console
 
       return (
-        <div>
+        <>
           <GlobalStyle />        
           <div className="section">
             <Header />
@@ -57,7 +54,7 @@ const CommunicationPage = ({
               <Footer/>
             </FooterWrapper>
           </div>
-        </div>
+        </>
       );
     }}
   />
