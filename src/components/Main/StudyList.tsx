@@ -34,9 +34,7 @@ const StudyListWrapper = styled.div`
   
 `;
 
-
-
-const SubStudyItem = styled.button`
+const StudyItem = styled.button`
 width:250px;
  height:50px;
  margin: 20px;
@@ -60,11 +58,51 @@ width:250px;
 @media (max-width: 1000px) {
   font-size: 18px;
 }
-@media (max-width: 750px) {
-  width:56px;
- height:56px;
+@media (max-width: 770px) {
+  font-size: 16px;
+}
+@media (max-width: 770px) {
+  width:50px;
+ height:50px;
  border-radius: 16px;
  background-color:white;
+ font-weight:bold;
+ :hover{
+  background-color:#233660;
+  color:white;
+}
+color:${({ active }) => (active ? 'white' : 'black')};
+ background-color:${({ active }) => (active ? '#233660' : 'white')};
+}
+  }
+`;
+
+
+const SubStudyItem = styled.button`
+width:250px;
+ height:50px;
+ margin: 20px;
+ border:2px solid #233660;
+ text-align: center;
+ line-height:50px;
+ font-weight:bold;
+ font-size: 24px;
+ font-weight:600;
+ :hover{
+   color:white;
+   background-color:#233660;
+   
+ }
+ color:${({ active }) => (active ? 'white' : 'black')};
+ background-color:${({ active }) => (active ? '#233660' : 'white')};
+ cursor: pointer;
+
+@media (max-width: 770px) {
+  width:100px;
+ height:50px;
+ border-radius: 16px;
+ background-color:white;
+ font-weight:bold;
  :hover{
   background-color:#233660;
   color:white;
@@ -157,9 +195,10 @@ const Description = styled.div`
 `;
 
 const StudyImageContainer = styled.div`
-width: 30%;
-margin: auto auto auto auto;
-height: 60%;
+width: 600px;
+margin: auto auto auto 30px;
+height: 400px%;
+//background-color:red;
 @media (max-width: 1000px) {
   display: none;
 }
@@ -169,19 +208,19 @@ height: 60%;
 }
 `;
 const StudyTitleLong = styled.div`
-@media (max-width: 750px) {
+@media (max-width: 770px) {
   display: none;
 }
 `;
 const StudyTitleShort = styled.div`
-@media (min-width: 750px) {
+@media (min-width: 770px) {
   display: none;
 }
 `;
 
 
 const StudyImage = styled(Img)`
-width: 300px;
+width: 100%;
 height: 100%;
 `;
 
@@ -239,10 +278,10 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
       <StudyCategory>Algorithm</StudyCategory>
       <StudyListWrapper>
         
-        <SubStudyItem onClick={setgicho} active={Study==="기초프로그래밍"}><StudyTitleLong>기초프로그래밍</StudyTitleLong><StudyTitleShort>기초</StudyTitleShort></SubStudyItem>
-        <SubStudyItem onClick={setchogeup} active={Study==="초급알고리즘"}><StudyTitleLong>초급알고리즘</StudyTitleLong><StudyTitleShort>초급</StudyTitleShort></SubStudyItem>
-        <SubStudyItem onClick={setjoonggeup} active={Study==="중급알고리즘"}><StudyTitleLong>중급알고리즘</StudyTitleLong><StudyTitleShort>중급</StudyTitleShort></SubStudyItem>
-        <SubStudyItem onClick={setgogeup} active={Study==="고급알고리즘"}><StudyTitleLong>고급알고리즘</StudyTitleLong><StudyTitleShort>고급</StudyTitleShort></SubStudyItem>
+        <StudyItem onClick={setgicho} active={Study==="기초프로그래밍"}><StudyTitleLong>기초프로그래밍</StudyTitleLong><StudyTitleShort>기초</StudyTitleShort></StudyItem>
+        <StudyItem onClick={setchogeup} active={Study==="초급알고리즘"}><StudyTitleLong>초급알고리즘</StudyTitleLong><StudyTitleShort>초급</StudyTitleShort></StudyItem>
+        <StudyItem onClick={setjoonggeup} active={Study==="중급알고리즘"}><StudyTitleLong>중급알고리즘</StudyTitleLong><StudyTitleShort>중급</StudyTitleShort></StudyItem>
+        <StudyItem onClick={setgogeup} active={Study==="고급알고리즘"}><StudyTitleLong>고급알고리즘</StudyTitleLong><StudyTitleShort>고급</StudyTitleShort></StudyItem>
       </StudyListWrapper>
       {studyData.map(({ node: { id, frontmatter } }: StudyType) => (
         <StudyDataContainer>

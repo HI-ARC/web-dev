@@ -5,7 +5,7 @@ interface RecordProps {}
 
 const ContestWrapper = styled.div`
   width: 200px;
-  height: 100px;
+  height: 130px;
   color: black;
   margin-bottom: 10px;
 `;
@@ -18,6 +18,7 @@ const LinkWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   width: 180px;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   @media (max-width: 750px) {
