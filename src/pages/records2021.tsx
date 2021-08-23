@@ -57,7 +57,7 @@ const TableDivider = styled.div`
   height: 0.25px;
   background-color: #233660;
   @media (max-width: 750px) {
-    width: 95;
+    width: 95%;
     background-color: white;
     border-bottom: 1.5px dashed;
     margin-left: 1vw;

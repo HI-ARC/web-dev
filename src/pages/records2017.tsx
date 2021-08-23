@@ -7,7 +7,7 @@ import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80%;
-  height: 60vh;
+  height: 30vh;
   margin-left: 10vw;
   margin-top: 7vh;
   padding-bottom: -10vh;

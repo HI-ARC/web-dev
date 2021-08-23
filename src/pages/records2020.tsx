@@ -7,7 +7,7 @@ import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80%;
-  height: 35vh;
+  height: 30vh;
   margin-left: 10vw;
   margin-top: 7vh;
   padding-bottom: -10vh;
@@ -65,16 +65,16 @@ const RecordWrapperExtra = styled.div`
 
 const TableDivider = styled.div`
   margin-top: 3vh;
-  margin-left: -18vw;
+  margin-left: 10vw;
   width: 80vw;
   height: 0.25px;
   background-color: #233660;
   @media (max-width: 750px) {
-    width: 95%;
+    width: 78%;
     background-color: white;
     border-bottom: 1.5px dashed;
-    margin-left: 1vw;
-    margin-top: 3vh;
+    margin-left: 14vw;
+    margin-top: 1.5vh;
   }
 `;
 
@@ -99,9 +99,11 @@ const RecordPage: FunctionComponent = () => {
               team="율촌 "
               member="정연두, 김효원, 정재현"
             ></TableTemplate>
-            <TableDivider></TableDivider>
+            
           </TableWrapper>
+          
         </RecordWrapper>
+        <TableDivider></TableDivider>
         {/*UCPC 2020 본선*/}
         <RecordWrapper>
           <RecordContent
@@ -119,9 +121,9 @@ const RecordPage: FunctionComponent = () => {
               team="율촌 "
               member="정연두, 김효원, 정재현"
             ></TableTemplate>
-            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
+        <TableDivider></TableDivider>
         {/*SUAPC 2020 Summer - Div. 1*/}
         <RecordWrapper>
           <RecordContent
@@ -138,9 +140,9 @@ const RecordPage: FunctionComponent = () => {
               team="사과는 맛있어 "
               member="김경근, 정재현, 백지웅"
             ></TableTemplate>
-            <TableDivider></TableDivider>
           </TableWrapper>
         </RecordWrapper>
+        <TableDivider></TableDivider>
         {/*SUAPC 2020 Summer - Div. 2*/}
         <RecordWrapperExtra>
           <RecordContent
