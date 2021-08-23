@@ -43,8 +43,7 @@ const RecordsDescriptionShort=styled.div`
 `;
 
 const Button = styled.button`
-  padding: 8px 10px;
-  margin-right: 14px;
+  padding: 1vh 1.25vw;
   font-size: 32px;
   font-color: black;
   border: none;
@@ -56,34 +55,25 @@ const Button = styled.button`
   }
   @media (max-width: 750px) {
     font-size: 24px;
+    padding: 0.75vh 1vw;
   }
 `;
 
 const RecordListWrapper = styled.div`
-  width: 80%;
+  width: 80vw;
+  height: 12vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
-  margin-left: 8.2vw;
+  margin-left: 8.4vw;
   margin-top: 2vh;
+  border-bottom: 3px solid #233660;
   @media (max-width: 750px) {
-    margin-left: 14vw;
-    margin-top: 1vh;
+    width: 70vw;
+    margin-left: 12vw;
   }
 `;
 
-const Divider = styled.div`
-  margin-top: 2vh;
-  margin-left: 8vw;
-  border-radius: 60px;
-  width: 80vw;
-  height: 3px;
-  background-color: #233660;
-  @media (max-width: 750px) {
-    margin-left: 12vw;
-    margin-top: 1vh;
-  }
-`;
 
 const RecordList: FunctionComponent = function () {
   return (
@@ -114,7 +104,6 @@ const RecordList: FunctionComponent = function () {
           <Link to="/records2017">2017</Link>
         </Button>
       </RecordListWrapper>
-      <Divider></Divider>
     </>
   );
 };

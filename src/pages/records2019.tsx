@@ -7,15 +7,15 @@ import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80%;
-  height: 40vh;
+  height: 30vh;
   margin-left: 10vw;
   margin-top: 7vh;
   padding-bottom: -10vh;
   display: flex;
   flex-direction: row;
   @media (max-width: 750px) {
-    height: 35vh;
-    margin-left: 10%;
+    height: 30vh;
+    margin-left: 10vw;
     display: grid;
   }
 `;
@@ -51,19 +51,18 @@ const TableWrapper = styled.div`
 
 const TableDivider = styled.div`
   margin-top: 3vh;
-  margin-left: -18vw;
+  margin-left: 10vw;
   width: 80vw;
   height: 0.25px;
   background-color: #233660;
   @media (max-width: 750px) {
-    width: 95%;
+    width: 78%;
     background-color: white;
     border-bottom: 1.5px dashed;
-    margin-left: 1vw;
-    margin-top: 3vh;
+    margin-left: 14vw;
+    margin-top: 1.5vh;
   }
 `;
-
 
 const RecordPage: FunctionComponent = () => {
   return (
@@ -86,9 +85,10 @@ const RecordPage: FunctionComponent = () => {
               team=" 삼성님들충성충성^^7 "
               member="김종욱, 정연두, 정윤석"
             ></TableTemplate>
-           <TableDivider></TableDivider>
+           
           </TableWrapper>
         </RecordWrapper>
+        <TableDivider></TableDivider>
         {/*UCPC 2019 본선*/}
         <RecordWrapper>
           <RecordContent
@@ -105,9 +105,10 @@ const RecordPage: FunctionComponent = () => {
               team=" 삼성님들충성충성^^7 "
               member="김종욱, 정연두, 정윤석"
             ></TableTemplate>
-            <TableDivider></TableDivider>
+            
           </TableWrapper>
         </RecordWrapper>
+        <TableDivider></TableDivider>
         {/*ACM-ICPC Seoul Regional*/}
         <RecordWrapper>
           <RecordContent
