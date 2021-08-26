@@ -7,6 +7,23 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MenuData } from 'components/Main/MenuData';
 import Menu from 'components/Main/Menu';
+import GlobalFonts from '../../fonts/fonts';
+
+const Slogan = styled.div`
+  position: absolute;
+  color: #233660;
+  font-size: 14px;
+  z-index: 4;
+  //margin-top: 510px;
+  //margin-left: -240px;
+  margin-left: 200px;
+  font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
+
+  @media (max-width: 825px) {
+    display: none;
+  }
+`;
 
 const HeaderWrapper = styled.div`
   position: fixed;
@@ -147,6 +164,7 @@ const Header: FunctionComponent = () => {
       <HeaderWrapper className={hide && 'hide'}>
         <Logo />
         <LogoHoriz />
+        <Slogan>/* Solve with Us! */</Slogan>
         <MenuBtn onClick={showDropdown}>
           <FontAwesomeIcon icon={dropdown ? faTimes : faBars} />
         </MenuBtn>
