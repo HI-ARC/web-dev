@@ -49,7 +49,7 @@ const Slogan = styled.div`
   font-size: 36px;
   z-index: 4;
   margin-top: 510px;
-  margin-left: -265px;
+  margin-left: -240px;
   font-weight: 500;
   font-family: 'IBM Plex Mono', monospace;
 
@@ -64,7 +64,7 @@ const MainImage = styled.img`
   width: 60vw;
 
   @media (min-width: 1200px) {
-    margin-left: -175px;
+    margin-left: -190px;
     width: 750px;
   }
 
@@ -92,7 +92,7 @@ const AboutWrapper = styled.div`
   @media (min-width: 1200px) {
     width: 750px;
     height: 550px;
-    margin-left: 185px;
+    margin-left: 200px;
   }
 
   @media (max-width: 850px) {
@@ -192,7 +192,6 @@ const Banner: FunctionComponent = function () {
   return (
     <BannerWrapper>
       <GlobalFonts />
-      <Slogan>/* Solve with Us! */</Slogan>
       <MainImage src={mainImage} />
       <AboutWrapper>
         <HiShort>HI-ARC</HiShort>

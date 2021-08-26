@@ -5,15 +5,15 @@ import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const FooterWrapper = styled.div`
   width: 100%;
-  height: 270px;
+  height: 200px;
   background-color: #233660;
   padding-top: 70px;
   padding-left: 50px;
 
   @media (max-width: 650px) {
-    height: 300px;
+    height: 220px;
     padding-left: 60px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 30px;
   }
 `;
@@ -35,6 +35,8 @@ const InfoWrapper = styled.div`
     width: 85%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
     padding-top: 50px;
     grid-template-areas:
       'a c'
@@ -44,10 +46,10 @@ const InfoWrapper = styled.div`
 
 const Info = styled.div`
   color: white;
-  font-size: 15px;
+  font-size: 13px;
 
   @media (max-width: 650px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 `;
 
@@ -65,12 +67,12 @@ const InfoRegular = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  width: 150px;
+  width: 130px;
   grid-area: 'c';
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: white;
-  font-size: 45px;
+  font-size: 40px;
   padding-right: 13px;
   margin-top: -0.9vh;
 

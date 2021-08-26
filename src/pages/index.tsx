@@ -6,8 +6,7 @@ import Header from 'components/Common/Header';
 import Banner from 'components/Main/Banner';
 import Footer from 'components/Common/Footer';
 import Contents from 'components/Main/Contents';
-import ActivityCard, { ActivityType } from 'components/Main/ActivityCard';
-import Icpc from 'components/Main/Icpc';
+import ActivityCard2, { ActivityType } from 'components/Main/ActivityCard2';
 import Scroll from 'components/Common/Scroll';
 
 interface IndexPageProps {
@@ -39,8 +38,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       <Banner />
       <Scroll showBelow={250} />
       <Contents name="ACTIVITIES" />
-      <ActivityCard activities={edges} />
-      <Icpc />
+      <ActivityCard2 activities={edges} />
       <Footer />
     </Container>
   );

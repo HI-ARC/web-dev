@@ -26,7 +26,7 @@ const Menu: FunctionComponent = function () {
   return (
     <>
       <MenuList>
-        <Link to="/records2021">기록</Link>
+        <Link to="/records2021">수상</Link>
         <Link to="/study/">스터디</Link>
         <Link to="/communication">친목</Link>
       </MenuList>
