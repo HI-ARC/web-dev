@@ -5,19 +5,22 @@ import { Link } from 'gatsby';
 interface ButtonProps {}
 
 const DescriptionWrapper = styled.div`
-  width: 80%;
-  height: 24vh;
+  width: 80vw;
+  max-height: 10rem;
   display: grid;
   margin-left: 10vw;
   margin-top: 2vh;
   @media (max-width: 750px) {
-    height: 14vh;
+    width: 78vw;
+    height: 12vh;
+    margin-left: 12vw;
   }
 `;
 
 const RecordsDescription = styled.div`
-  width: 76vw;
-  height: 20vh;
+  width: 74vw;
+  margin-left: 3vh;
+  min-height: 5rem;
   font-size: 22px;
   letter-spacing: 1.5px;
   line-height: 150%;
@@ -32,7 +35,8 @@ const RecordsDescription = styled.div`
 const RecordsDescriptionShort = styled.div`
   width: 76vw;
   height: 12vh;
-  margin-left: 4vw;
+  margin-left: 1vw;
+  margin-top: 1vh;
   font-size: 20px;
   letter-spacing: 1.5px;
   line-height: 150%;
