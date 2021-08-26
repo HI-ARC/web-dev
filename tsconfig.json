@@ -26,7 +26,7 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/**/*.tsx", "src/pages/fullpage.js"],
+    "src/**/*.tsx", "src/pages/fullpage.js", "src/components/Common/CreateTable.js", "src/components/Common/TableTemplate.js"],
   "exclude": [
     "node_modules"
   ]

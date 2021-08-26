@@ -5,20 +5,23 @@ import { Link } from 'gatsby';
 interface ButtonProps {}
 
 const DescriptionWrapper=styled.div`
-  width: 80%;
-  height: 24vh;
+  width: 80vw;
+  max-height: 10rem;
   display: grid;
-  place-items: center;
   margin-left: 10vw;
   margin-top:2vh;
   @media (max-width: 750px) {
-    height:14vh;
+    width: 78vw;
+    height:12vh;
+    margin-left: 12vw;
   }
 `;
 
 const RecordsDescription=styled.div`
-  width:76vw;
-  height:20vh;
+
+  width:74vw;
+  margin-left: 3vh;
+  min-height: 5rem;
   font-size:22px;
   letter-spacing:1.5px;
   line-height:150%;
@@ -33,7 +36,8 @@ const RecordsDescription=styled.div`
 const RecordsDescriptionShort=styled.div`
   width:76vw;
   height:12vh;
-  margin-left: 4vw;
+  margin-left: 1vw;
+  margin-top: 1vh;
   font-size:20px;
   letter-spacing:1.5px;
   line-height:150%;
@@ -43,8 +47,8 @@ const RecordsDescriptionShort=styled.div`
 `;
 
 const Button = styled.button`
-  padding: 1vh 1.25vw;
-  font-size: 32px;
+  padding: 0.5vh 0.5vw;
+  font-size: 34px;
   font-color: black;
   border: none;
   border-radius: 60px;
@@ -65,12 +69,13 @@ const RecordListWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
-  margin-left: 8.4vw;
-  margin-top: 2vh;
+  margin-left: 10vw;
+  margin-top: 3vh;
   border-bottom: 3px solid #233660;
   @media (max-width: 750px) {
-    width: 70vw;
-    margin-left: 12vw;
+    width: 77vw;
+    margin-top: 2vh;
+    margin-left: 10vw;
   }
 `;
 
@@ -90,7 +95,7 @@ const RecordList: FunctionComponent = function () {
       <RecordListWrapper>    
         <Button>
           <Link to="/records2021">2021</Link>
-        </Button>
+        </Button>    
         <Button>
           <Link to="/records2020">2020</Link>
         </Button>
