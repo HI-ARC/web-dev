@@ -6,33 +6,33 @@ import RecordContent from 'components/Main/RecordContent';
 import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
-  width: 80%;
-  height: 30vh;
+  width: 80vw;
+  min-height: 10rem;
   margin-left: 10vw;
   margin-top: 7vh;
-  padding-bottom: -10vh;
+  margin-bottom: 3vh; 
   display: flex;
   flex-direction: row;
   @media (max-width: 750px) {
-    height: 30vh;
+    min-height: 32vh;
     margin-left: 10%;
     display: grid;
   }
+
 `;
 const TableWrapper = styled.div`
   width: 65vw;
-  margin: 2vh 0px 0px 3vw;
-  height: 40vh;
+  min-height: 18vh;
   color: black;
   font-size: 21px;
+  
   table {
+    margin-left: 1.5vw;
     border-top: 1.25px solid #444444;
     table-layout: fixed;
     width: 95%;
-    margin-left: 1vw;
     vertical-align : middle;
     text-align: center;
-    
   }
   td {
     padding-top: 2px;
@@ -41,26 +41,24 @@ const TableWrapper = styled.div`
     white-space: normal;
   }
   @media (max-width: 750px) {
-    width: 100%;
-    height: 40vh;
+    width: 92%;
     margin-left: 3vw;
-    margin-top: -8vh;
     font-size: 20px;
   }
 `;
 
 const TableDivider = styled.div`
   margin-top: 3vh;
-  margin-left: 10vw;
+  margin-left:10vw;
   width: 80vw;
   height: 0.25px;
   background-color: #233660;
   @media (max-width: 750px) {
-    width: 78%;
+    width: 95%;
     background-color: white;
     border-bottom: 1.5px dashed;
-    margin-left: 14vw;
-    margin-top: 1.5vh;
+    margin-left: 1vw;
+    margin-top: 3vh;
   }
 `;
 
@@ -88,7 +86,8 @@ const RecordPage: FunctionComponent = () => {
             
           </TableWrapper>
         </RecordWrapper>
-        <TableDivider></TableDivider>
+        <TableDivider/>
+        
         {/*카카오 코드 페스티벌*/}
         <RecordWrapper>
           <RecordContent
@@ -112,7 +111,7 @@ const RecordPage: FunctionComponent = () => {
         {/*UCPC 예선*/}
         <RecordWrapper>
           <RecordContent
-            title={'UCPC 예선'}
+            title={'UCPC 2018 예선'}
             problem={'https://www.acmicpc.net/category/detail/1891'}
             scoreboard={'https://www.acmicpc.net/contest/scoreboard/307'}
           ></RecordContent>
@@ -149,6 +148,7 @@ const RecordPage: FunctionComponent = () => {
             <p style={{color:`gray`}}> &nbsp;&nbsp;&nbsp;&nbsp;* HM = Honorable Mention</p>
           </TableWrapper>
         </RecordWrapper>
+        <br/><br/>
       </Template>
     </>
   );

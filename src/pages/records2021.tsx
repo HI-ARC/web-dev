@@ -6,15 +6,15 @@ import RecordContent from 'components/Main/RecordContent';
 import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
-  width: 80%;
-  height: 40vh;
+  width: 80vw;
+  min-height: 14rem;
   margin-left: 10vw;
   margin-top: 7vh;
-  padding-bottom: -10vh;
+  margin-bottom: 3vh; 
   display: flex;
   flex-direction: row;
   @media (max-width: 750px) {
-    height: 40vh;
+    min-height: 32vh;
     margin-left: 10%;
     display: grid;
   }
@@ -22,16 +22,16 @@ const RecordWrapper = styled.div`
 `;
 const TableWrapper = styled.div`
   width: 65vw;
-  margin: 2vh 0px 0px 3vw;
-  height: 40vh;
+  min-height: 20vh;
   color: black;
   font-size: 21px;
   
   table {
+
+    margin-left: 1.5vw;
     border-top: 1.25px solid #444444;
     table-layout: fixed;
     width: 95%;
-    margin-left: 1vw;
     vertical-align : middle;
     text-align: center;
   }
@@ -42,10 +42,8 @@ const TableWrapper = styled.div`
     white-space: normal;
   }
   @media (max-width: 750px) {
-    width: 100%;
-    height: 40vh;
+    width: 92%;
     margin-left: 3vw;
-    margin-top: -8vh;
     font-size: 20px;
   }
 `;
@@ -97,6 +95,7 @@ const RecordPage: FunctionComponent = () => {
             ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
+        <br/><br/>
       </Template>
     </>
   );
