@@ -29,10 +29,28 @@ const PostListWrapper = styled.div`
   margin: 0 auto;
   padding: 50px 0 100px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
+    grid-gap: 75px;
+    width: 750px;
+  }
+
+  @media (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-gap: 70px;
-    width: 500px;
+    width: 450px;
+    padding: 50px 20px;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-rows: 300px;
+    grid-gap: 60px;
+    width: 400px;
+    padding: 50px 20px;
+  }
+  @media (max-width: 500px) {
+    grid-template-rows: 250px;
+    grid-gap: 50px;
+    width: 350px;
     padding: 50px 20px;
   }
 `;
