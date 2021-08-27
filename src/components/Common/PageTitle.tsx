@@ -13,10 +13,22 @@ const PageTitleWrapper = styled.div`
   color: #233660;
   font-weight: bolder;
   font-size: 42px;
-  margin: 2.2em 75px 10px;
+  margin: 2.2em 75px 0px;
 
   @media (max-width: 710px) {
     font-size: 37px;
+  }
+  @media (max-width: 450px) {
+    font-size: 35px;
+    margin: 2.2em 50px 0px;
+  }
+  @media (max-width: 400px) {
+    font-size: 32px;
+    margin: 2.2em 45px 0px;
+  }
+  @media (max-width: 380px) {
+    font-size: 30px;
+
   }
 `;
 
