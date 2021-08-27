@@ -46,7 +46,7 @@ const CommunicationPage = ({
             <Header />
             <PageTitle title='Communication' />
             <Description />
-            <MoveToDetail onClick={() => fullpageApi.moveSectionDown()}/>  
+            <MoveToDetail onClick={() => fullpageApi.moveSectionDown()}/>
           </div>
           <div className="section">       
             <PostList posts={edges} />

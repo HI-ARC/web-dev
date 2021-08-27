@@ -6,20 +6,30 @@ const DescriptionWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  //height: 25vh;
   color: black;
   font-size: 27px;
   line-height: 2;
-  margin: 130px 120px 40px;
+  margin: 70px 120px 30px;
   
   @media (max-width: 980px) {
     font-size: 25px;
-    margin: 140px 120px 50px;
+    margin: 75px 120px 40px;
   }
   @media (max-width: 920px) {
-    margin: 100px 120px 40px;
+    margin: 50px 120px 20px;
   }
-    @media (max-width: 710px) {
-    margin: 140px 120px 60px;
+  @media (max-width: 710px) {
+    margin: 70px 120px 30px;
+  }
+  @media (max-width: 450px) {
+    margin: 90px 120px 40px;
+  }
+  @media (max-width: 400px) {
+    margin: 80px 120px 40px;
+  }
+  @media (max-width: 380px) {
+    margin: 85px 120px 50px;
   }
 `;
 
@@ -31,6 +41,18 @@ const Hidden = styled.p`
   @media (max-width: 710px) {
     font-size: 22px;
     width: 430px;
+  }
+  @media (max-width: 450px) {
+    font-size: 20px;
+    width: 380px;
+  }
+  @media (max-width: 400px) {
+    font-size: 18px;
+    width: 350px;
+  }
+  @media (max-width: 380px) {
+    font-size: 17px;
+    width: 320px;
   }
 `;
 
