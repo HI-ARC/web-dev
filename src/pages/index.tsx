@@ -6,8 +6,9 @@ import Header from 'components/Common/Header';
 import Banner from 'components/Main/Banner';
 import Footer from 'components/Common/Footer';
 import Contents from 'components/Main/Contents';
-import ActivityCard2, { ActivityType } from 'components/Main/ActivityCard2';
+import ActivityCard3, { ActivityType } from 'components/Main/ActivityCard3';
 import Scroll from 'components/Common/Scroll';
+import Icpc2 from 'components/Main/Icpc2';
 
 interface IndexPageProps {
   data: {
@@ -38,7 +39,8 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       <Banner />
       <Scroll showBelow={250} />
       <Contents name="ACTIVITIES" />
-      <ActivityCard2 activities={edges} />
+      <ActivityCard3 activities={edges} />
+      <Icpc2 />
       <Footer />
     </Container>
   );
@@ -58,6 +60,18 @@ export const queryActivities = graphql`
             order
             introduction
             url
+            img {
+              childImageSharp {
+                fluid(
+                  maxWidth: 768
+                  maxHeight: 300
+                  fit: INSIDE
+                  quality: 100
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }

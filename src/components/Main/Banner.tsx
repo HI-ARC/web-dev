@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
-import mainImage from '../../../contents/main_image3.png';
+import mainImage from '../../../contents/index/main_image3.png';
 import GlobalFonts from '../../fonts/fonts';
 
 const BannerWrapper = styled.div`
