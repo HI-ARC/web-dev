@@ -30,6 +30,12 @@ th{
 @media (min-width: 750px) {
   display: none;
 }
+@media (max-width: 375px) {
+  td, th{
+    font-size: 14px;
+    height: 3vh;
+  }
+}
 `;
 
 export const TableTemplate = ({ prize, team, member }) => {

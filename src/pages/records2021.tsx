@@ -18,7 +18,11 @@ const RecordWrapper = styled.div`
     margin-left: 10%;
     display: grid;
   }
-
+  @media (max-width: 375px) {
+    min-height: 16vh;
+    margin-left: 10%;
+    display: grid;
+  }
 `;
 const TableWrapper = styled.div`
   width: 65vw;
@@ -46,22 +50,30 @@ const TableWrapper = styled.div`
     margin-left: 3vw;
     font-size: 20px;
   }
+  @media (max-width: 375px) {
+    margin-top: 1vh;
+    font-size: 18px;
+    min-height: 10vh;
+    margin-left: 0vw;
+    display: grid;
+  }
 `;
 
 const TableDivider = styled.div`
   margin-top: 3vh;
-  margin-left: -18vw;
+  margin-left:10vw;
   width: 80vw;
   height: 0.25px;
   background-color: #233660;
   @media (max-width: 750px) {
-    width: 95%;
+    width: 80%;
     background-color: white;
     border-bottom: 1.5px dashed;
-    margin-left: 1vw;
-    margin-top: 3vh;
+    margin-left: 10vw;
+    margin-top: 0vh;
   }
 `;
+
 
 const RecordPage: FunctionComponent = () => {
   return (
