@@ -83,12 +83,12 @@ const Card = styled.div`
 
 const Thumbnail = styled(Img)`
   width: 380px;
-  height: 200px;
+  height: 50%;
   border: 1px solid #233660;
   border-radius: 33px 33px 0 0;
 
   @media (max-width: 1300px) {
-    width: 40%;
+    width: 45%;
     height: 100%;
     border-radius: 33px 0 0 33px;
   }
@@ -102,7 +102,7 @@ const CardContent = styled.div`
   width: 100%;
 
   @media (max-width: 1300px) {
-    width: 60%;
+    width: 55%;
   }
 
   @media (max-width: 600px) {
@@ -114,22 +114,22 @@ const Title = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
   padding-left: 30px;
   margin-top: 20px;
 
   @media (max-width: 1300px) {
-    height: 30%;
+    height: 25%;
+  }
+
+  @media (max-width: 600px) {
+    height: 25%;
   }
 
   @media (max-width: 499px) {
     font-size: 5.2vw;
     font-weight: bold;
-  }
-
-  @media (max-width: 600px) {
-    height: 25%;
   }
 `;
 
@@ -142,7 +142,11 @@ const Introduction = styled.div`
 
   @media (max-width: 1300px) {
     padding-top: 3px;
-    height: 36%;
+    height: 43%;
+  }
+
+  @media (max-width: 600px) {
+    height: 38%;
   }
 
   @media (max-width: 499px) {
@@ -160,10 +164,13 @@ const GoTo = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-top: -5px;
 
   @media (max-width: 1300px) {
     height: 30%;
     padding-bottom: 0;
+    margin-top: 0px;
+    padding-right: 30px;
   }
 
   @media (max-width: 499px) {
