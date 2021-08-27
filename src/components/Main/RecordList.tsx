@@ -15,6 +15,11 @@ const DescriptionWrapper = styled.div`
     height: 12vh;
     margin-left: 12vw;
   }
+  @media (max-width: 375px) {
+    width: 78vw;
+    height: 6rem;
+    margin-left: 12vw;
+  }
 `;
 
 const RecordsDescription = styled.div`
@@ -43,6 +48,9 @@ const RecordsDescriptionShort = styled.div`
   @media (min-width: 750px) {
     display: none;
   }
+  @media (max-width: 375px) {
+    font-size: 18px;
+  }
 `;
 
 const Button = styled.button`
@@ -60,7 +68,12 @@ const Button = styled.button`
     font-size: 24px;
     padding: 0.75vh 1vw;
   }
+  @media (max-width: 375px) {
+    font-size: 18px;
+    onClick
+  }
 `;
+
 
 const RecordListWrapper = styled.div`
   width: 80vw;

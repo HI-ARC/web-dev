@@ -13,6 +13,11 @@ const ContestWrapper = styled.div`
     min-height: 2rem;
     margin-left: 1rem;
   }
+  @media (max-width: 375px) {
+    width: 16rem;
+    min-height: 2rem;
+    margin-left: 0rem;
+  }
 `;
 
 
@@ -28,6 +33,13 @@ const TitleWrapper = styled.div`
     margin-left: 0.5rem;
     margin-top: 0.5rem;
   }
+  @media (max-width: 375px) {
+    width: 14rem;
+    min-height: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
 `;
 
 const Title = styled.div`
@@ -42,6 +54,12 @@ const Title = styled.div`
     width: 25rem;
     margin-left: 0rem;
     font-size: 25px;
+    min-height:1rem;
+  }
+  @media (max-width: 375px) {
+    width: 14rem;
+    margin-left: 0rem;
+    font-size: 20px;
     min-height:1rem;
   }
 `;

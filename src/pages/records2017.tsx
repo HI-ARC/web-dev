@@ -5,9 +5,9 @@ import RecordList from 'components/Main/RecordList';
 import RecordContent from 'components/Main/RecordContent';
 import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
-const RecordWrapper = styled.div` 
+const RecordWrapper = styled.div`
   width: 80vw;
-  min-height: 10rem;
+  min-height: 14rem;
   margin-left: 10vw;
   margin-top: 7vh;
   margin-bottom: 3vh; 
@@ -18,16 +18,20 @@ const RecordWrapper = styled.div`
     margin-left: 10%;
     display: grid;
   }
-
+  @media (max-width: 375px) {
+    min-height: 16vh;
+    margin-left: 10%;
+    display: grid;
+  }
 `;
 const TableWrapper = styled.div`
-
   width: 65vw;
   min-height: 20vh;
   color: black;
   font-size: 21px;
   
   table {
+
     margin-left: 1.5vw;
     border-top: 1.25px solid #444444;
     table-layout: fixed;
@@ -46,6 +50,13 @@ const TableWrapper = styled.div`
     margin-left: 3vw;
     font-size: 20px;
   }
+  @media (max-width: 375px) {
+    margin-top: 1vh;
+    font-size: 18px;
+    min-height: 10vh;
+    margin-left: 0vw;
+    display: grid;
+  }
 `;
 
 const TableDivider = styled.div`
@@ -59,9 +70,10 @@ const TableDivider = styled.div`
     background-color: white;
     border-bottom: 1.5px dashed;
     margin-left: 10vw;
-    margin-top: 3vh;
+    margin-top: 0vh;
   }
 `;
+
 
 
 const RecordPage: FunctionComponent = () => {
