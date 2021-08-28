@@ -29,7 +29,6 @@ const TableWrapper = styled.div`
   min-height: 20vh;
   color: black;
   font-size: 21px;
-  background-color:pink;
   table {
     margin-left: 1.5vw;
     border-top: 1.25px solid #444444;
