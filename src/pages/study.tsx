@@ -5,7 +5,6 @@ import StudyList, { StudyType } from 'components/Main/StudyList';
 import Template from 'components/Common/Template';
 
 interface StudyPageProps {
- 
   data: {
     allMarkdownRemark: {
       edges: StudyType[];
@@ -18,12 +17,11 @@ const StudyPage: FunctionComponent<StudyPageProps> = function ({
     allMarkdownRemark: { edges },
   },
 }) {
-
   return (
     <>
       <Template title="Study">
         <StudyTitle />
-        <StudyList   studies={edges} />
+        <StudyList studies={edges} />
       </Template>
     </>
   );
@@ -42,7 +40,7 @@ export const studyDataQuery = graphql`
             categories
             summary
             description
-            studyimage{
+            studyimage {
               childImageSharp {
                 fluid(
                   maxWidth: 768

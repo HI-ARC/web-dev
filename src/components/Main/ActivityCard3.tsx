@@ -84,7 +84,7 @@ const Card = styled.div`
 const Thumbnail = styled(Img)`
   width: 380px;
   height: 50%;
-  border: 1px solid #233660;
+  //border: 1px solid #233660;
   border-radius: 33px 33px 0 0;
 
   @media (max-width: 1300px) {
