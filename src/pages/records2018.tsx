@@ -4,7 +4,6 @@ import Template from 'components/Common/Template';
 import RecordList from 'components/Main/RecordList';
 import RecordContent from 'components/Main/RecordContent';
 import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
-
 const RecordWrapper = styled.div`
   width: 80vw;
   min-height: 14rem;

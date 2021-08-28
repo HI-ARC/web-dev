@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useMemo } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
@@ -64,16 +64,17 @@ const Button = styled.button`
     background-color: #233660;
     color: #ffffff;
   }
+  color:${({ active }) => (active ? 'white' : 'black')};
+  background-color:${({ active }) => (active ? '#233660' : 'white')};
+ 
   @media (max-width: 750px) {
     font-size: 24px;
     padding: 0.75vh 1vw;
   }
   @media (max-width: 375px) {
     font-size: 18px;
-    onClick
   }
 `;
-
 
 const RecordListWrapper = styled.div`
   width: 80vw;

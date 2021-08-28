@@ -25,17 +25,16 @@ const RecordWrapper = styled.div`
   }
 `;
 const TableWrapper = styled.div`
-  width: 65vw;
+  width: 80%;
   min-height: 20vh;
   color: black;
   font-size: 21px;
-  
+  background-color:pink;
   table {
-
     margin-left: 1.5vw;
     border-top: 1.25px solid #444444;
     table-layout: fixed;
-    width: 95%;
+    width: 96%;
     vertical-align : middle;
     text-align: center;
   }
@@ -46,13 +45,19 @@ const TableWrapper = styled.div`
     white-space: normal;
   }
   @media (max-width: 750px) {
-    width: 92%;
+    width: 90%;
     margin-left: 3vw;
     font-size: 20px;
   }
-  @media (max-width: 375px) {
-    margin-top: 1vh;
+  @media (max-width: 550px) {
+    width: 72%;
+    margin-left: 1rem;
     font-size: 18px;
+  }
+  @media (max-width: 375px) {
+    width: 90%;
+    margin-top: 1vh;
+    font-size: 16px;
     min-height: 10vh;
     margin-left: 0vw;
     display: grid;
