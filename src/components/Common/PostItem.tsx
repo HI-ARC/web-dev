@@ -26,7 +26,8 @@ const PostItemWrapper = styled.div`
 
 const Title = styled.div`
   overflow: hidden;
-  margin: 10px auto;
+  margin: 5px auto;
+  padding: 5px;
   text-overflow: ellipsis;
   overflow-wrap: break-word;
   font-size: 22px;
@@ -35,11 +36,17 @@ const Title = styled.div`
   @media (max-width: 980px) {
     font-size: 20px;
   }
+  @media (max-width: 500px) {
+    font-size: 18px;
+  }
+  @media (max-width: 380px) {
+    font-size: 17px;
+  }
 `;
 
 const Image = styled(Img)`
   width: 100%;
-  height: 300px;
+  height: 90%;
   border-radius: 10px;
 `;
 

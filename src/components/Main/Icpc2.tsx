@@ -95,6 +95,12 @@ const Button = styled.div`
     width: 38vw;
     height: 45px;
   }
+
+  &:hover {
+    transition: all 0.3s;
+    background-color: #233660;
+    color: white;
+  }
 `;
 
 const Hidden = styled.p`
