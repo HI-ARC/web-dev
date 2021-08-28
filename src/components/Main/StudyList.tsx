@@ -56,14 +56,16 @@ width:250px;
   font-size: 22px;
 }
 @media (max-width: 1000px) {
-  font-size: 18px;
+  font-size: 20px;
 }
-@media (max-width: 770px) {
+@media (max-width: 800px) {
   font-size: 16px;
 }
 @media (max-width: 770px) {
-  width:50px;
- height:50px;
+  font-size: 18px;
+  margin-left:10px;
+  width:60px;
+ height:60px;
  border-radius: 16px;
  background-color:white;
  font-weight:bold;
@@ -102,6 +104,7 @@ width:250px;
  height:50px;
  border-radius: 16px;
  background-color:white;
+ font-size: 20px;
  font-weight:bold;
  :hover{
   background-color:#233660;
@@ -117,7 +120,8 @@ const StudyLine = styled.div`
   width: 80%;
   height:1px;
   border: 2px solid #233660;
-  margin-bottom:60px;
+  margin-bottom:30px;
+  background-color:#233660;
   
 `;
 
@@ -127,17 +131,13 @@ const StudyCategory = styled.div`
   font-size:28px;
   color:#233660;
   font-weight:bold;
-  margin:0 0 20px 40px;
-
-
+  margin:40px 10px 30px 50px;
 `;
 
 
 const StudyWrapper = styled.div`
   width: 100%;
   height:100%;
-  margin-right: auto;
-  margin-left: auto;
   display:flex;
   flex-direction: column;
  // background-color:red;
@@ -146,8 +146,8 @@ const StudyWrapper = styled.div`
 `;
 
 const StudyContainer = styled.div`
-  width: 1000px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   display: flex;
   color: black;
@@ -157,6 +157,7 @@ const StudyDataContainer = styled.div`
   width: 80%;
   height: 500px;
   display: flex;
+  
   color: black;
  // background-color:blue; 
 `;
@@ -195,17 +196,12 @@ const Description = styled.div`
 `;
 
 const StudyImageContainer = styled.div`
-width: 600px;
-margin: auto auto auto 30px;
-height: 400px%;
-//background-color:red;
+margin:auto;
+
 @media (max-width: 1000px) {
   display: none;
 }
-@media (max-width: 1200px) {
-  width: 500px;
-  height:240px;
-}
+
 `;
 const StudyTitleLong = styled.div`
 @media (max-width: 770px) {
@@ -220,8 +216,18 @@ const StudyTitleShort = styled.div`
 
 
 const StudyImage = styled(Img)`
-width: 100%;
-height: 100%;
+width: 430px;
+height: 350px;
+display:grid;
+@media (max-width: 1770px) {
+  width: 370px;
+height: 300px;
+}
+@media (max-width: 1400px) {
+  width: 300px;
+height: 270px;
+}
+
 `;
 
 const StudyList: FunctionComponent<StudiesProps> = function ({
@@ -301,7 +307,7 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
         <SubStudyItem onClick={setMogakko} active={subStudy==="모각코"}>모각코</SubStudyItem>
         <SubStudyItem onClick={setfree} active={subStudy==="자율스터디"}><StudyTitleLong>자율스터디</StudyTitleLong><StudyTitleShort>자율</StudyTitleShort></SubStudyItem>
       </StudyListWrapper>
-      {subStudyData.map(({ node: { id, frontmatter } }: StudyType) => (
+      {subStudyData.map(({ node: {  frontmatter } }: StudyType) => (
         <StudyDataContainer>
           <StudyContainer>
             <Summary>{frontmatter.summary}</Summary>
