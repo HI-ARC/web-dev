@@ -44,7 +44,7 @@ export const studyDataQuery = graphql`
               childImageSharp {
                 fluid(
                   maxWidth: 768
-                  maxHeight: 300
+                  maxHeight: 768
                   fit: INSIDE
                   quality: 100
                 ) {
