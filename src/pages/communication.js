@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React from 'react';
 import styled from '@emotion/styled';
-import ReactFullpage from "@fullpage/react-fullpage";
+import ReactFullpage from '@fullpage/react-fullpage';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Description from 'components/Common/Description';
 import MoveToDetail from 'components/Common/MoveToDetail';
@@ -11,13 +11,13 @@ import PageTitle from 'components/Common/PageTitle';
 import PostList from 'components/Common/PostList';
 import { graphql } from 'gatsby';
 
-import "../../src/styles.css";
+import '../../src/styles.css';
 
 const FooterWrapper = styled.div`
   text-align: initial;
 `;
 
-const anchors = ["firstPage", "secondPage", "thirdPage"];
+const anchors = ['firstPage', 'secondPage', 'thirdPage'];
 const pluginWrapper = () => {
   require('fullpage.js/vendors/scrolloverflow');
 };
@@ -34,24 +34,24 @@ const CommunicationPage = ({
     navigation
     navigationTooltips={anchors}
     onLeave={(origin, destination, direction) => {
-      console.log("onLeave event", { origin, destination, direction });
+      console.log('onLeave event', { origin, destination, direction });
     }}
     render={({ state, fullpageApi }) => {
-      console.log("render prop change", state, fullpageApi); // eslint-disable-line no-console
+      console.log('render prop change', state, fullpageApi); // eslint-disable-line no-console
 
       return (
         <>
-          <GlobalStyle />        
+          <GlobalStyle />
           <div className="section">
             <Header />
-            <PageTitle title='Communication' />
+            <PageTitle title="Communication" />
             <Description />
-            <MoveToDetail onClick={() => fullpageApi.moveSectionDown()}/>
+            <MoveToDetail onClick={() => fullpageApi.moveSectionDown()} />
           </div>
-          <div className="section">       
+          <div className="section">
             <PostList posts={edges} />
             <FooterWrapper>
-              <Footer/>
+              <Footer />
             </FooterWrapper>
           </div>
         </>
@@ -67,7 +67,7 @@ export const queryPostList = graphql`
     allMarkdownRemark(
       filter: { frontmatter: { categories: { eq: "Communication" } } }
       sort: { fields: [frontmatter___order], order: ASC }
-      ) {
+    ) {
       edges {
         node {
           id
