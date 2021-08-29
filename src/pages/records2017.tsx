@@ -63,8 +63,24 @@ const TableWrapper = styled.div`
   }
 `;
 
+const TableDivider = styled.div`
+  margin-top: 3vh;
+  margin-left:10vw;
+  width: 80vw;
+  height: 0.25px;
+  background-color: #233660;
+  @media (max-width: 750px) {
+    width: 80%;
+    background-color: white;
+    border-bottom: 1.5px dashed;
+    margin-left: 10vw;
+    margin-top: 0vh;
+  }
+`;
 
 const RecordPage: FunctionComponent = () => {
+    document.getElementById("2017").style.background='#233660';
+    document.getElementById("2017").style.color='#ffffff';
   return (
     <>
       <Template title="Records">
