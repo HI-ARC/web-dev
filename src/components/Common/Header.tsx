@@ -162,6 +162,7 @@ const Header: FunctionComponent = () => {
 
   return (
     <>
+      <GlobalFonts/>
       <HeaderWrapper className={hide && 'hide'}>
         <Logo />
         <LogoHoriz />
