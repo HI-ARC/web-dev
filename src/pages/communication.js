@@ -42,8 +42,8 @@ const CommunicationPage = ({
       return (
         <>
           <GlobalStyle />
+          <Header />
           <div className="section">
-            <Header />
             <PageTitle title="Communication" />
             <Description />
             <MoveToDetail onClick={() => fullpageApi.moveSectionDown()} />
