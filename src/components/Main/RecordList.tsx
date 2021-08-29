@@ -1,7 +1,6 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent} from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-
 interface ButtonProps {}
 
 const DescriptionWrapper = styled.div`
@@ -70,10 +69,8 @@ const Button = styled.button`
   }
   @media (max-width: 375px) {
     font-size: 18px;
-    onClick
   }
 `;
-
 
 const RecordListWrapper = styled.div`
   width: 80vw;
@@ -90,6 +87,34 @@ const RecordListWrapper = styled.div`
     margin-left: 10vw;
   }
 `;
+
+/*
+function getURL() {
+  if (typeof document !== 'undefined') {
+      const url = window.location.href;
+      if(url.includes('2021')){
+        document.getElementById("2021").style.background='#233660';
+        document.getElementById("2021").style.color='#ffffff';
+      }
+      if(url.includes('2020')){
+        document.getElementById("2020").style.background='#233660';
+        document.getElementById("2020").style.color='#ffffff';
+      }
+      if(url.includes('2019')){
+        document.getElementById("2019").style.background='#233660';
+        document.getElementById("2019").style.color='#ffffff';
+      }
+      if(url.includes('2018')){
+        document.getElementById("2018").style.background='#233660';
+        document.getElementById("2018").style.color='#ffffff';
+      }
+      if(url.includes('2017')){
+        document.getElementById("2017").style.background='#233660';
+        document.getElementById("2017").style.color='#ffffff';
+    }
+  }
+}
+*/
 
 const RecordList: FunctionComponent = function () {
   return (
@@ -110,19 +135,19 @@ const RecordList: FunctionComponent = function () {
       </DescriptionWrapper>
       <br />
       <RecordListWrapper>
-        <Button>
+        <Button id="2021">
           <Link to="/records2021">2021</Link>
         </Button>
-        <Button>
+        <Button id="2020">
           <Link to="/records2020">2020</Link>
         </Button>
-        <Button>
+        <Button id="2019">
           <Link to="/records2019">2019</Link>
         </Button>
-        <Button>
+        <Button id="2018">
           <Link to="/records2018">2018</Link>
         </Button>
-        <Button>
+        <Button id="2017">
           <Link to="/records2017">2017</Link>
         </Button>
       </RecordListWrapper>
