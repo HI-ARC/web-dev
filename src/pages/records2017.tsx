@@ -79,8 +79,15 @@ const TableDivider = styled.div`
 `;
 
 const RecordPage: FunctionComponent = () => {
-    document.getElementById("2017").style.background='#233660';
-    document.getElementById("2017").style.color='#ffffff';
+  window.onbeforeunload=function(){
+    if (typeof document !== 'undefined') {
+      document.getElementById("2017").style.background='#233660';
+      document.getElementById("2017").style.color='#ffffff';
+    }
+  }
+
+  
+
   return (
     <>
       <Template title="Records">
