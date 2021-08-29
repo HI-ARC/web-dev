@@ -5,6 +5,7 @@ import RecordList from 'components/Main/RecordList';
 import RecordContent from 'components/Main/RecordContent';
 import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
 
+
 const RecordWrapper = styled.div`
   width: 80vw;
   min-height: 14rem;
@@ -80,6 +81,9 @@ const TableDivider = styled.div`
 
 
 const RecordPage: FunctionComponent = () => {
+    document.getElementById("2021").style.background='#233660';
+    document.getElementById("2021").style.color='#ffffff';
+
   return (
     <>
       <Template title="Records">
