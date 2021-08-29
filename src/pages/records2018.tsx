@@ -78,8 +78,10 @@ const TableDivider = styled.div`
   }
 `;
 const RecordPage: FunctionComponent = () => {
+  if (typeof document !== 'undefined') {
     document.getElementById("2018").style.background='#233660';
     document.getElementById("2018").style.color='#ffffff';
+  }
   return (
     <>
       <Template title="Records">
