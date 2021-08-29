@@ -81,13 +81,12 @@ const TableDivider = styled.div`
 
 
 const RecordPage: FunctionComponent = () => {
-    document.getElementById("2020").style.background='#233660';
-    document.getElementById("2020").style.color='#ffffff';
-    
+
   return (
     <>
       <Template title="Records">
         <RecordList></RecordList>
+        
         {/*UCPC 2020 예선*/}
         <RecordWrapper>
           <RecordContent
@@ -109,6 +108,7 @@ const RecordPage: FunctionComponent = () => {
           
         </RecordWrapper>
         <TableDivider></TableDivider>
+        
         {/*UCPC 2020 본선*/}
         <RecordWrapper>
           <RecordContent
@@ -129,6 +129,7 @@ const RecordPage: FunctionComponent = () => {
           </TableWrapper>
         </RecordWrapper>
         <TableDivider></TableDivider>
+        
         {/*SUAPC 2020 Summer - Div. 1*/}
         <RecordWrapper>
           <RecordContent
@@ -148,6 +149,7 @@ const RecordPage: FunctionComponent = () => {
           </TableWrapper>
         </RecordWrapper>
         <TableDivider></TableDivider>
+        
         {/*SUAPC 2020 Summer - Div. 2*/}
         <RecordWrapper>
           <RecordContent
@@ -184,9 +186,9 @@ const RecordPage: FunctionComponent = () => {
         {/*ICPC 2020 예선*/}
         <RecordWrapper>
           <RecordContent
-            title={'ICPC 2020 -예선'}
-            problem={'https://www.acmicpc.net/category/detail/2272'}
-            scoreboard={'https://www.acmicpc.net/contest/spotboard/524'}
+            title={'ACM-ICPC Seoul Regional 2020 - 예선'}
+            problem={'http://static.icpckorea.net/20201010/problems.pdf'}
+            scoreboard={'http://icpckorea.org/2020/preliminary/scoreboard/dbda78f0e4/'}
           ></RecordContent>
           <TableWrapper>
             <tr>
@@ -224,15 +226,12 @@ const RecordPage: FunctionComponent = () => {
         {/*ICPC 2020 본선*/}
         <RecordWrapper>
           <RecordContent
-            title={'ICPC 2020 -본선'}
-            problem={'https://www.acmicpc.net/category/detail/2272'}
-            scoreboard={'https://www.acmicpc.net/contest/spotboard/524'}
+            title={'ACM-ICPC Seoul Regional 2020 - 본선'}
+            problem={'http://static.icpckorea.net/2020/problemset.pdf'}
+            scoreboard={'http://static.icpckorea.net/2020/scoreboard_terpin/'}
           ></RecordContent>
           <TableWrapper>
-            <tr>
             <CreateHeader></CreateHeader>
-            </tr>
-
             <TableTemplate
               prize="20"
               team="Gr-Yee-n55 "
@@ -246,8 +245,8 @@ const RecordPage: FunctionComponent = () => {
         <RecordWrapper>
           <RecordContent
             title={'SCPC 2020 예선'}
-            problem={'https://www.acmicpc.net/category/detail/2272'}
-            scoreboard={'https://www.acmicpc.net/contest/spotboard/524'}
+            problem={'/emptyPage'}
+            scoreboard={'/emptyPage'}
           ></RecordContent>
           <TableWrapper>
             <tr>
@@ -267,14 +266,11 @@ const RecordPage: FunctionComponent = () => {
         <RecordWrapper>
           <RecordContent
             title={'SCPC 2020 본선'}
-            problem={'https://www.acmicpc.net/category/detail/2272'}
-            scoreboard={'https://www.acmicpc.net/contest/spotboard/524'}
+            problem={'/emptyPage'}
+            scoreboard={'/emptyPage'}
           ></RecordContent>
           <TableWrapper>
-            <tr>
             <CreateHeader></CreateHeader>
-            </tr>
-
             <TableTemplate
               prize="4"
               team="개인"
@@ -282,73 +278,7 @@ const RecordPage: FunctionComponent = () => {
             ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
-        <TableDivider></TableDivider>
-        
-        {/*UCPC 2020 예선*/}
-        <RecordWrapper>
-          <RecordContent
-            title={'UCPC 2020 본선'}
-            problem={'https://www.acmicpc.net/category/detail/2272'}
-            scoreboard={'https://www.acmicpc.net/contest/spotboard/524'}
-          ></RecordContent>
-          <TableWrapper>
-            <tr>
-            <CreateHeader></CreateHeader>
-            </tr>
 
-            <TableTemplate
-              prize="34"
-              team="율촌 "
-              member="정연두, 김효원, 정재현"
-            ></TableTemplate>
-          </TableWrapper>
-        </RecordWrapper>
-        <TableDivider></TableDivider>
-
-        {/*SCPC본선*/}
-        <TableDivider></TableDivider>
-        {/*UCPC 2020 본선*/}
-        <RecordWrapper>
-          <RecordContent
-            title={'UCPC 2020 본선'}
-            problem={'https://www.acmicpc.net/category/detail/2272'}
-            scoreboard={'https://www.acmicpc.net/contest/spotboard/524'}
-          ></RecordContent>
-          <TableWrapper>
-            <tr>
-            <CreateHeader></CreateHeader>
-            </tr>
-
-            <TableTemplate
-              prize="34"
-              team="율촌 "
-              member="정연두, 김효원, 정재현"
-            ></TableTemplate>
-          </TableWrapper>
-        </RecordWrapper>
-        <TableDivider></TableDivider>
-
-        {/*UCPC 예선 */}
-        <TableDivider></TableDivider>
-        {/*UCPC 2020 본선*/}
-        <RecordWrapper>
-          <RecordContent
-            title={'UCPC 2020 본선'}
-            problem={'https://www.acmicpc.net/category/detail/2272'}
-            scoreboard={'https://www.acmicpc.net/contest/spotboard/524'}
-          ></RecordContent>
-          <TableWrapper>
-            <tr>
-            <CreateHeader></CreateHeader>
-            </tr>
-
-            <TableTemplate
-              prize="34"
-              team="율촌 "
-              member="정연두, 김효원, 정재현"
-            ></TableTemplate>
-          </TableWrapper>
-        </RecordWrapper>
         <br/><br/>
       </Template>
     </>

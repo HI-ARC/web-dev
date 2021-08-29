@@ -88,32 +88,33 @@ const RecordListWrapper = styled.div`
   }
 `;
 
-
-
+/*
 function getURL() {
-  const url = window.location.href;
-  if(url.includes('2021')){
-    document.getElementById("2021").style.background='#233660';
-    document.getElementById("2021").style.color='#ffffff';
-  }
-  if(url.includes('2020')){
-    document.getElementById("2020").style.background='#233660';
-    document.getElementById("2020").style.color='#ffffff';
-  }
-  if(url.includes('2019')){
-    document.getElementById("2019").style.background='#233660';
-    document.getElementById("2019").style.color='#ffffff';
-  }
-  if(url.includes('2018')){
-    document.getElementById("2018").style.background='#233660';
-    document.getElementById("2018").style.color='#ffffff';
-  }
-  if(url.includes('2017')){
-    document.getElementById("2017").style.background='#233660';
-    document.getElementById("2017").style.color='#ffffff';
+  if (typeof document !== 'undefined') {
+      const url = window.location.href;
+      if(url.includes('2021')){
+        document.getElementById("2021").style.background='#233660';
+        document.getElementById("2021").style.color='#ffffff';
+      }
+      if(url.includes('2020')){
+        document.getElementById("2020").style.background='#233660';
+        document.getElementById("2020").style.color='#ffffff';
+      }
+      if(url.includes('2019')){
+        document.getElementById("2019").style.background='#233660';
+        document.getElementById("2019").style.color='#ffffff';
+      }
+      if(url.includes('2018')){
+        document.getElementById("2018").style.background='#233660';
+        document.getElementById("2018").style.color='#ffffff';
+      }
+      if(url.includes('2017')){
+        document.getElementById("2017").style.background='#233660';
+        document.getElementById("2017").style.color='#ffffff';
+    }
   }
 }
-
+*/
 
 const RecordList: FunctionComponent = function () {
   return (

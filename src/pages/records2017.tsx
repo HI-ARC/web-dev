@@ -79,8 +79,6 @@ const TableDivider = styled.div`
 `;
 
 const RecordPage: FunctionComponent = () => {
-    document.getElementById("2017").style.background='#233660';
-    document.getElementById("2017").style.color='#ffffff';
   return (
     <>
       <Template title="Records">
