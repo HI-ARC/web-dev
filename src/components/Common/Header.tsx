@@ -140,6 +140,7 @@ const Header: FunctionComponent = () => {
     const { pageYOffset } = window;
     const deltaY = pageYOffset - pageY;
     const hide = pageYOffset !== 0 && deltaY >= 0;
+    setDropdown(false);
     setHide(hide);
     setPageY(pageYOffset);
   };
