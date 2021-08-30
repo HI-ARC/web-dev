@@ -38,7 +38,6 @@ const StudyListWrapper = styled.div`
 const StudyItem = styled.button`
 width:250px;
  height:50px;
- margin: 20px;
  border:2px solid #233660;
  text-align: center;
  line-height:50px;
@@ -46,6 +45,7 @@ width:250px;
  font-size: 24px;
  font-weight:600;
  border-radius:10px;
+ margin: 0 20px;
  background-color:white;
  :hover{
    color:white;
@@ -55,19 +55,20 @@ width:250px;
  cursor: pointer;
  @media (max-width: 1200px) {
   font-size: 22px;
-  margin:10px;
+  margin: 0 20px;
 }
 @media (max-width: 1000px) {
   font-size: 20px;
+  margin: 0 20px;
 }
 @media (max-width: 800px) {
   font-size: 18px;
+  margin: 0 20px;
 }
 @media (max-width: 770px) {
-  margin: 10px 0px;
   font-size: 22px;
-  margin-left:20px;
   width:25%;
+  margin: 0 10px;
  height:60px;
  border-radius: 16px;
  background-color:white;
