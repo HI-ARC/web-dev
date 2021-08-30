@@ -9,12 +9,18 @@ import Header from 'components/Common/Header';
 import Footer from 'components/Common/Footer';
 import PageTitle from 'components/Common/PageTitle';
 import PostList from 'components/Common/PostList';
+import MoveToTop from 'components/Common/MoveToTop';
 import { graphql } from 'gatsby';
 
 import '../../src/styles.css';
 
 const FooterWrapper = styled.div`
   text-align: initial;
+`;
+
+const TopWrapper = styled.div`
+  margin-right: 62px;
+  text-align: end;
 `;
 
 const anchors = ['firstPage', 'secondPage', 'thirdPage'];
@@ -42,14 +48,17 @@ const CommunicationPage = ({
       return (
         <>
           <GlobalStyle />
+          <Header />
           <div className="section">
-            <Header />
             <PageTitle title="Communication" />
             <Description />
             <MoveToDetail onClick={() => fullpageApi.moveSectionDown()} />
           </div>
           <div className="section">
             <PostList posts={edges} />
+            <TopWrapper>
+              <MoveToTop onClick={() => fullpageApi.moveSectionUp()} />
+            </TopWrapper>     
             <FooterWrapper>
               <Footer />
             </FooterWrapper>
