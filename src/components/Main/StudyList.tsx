@@ -65,9 +65,9 @@ width:250px;
 }
 @media (max-width: 770px) {
   margin: 10px 0px;
-  font-size: 17px;
+  font-size: 22px;
   margin-left:20px;
-  width:75px;
+  width:25%;
  height:60px;
  border-radius: 16px;
  background-color:white;
@@ -79,7 +79,7 @@ width:250px;
 @media (max-width: 450px) {
   font-size:15px;
 }
-@media (max-width: 300px) {
+@media (max-width: 315px) {
   font-size:12px;
 }
 
