@@ -55,6 +55,7 @@ width:250px;
  cursor: pointer;
  @media (max-width: 1200px) {
   font-size: 22px;
+  margin:10px;
 }
 @media (max-width: 1000px) {
   font-size: 20px;
@@ -63,9 +64,10 @@ width:250px;
   font-size: 18px;
 }
 @media (max-width: 770px) {
+  margin: 10px 0px;
   font-size: 17px;
   margin-left:20px;
-  width:70px;
+  width:75px;
  height:60px;
  border-radius: 16px;
  background-color:white;
