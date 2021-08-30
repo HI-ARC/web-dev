@@ -5,7 +5,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Description from 'components/Common/Description';
 import MoveToDetail from 'components/Common/MoveToDetail';
-import Header from 'components/Common/Header';
+import Header2 from 'components/Common/Header2';
 import Footer from 'components/Common/Footer';
 import PageTitle from 'components/Common/PageTitle';
 import PostList from 'components/Common/PostList';
@@ -48,7 +48,7 @@ const CommunicationPage = ({
       return (
         <>
           <GlobalStyle />
-          <Header />
+          <Header2 />
           <div className="section">
             <PageTitle title="Communication" />
             <Description />
@@ -58,7 +58,7 @@ const CommunicationPage = ({
             <PostList posts={edges} />
             <TopWrapper>
               <MoveToTop onClick={() => fullpageApi.moveSectionUp()} />
-            </TopWrapper>     
+            </TopWrapper>
             <FooterWrapper>
               <Footer />
             </FooterWrapper>
