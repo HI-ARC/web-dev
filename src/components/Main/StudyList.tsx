@@ -60,12 +60,12 @@ width:250px;
   font-size: 20px;
 }
 @media (max-width: 800px) {
-  font-size: 16px;
+  font-size: 18px;
 }
 @media (max-width: 770px) {
-  font-size: 18px;
-  margin-left:10px;
-  width:60px;
+  font-size: 17px;
+  margin-left:20px;
+  width:70px;
  height:60px;
  border-radius: 16px;
  background-color:white;
@@ -74,8 +74,7 @@ width:250px;
   background-color:#233660;
   color:white;
 }
-color:${({ active }) => (active ? 'white' : 'black')};
- background-color:${({ active }) => (active ? '#233660' : 'white')};
+
 }
   }
 `;
@@ -122,11 +121,12 @@ const Summary = styled.div`
   font-weight: 600;
   padding-left: 20px;
   padding-top: 10px;
+  color:#233660;
   @media (max-width: 1200px) {
-    font-size: 26px;
+    font-size: 30px;
   }
   @media (max-width: 1100px) {
-    font-size: 22px;
+    font-size: 26px;
   }
   
 `;
@@ -142,6 +142,9 @@ const Description = styled.div`
   }
   @media (max-width: 770px) {
     font-size: 18px;
+  }
+  @media (max-width: 700px) {
+    font-size: 17px;
   }
   
   
@@ -188,7 +191,7 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
 }) {
  
  
-  const [Study,setStudy]= useState("초급알고리즘");
+  const [Study]= useState("초급알고리즘");
  
   const studyData = useMemo(() =>
   studies.filter(
@@ -200,16 +203,16 @@ const StudyList: FunctionComponent<StudiesProps> = function ({
   ), [Study]
 );
 const moveto1 = () => {
-  window[`scrollTo`]({ top: 100, behavior: `smooth` });
+  window[`scrollTo`]({ top: 200, behavior: `smooth` });
 };
 const moveto2 = () => {
-  window[`scrollTo`]({ top: 700, behavior: `smooth` });
+  window[`scrollTo`]({ top: 800, behavior: `smooth` });
 };
 const moveto3 = () => {
-  window[`scrollTo`]({ top: 1200, behavior: `smooth` });
+  window[`scrollTo`]({ top: 1400, behavior: `smooth` });
 };
 const moveto4 = () => {
-  window[`scrollTo`]({ top: 1700, behavior: `smooth` });
+  window[`scrollTo`]({ top: 2000, behavior: `smooth` });
 };
 
 
