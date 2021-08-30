@@ -45,6 +45,7 @@ width:250px;
  font-size: 24px;
  font-weight:600;
  border-radius:10px;
+ margin: 0 20px;
  background-color:white;
  :hover{
    color:white;
@@ -54,12 +55,15 @@ width:250px;
  cursor: pointer;
  @media (max-width: 1200px) {
   font-size: 22px;
+  margin: 0 20px;
 }
 @media (max-width: 1000px) {
   font-size: 20px;
+  margin: 0 20px;
 }
 @media (max-width: 800px) {
   font-size: 18px;
+  margin: 0 20px;
 }
 @media (max-width: 770px) {
   font-size: 22px;
