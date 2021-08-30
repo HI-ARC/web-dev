@@ -76,6 +76,12 @@ width:250px;
   background-color:#233660;
   color:white;
 }
+@media (max-width: 450px) {
+  font-size:15px;
+}
+@media (max-width: 300px) {
+  font-size:12px;
+}
 
 }
   }
@@ -130,6 +136,9 @@ const Summary = styled.div`
   @media (max-width: 1100px) {
     font-size: 26px;
   }
+  @media (max-width: 450px) {
+    font-size:20px;
+  }
   
 `;
 
@@ -147,6 +156,12 @@ const Description = styled.div`
   }
   @media (max-width: 700px) {
     font-size: 17px;
+  }
+  @media (max-width: 450px) {
+    font-size:16px;
+  }
+  @media (max-width: 300px) {
+    font-size:14px;
   }
   
   
