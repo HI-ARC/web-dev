@@ -78,7 +78,18 @@ const TableDivider = styled.div`
   }
 `;
 
-
+const Update = styled.text`
+  margin-top: 2vh;
+  font-size: 20px;
+  color: gray;
+  width: 80%;
+  height: 30%;
+  margin-left: 2vw;
+  display: grid;
+  @media (max-width: 750px) {
+   display:none;
+  }
+`;
 
 const RecordPage: FunctionComponent = () => {
 
@@ -245,19 +256,18 @@ const RecordPage: FunctionComponent = () => {
         <RecordWrapper>
           <RecordContent
             title={'SCPC 2020 예선'}
-            problem={'/emptyPage'}
-            scoreboard={'/emptyPage'}
           ></RecordContent>
           <TableWrapper>
-            <tr>
             <CreateHeader></CreateHeader>
-            </tr>
 
             <TableTemplate
               prize="본선진출"
               team="개인"
               member="정연두"
             ></TableTemplate>
+            <Update>
+              <p>* 문제 및 스코어보드 링크 업데이트 예정입니다.</p>
+            </Update>
           </TableWrapper>
         </RecordWrapper>
         <TableDivider></TableDivider>
@@ -266,8 +276,6 @@ const RecordPage: FunctionComponent = () => {
         <RecordWrapper>
           <RecordContent
             title={'SCPC 2020 본선'}
-            problem={'/emptyPage'}
-            scoreboard={'/emptyPage'}
           ></RecordContent>
           <TableWrapper>
             <CreateHeader></CreateHeader>
@@ -276,6 +284,9 @@ const RecordPage: FunctionComponent = () => {
               team="개인"
               member="정연두"
             ></TableTemplate>
+            <Update>
+              <p>* 문제 및 스코어보드 링크 업데이트 예정입니다.</p>
+            </Update>
           </TableWrapper>
         </RecordWrapper>
 

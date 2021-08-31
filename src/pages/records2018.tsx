@@ -77,6 +77,20 @@ const TableDivider = styled.div`
     margin-top: 0vh;
   }
 `;
+
+const Update = styled.text`
+  margin-top: 2vh;
+  font-size: 20px;
+  color: gray;
+  width: 80%;
+  height: 30%;
+  margin-left: 2vw;
+  display: grid;
+  @media (max-width: 750px) {
+   display:none;
+  }
+`;
+
 const RecordPage: FunctionComponent = () => {
 
   return (
@@ -87,19 +101,17 @@ const RecordPage: FunctionComponent = () => {
         <RecordWrapper>
           <RecordContent
             title={'이데일리 코딩 챌린지'}
-            problem={'https://www.edaily.co.kr/'}
-            scoreboard={'https://www.edaily.co.kr/'}
           ></RecordContent>
           <TableWrapper>
-            <tr>
             <CreateHeader></CreateHeader>
-            </tr>
             <TableTemplate
               prize="6"
               team=" 개인 "
               member="정연두"
             ></TableTemplate>
-            
+            <Update>
+              <p>* 문제 및 스코어보드 링크 업데이트 예정입니다.</p>
+            </Update>
           </TableWrapper>
         </RecordWrapper>
         <TableDivider/>

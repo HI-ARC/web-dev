@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 
 interface RecordProps {}
-
+interface Props{}
 
 const ContestWrapper = styled.div`
   width: 16rem;
@@ -114,11 +114,13 @@ const Scoreboard = styled.div`
   }
 `;
 
+
 const RecordContent: FunctionComponent<RecordProps> = function ({
   title,
   problem,
   scoreboard,
-}) {
+}) 
+{
   return (
     <ContestWrapper>
       <TitleWrapper>
