@@ -244,7 +244,7 @@ const RecordPage: FunctionComponent = () => {
           <TableWrapper>
             <CreateHeader></CreateHeader>
             <TableTemplate
-              prize="20"
+              prize="10"
               team="Gr-Yee-n55 "
               member="정연두, 김효원, 정재현"
             ></TableTemplate>

@@ -28,7 +28,7 @@ const TitleWrapper = styled.div`
   flex-direction: row;
   margin-left: 1rem;
   @media (max-width: 750px) {
-    width: 24rem;
+    width: 18rem;
     min-height: 1rem;
     margin-left: 0.5rem;
     margin-top: 0.5rem;
