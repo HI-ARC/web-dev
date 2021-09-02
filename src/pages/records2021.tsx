@@ -146,6 +146,22 @@ const RecordPage: FunctionComponent = () => {
             </Update>
           </TableWrapper>
         </RecordWrapper>
+        <TableDivider></TableDivider>
+
+        {/*SUAPC 2021 Summer
+         업데이트 예정*/}
+         <RecordWrapper>
+          <RecordContent
+            title={'SUAPC 2021 Summer'}></RecordContent>
+          <TableWrapper>
+            <CreateHeader></CreateHeader>
+            <TableTemplate
+              prize="66"
+              team="생수 "
+              member="김기선, 김효원, 정재현"
+            ></TableTemplate>
+          </TableWrapper>
+        </RecordWrapper>
         <br/><br/>
       </Template>
     </>
