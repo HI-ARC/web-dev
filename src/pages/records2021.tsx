@@ -152,13 +152,26 @@ const RecordPage: FunctionComponent = () => {
          업데이트 예정*/}
          <RecordWrapper>
           <RecordContent
-            title={'SUAPC 2021 Summer'}></RecordContent>
+            title={'SUAPC 2021 Summer'}
+            problem={'https://archive.suapc.kr/2021s/problem/'}
+            scoreboard={'https://www.acmicpc.net/contest/spotboard/678'}
+            ></RecordContent>
           <TableWrapper>
             <CreateHeader></CreateHeader>
             <TableTemplate
-              prize="66"
+              prize="5"
               team="생수 "
               member="김기선, 김효원, 정재현"
+            ></TableTemplate>
+            <TableTemplate
+              prize="6"
+              team="우승못하면2학기휴학함"
+              member="권찬, 김도현, 박건휘"
+            ></TableTemplate>
+            <TableTemplate
+              prize="28"
+              team="엄마야 누나야 강변 살려면 20억"
+              member="고민재, 이지은 전지수"
             ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
