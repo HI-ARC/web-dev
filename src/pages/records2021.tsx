@@ -148,9 +148,8 @@ const RecordPage: FunctionComponent = () => {
         </RecordWrapper>
         <TableDivider></TableDivider>
 
-        {/*SUAPC 2021 Summer
-         업데이트 예정*/}
-         <RecordWrapper>
+        {/*SUAPC 2021 Summer*/}
+        <RecordWrapper>
           <RecordContent
             title={'SUAPC 2021 Summer'}
             problem={'https://archive.suapc.kr/2021s/problem/'}
@@ -175,6 +174,7 @@ const RecordPage: FunctionComponent = () => {
             ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
+        
         <br/><br/>
       </Template>
     </>
