@@ -156,6 +156,7 @@ const RecordPage: FunctionComponent = () => {
           </TableWrapper>
         </RecordWrapper>
         <TableDivider></TableDivider>
+        
         {/*ACM-ICPC Seoul Regional*/}
         <RecordWrapper>
           <RecordContent
@@ -174,6 +175,47 @@ const RecordPage: FunctionComponent = () => {
             ></TableTemplate> 
             <br/>
             <p style={{color:`gray`}}> &nbsp;&nbsp;&nbsp;&nbsp;* HM = Honorable Mention</p>
+            </TableWrapper>
+        </RecordWrapper>
+        <TableDivider></TableDivider>
+        
+        {/*교내 프로그래밍 경진대회 2018*/}
+        <RecordWrapper>
+          <RecordContent
+            title={'교내 프로그래밍 경진대회- 2018'}
+          ></RecordContent>
+          <TableWrapper>
+            <CreateHeader></CreateHeader>
+            <TableTemplate
+              prize="1"
+              team="개인"
+              member="김효원"
+            ></TableTemplate> 
+            <TableTemplate
+              prize="2"
+              team="개인"
+              member="민경태"
+            ></TableTemplate>
+            <TableTemplate
+              prize="3"
+              team="개인"
+              member="이재열"
+            ></TableTemplate>
+            <TableTemplate
+              prize="8"
+              team="개인"
+              member="김종욱"
+            ></TableTemplate>
+            <TableTemplate
+              prize="9"
+              team="개인"
+              member="박성빈"
+            ></TableTemplate>
+            <TableTemplate
+                prize="17"
+                team="개인"
+                member="양동우"
+            ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
         <br/><br/>

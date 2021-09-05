@@ -256,6 +256,9 @@ const RecordPage: FunctionComponent = () => {
         <RecordWrapper>
           <RecordContent
             title={'SCPC 2020 예선'}
+            problem={'invalid'}
+            scoreboard={'invalid'}
+
           ></RecordContent>
           <TableWrapper>
             <CreateHeader></CreateHeader>

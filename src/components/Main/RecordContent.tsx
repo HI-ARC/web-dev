@@ -127,21 +127,21 @@ const RecordContent: FunctionComponent<RecordProps> = function ({
         <Title>{title}</Title>
       </TitleWrapper>
       <LinkWrapper>
-        <ProblemWrapper>
-          <Problem>
-            <a href={problem} target="_blank">
-              문제
-            </a>
-          </Problem>
-        </ProblemWrapper>
-        <ScoreboardWrapper>
-          <Scoreboard>
-            <a href={scoreboard} target="_blank">
-              스코어보드
-            </a>
-          </Scoreboard>
-        </ScoreboardWrapper>
-      </LinkWrapper>
+    <ProblemWrapper>
+      <Problem>
+        <a href={problem} target="_blank">
+          문제
+        </a>
+      </Problem>
+    </ProblemWrapper>
+    <ScoreboardWrapper>
+      <Scoreboard>
+        <a href={scoreboard} target="_blank">
+          스코어보드
+        </a>
+      </Scoreboard>
+    </ScoreboardWrapper>
+  </LinkWrapper>
     </ContestWrapper>
   );
 };

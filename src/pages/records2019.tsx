@@ -142,6 +142,54 @@ const RecordPage: FunctionComponent = () => {
             ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
+
+        <TableDivider></TableDivider>
+        {/*교내프로그래밍경진대회*/}
+        <RecordWrapper>
+          <RecordContent
+            title={'교내 프로그래밍 경진대회- 2019'}
+            ></RecordContent>
+          <TableWrapper>
+            <CreateHeader></CreateHeader>
+            <TableTemplate
+              prize="1"
+              team="개인"
+              member="김종욱"
+            ></TableTemplate>
+            <TableTemplate
+              prize="7"
+              team="개인"
+              member="서영진"
+            ></TableTemplate>
+            <TableTemplate
+              prize="8"
+              team="개인"
+              member="김성민"
+            ></TableTemplate>
+            <TableTemplate
+              prize="11"
+              team="개인"
+              member="백성익"
+            ></TableTemplate>
+            <TableTemplate
+              prize="12"
+              team="개인"
+              member="김민균"
+            ></TableTemplate>
+            <TableTemplate
+              prize="13"
+              team="개인"
+              member="김효원"
+            ></TableTemplate>
+            <TableTemplate
+              prize="26"
+              team="개인"
+              member="정재현"
+            ></TableTemplate>
+          </TableWrapper>
+        </RecordWrapper>
+
+      <br/><br/>
       </Template>
     </>
   );
