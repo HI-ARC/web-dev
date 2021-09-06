@@ -9,7 +9,7 @@ typescript, graphql, reactjs, gatsbyjs, emotion.js, font awesome, material ui
 | 이름 |github|블로그|
 |------|---|---|
 |김예임|https://github.com/KIMYEIM | https://velog.io/@kyaeim |
-|권예빈|https://github.com/yevinKwon | https://velog.io/@yev_|
+|권예빈|https://github.com/yevinKwon | [https://velog.io/@yev_](https://velog.io/@yev_)|
 |김종호|테스트2|테스트3|
 |장희지|https://github.com/huiji0315|https://blog.naver.com/huiji0315|
 
