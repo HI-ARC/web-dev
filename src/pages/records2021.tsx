@@ -79,6 +79,19 @@ const TableDivider = styled.div`
   }
 `;
 
+const Update = styled.text`
+  margin-top: 2vh;
+  font-size: 20px;
+  color: gray;
+  width: 80%;
+  height: 30%;
+  margin-left: 2vw;
+  display: grid;
+  @media (max-width: 750px) {
+   display:none;
+  }
+`;
+
 
 const RecordPage: FunctionComponent = () => {
 
@@ -115,13 +128,11 @@ const RecordPage: FunctionComponent = () => {
         </RecordWrapper>
         <TableDivider></TableDivider>
          
-         {/*UCPC 2021 예선*/}
+         {/*UCPC 2021 예선
+         업데이트 예정*/}
          <RecordWrapper>
           <RecordContent
-            title={'UCPC 2021 예선'}
-            problem={'/emptyPage'}
-            scoreboard={'/emptyPage'}
-          ></RecordContent>
+            title={'UCPC 2021 예선'}></RecordContent>
           <TableWrapper>
             <CreateHeader></CreateHeader>
 
@@ -130,8 +141,40 @@ const RecordPage: FunctionComponent = () => {
               team="생수 "
               member="김기선, 김효원, 정재현"
             ></TableTemplate>
+            <Update>
+              <p>* 문제 및 스코어보드 링크 업데이트 예정입니다.</p>
+            </Update>
           </TableWrapper>
         </RecordWrapper>
+        <TableDivider></TableDivider>
+
+        {/*SUAPC 2021 Summer*/}
+        <RecordWrapper>
+          <RecordContent
+            title={'SUAPC 2021 Summer'}
+            problem={'https://archive.suapc.kr/2021s/problem/'}
+            scoreboard={'https://www.acmicpc.net/contest/spotboard/678'}
+            ></RecordContent>
+          <TableWrapper>
+            <CreateHeader></CreateHeader>
+            <TableTemplate
+              prize="5"
+              team="생수 "
+              member="김기선, 김효원, 정재현"
+            ></TableTemplate>
+            <TableTemplate
+              prize="6"
+              team="우승못하면2학기휴학함"
+              member="권찬, 김도현, 박건휘"
+            ></TableTemplate>
+            <TableTemplate
+              prize="28"
+              team="엄마야 누나야 강변 살려면 20억"
+              member="고민재, 이지은 전지수"
+            ></TableTemplate>
+          </TableWrapper>
+        </RecordWrapper>
+        
         <br/><br/>
       </Template>
     </>

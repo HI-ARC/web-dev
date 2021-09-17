@@ -48,7 +48,7 @@ export const TableTemplate = ({ prize, team, member }) => {
       </Default>
       <Reactive>
       <td style={{width:`5rem`}}>{prize}</td>
-      <td style={{width:`45rem`}}>{team}</td>
+      <td style={{width:`18rem`}}>{member}</td>
       </Reactive>
     </table>
    
@@ -67,7 +67,7 @@ export const CreateHeader = () => {
       </Default>
       <Reactive>
       <th style={{width:`4rem`}}>🏆</th>
-      <th style={{width:`30rem`}}>TEAM</th>
+      <th style={{width:`20rem`}}>MEMBER</th>
       </Reactive>
     </table>
   );

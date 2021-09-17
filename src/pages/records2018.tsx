@@ -77,6 +77,20 @@ const TableDivider = styled.div`
     margin-top: 0vh;
   }
 `;
+
+const Update = styled.text`
+  margin-top: 2vh;
+  font-size: 20px;
+  color: gray;
+  width: 80%;
+  height: 30%;
+  margin-left: 2vw;
+  display: grid;
+  @media (max-width: 750px) {
+   display:none;
+  }
+`;
+
 const RecordPage: FunctionComponent = () => {
 
   return (
@@ -87,19 +101,17 @@ const RecordPage: FunctionComponent = () => {
         <RecordWrapper>
           <RecordContent
             title={'이데일리 코딩 챌린지'}
-            problem={'https://www.edaily.co.kr/'}
-            scoreboard={'https://www.edaily.co.kr/'}
           ></RecordContent>
           <TableWrapper>
-            <tr>
             <CreateHeader></CreateHeader>
-            </tr>
             <TableTemplate
               prize="6"
               team=" 개인 "
               member="정연두"
             ></TableTemplate>
-            
+            <Update>
+              <p>* 문제 및 스코어보드 링크 업데이트 예정입니다.</p>
+            </Update>
           </TableWrapper>
         </RecordWrapper>
         <TableDivider/>
@@ -144,6 +156,7 @@ const RecordPage: FunctionComponent = () => {
           </TableWrapper>
         </RecordWrapper>
         <TableDivider></TableDivider>
+        
         {/*ACM-ICPC Seoul Regional*/}
         <RecordWrapper>
           <RecordContent
@@ -162,6 +175,47 @@ const RecordPage: FunctionComponent = () => {
             ></TableTemplate> 
             <br/>
             <p style={{color:`gray`}}> &nbsp;&nbsp;&nbsp;&nbsp;* HM = Honorable Mention</p>
+            </TableWrapper>
+        </RecordWrapper>
+        <TableDivider></TableDivider>
+        
+        {/*교내 프로그래밍 경진대회 2018*/}
+        <RecordWrapper>
+          <RecordContent
+            title={'교내 프로그래밍 경진대회- 2018'}
+          ></RecordContent>
+          <TableWrapper>
+            <CreateHeader></CreateHeader>
+            <TableTemplate
+              prize="1"
+              team="개인"
+              member="김효원"
+            ></TableTemplate> 
+            <TableTemplate
+              prize="2"
+              team="개인"
+              member="민경태"
+            ></TableTemplate>
+            <TableTemplate
+              prize="3"
+              team="개인"
+              member="이재열"
+            ></TableTemplate>
+            <TableTemplate
+              prize="8"
+              team="개인"
+              member="김종욱"
+            ></TableTemplate>
+            <TableTemplate
+              prize="9"
+              team="개인"
+              member="박성빈"
+            ></TableTemplate>
+            <TableTemplate
+                prize="17"
+                team="개인"
+                member="양동우"
+            ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
         <br/><br/>

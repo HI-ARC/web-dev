@@ -28,7 +28,7 @@ const TitleWrapper = styled.div`
   flex-direction: row;
   margin-left: 1rem;
   @media (max-width: 750px) {
-    width: 24rem;
+    width: 18rem;
     min-height: 1rem;
     margin-left: 0.5rem;
     margin-top: 0.5rem;
@@ -114,32 +114,34 @@ const Scoreboard = styled.div`
   }
 `;
 
+
 const RecordContent: FunctionComponent<RecordProps> = function ({
   title,
   problem,
   scoreboard,
-}) {
+}) 
+{
   return (
     <ContestWrapper>
       <TitleWrapper>
         <Title>{title}</Title>
       </TitleWrapper>
       <LinkWrapper>
-        <ProblemWrapper>
-          <Problem>
-            <a href={problem} target="_blank">
-              문제
-            </a>
-          </Problem>
-        </ProblemWrapper>
-        <ScoreboardWrapper>
-          <Scoreboard>
-            <a href={scoreboard} target="_blank">
-              스코어보드
-            </a>
-          </Scoreboard>
-        </ScoreboardWrapper>
-      </LinkWrapper>
+    <ProblemWrapper>
+      <Problem>
+        <a href={problem} target="_blank">
+          문제
+        </a>
+      </Problem>
+    </ProblemWrapper>
+    <ScoreboardWrapper>
+      <Scoreboard>
+        <a href={scoreboard} target="_blank">
+          스코어보드
+        </a>
+      </Scoreboard>
+    </ScoreboardWrapper>
+  </LinkWrapper>
     </ContestWrapper>
   );
 };
