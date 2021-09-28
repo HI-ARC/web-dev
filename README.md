@@ -46,11 +46,20 @@ typescript, graphql, reactjs, gatsbyjs, emotion.js, font awesome, material ui
 
 ### 2️⃣ 기록 페이지 - 예빈
 #### 담당한 파트
-- 업데이트 예정
+
+1. Records Page
+2. Scroll-to-Top Button
+
 
 #### 구현물 설명
-- 업데이트 예정
 
+1. Records Page
+    - 반응형 웹 구현
+
+2. Scroll-to-Top Button
+    - 항상 우측 하단에 표시되도록
+    - 스크롤을 감지하여 활성화/비활성화
+    
 
 ### 4️⃣ 친목 페이지 - 희지
 #### 담당한 파트
