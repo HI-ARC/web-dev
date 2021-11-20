@@ -9,7 +9,7 @@ typescript, graphql, reactjs, gatsbyjs, emotion.js, font awesome, material ui
 | 이름 |github|블로그|
 |------|---|---|
 |김예임|https://github.com/KIMYEIM |  |
-|권예빈|테스트2|테스트3|
+|권예빈|https://github.com/yevinKwon | [https://velog.io/@yev_](https://velog.io/@yev_)|
 |김종호|테스트2|테스트3|
 |장희지|https://github.com/huiji0315|https://blog.naver.com/huiji0315|
 
@@ -42,6 +42,24 @@ typescript, graphql, reactjs, gatsbyjs, emotion.js, font awesome, material ui
     - ActivityCard
         - GraphQl을 이용해 활동 내역 fetch
     - ICPC
+
+
+### 2️⃣ 기록 페이지 - 예빈
+#### 담당한 파트
+
+1. Records Page
+2. Scroll-to-Top Button
+
+
+#### 구현물 설명
+
+1. Records Page
+    - 반응형 웹 구현
+
+2. Scroll-to-Top Button
+    - 항상 우측 하단에 표시되도록
+    - 스크롤을 감지하여 활성화/비활성화
+    
 
 ### 4️⃣ 친목 페이지 - 희지
 #### 담당한 파트
