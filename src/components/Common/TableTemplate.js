@@ -72,3 +72,19 @@ export const CreateHeader = () => {
     </table>
   );
 };
+
+export const CreateHeaderSolo = () => {
+  return (
+    <table style={{background: '#233660'}}>
+      <Default>
+      <th style={{width:`7rem`}}>🏆</th>
+      <th style={{width:`35rem`}}>PRIZE</th>
+      <th style={{width:`20rem`}}>MEMBER</th>
+      </Default>
+      <Reactive>
+      <th style={{width:`4rem`}}>🏆</th>
+      <th style={{width:`20rem`}}>MEMBER</th>
+      </Reactive>
+    </table>
+  );
+};
