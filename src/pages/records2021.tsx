@@ -3,15 +3,14 @@ import styled from '@emotion/styled';
 import Template from 'components/Common/Template';
 import RecordList from 'components/Main/RecordList';
 import RecordContent from 'components/Main/RecordContent';
-import {TableTemplate, CreateHeader} from 'components/Common/TableTemplate';
-
+import { TableTemplate, CreateHeader, CreateHeaderSolo } from 'components/Common/TableTemplate';
 
 const RecordWrapper = styled.div`
   width: 80vw;
   min-height: 14rem;
   margin-left: 10vw;
   margin-top: 7vh;
-  margin-bottom: 3vh; 
+  margin-bottom: 3vh;
   display: flex;
   flex-direction: row;
   @media (max-width: 750px) {
@@ -35,7 +34,7 @@ const TableWrapper = styled.div`
     border-top: 1.25px solid #444444;
     table-layout: fixed;
     width: 96%;
-    vertical-align : middle;
+    vertical-align: middle;
     text-align: center;
   }
   td {
@@ -66,7 +65,7 @@ const TableWrapper = styled.div`
 
 const TableDivider = styled.div`
   margin-top: 3vh;
-  margin-left:10vw;
+  margin-left: 10vw;
   width: 80vw;
   height: 0.25px;
   background-color: #233660;
@@ -88,13 +87,11 @@ const Update = styled.text`
   margin-left: 2vw;
   display: grid;
   @media (max-width: 750px) {
-   display:none;
+    display: none;
   }
 `;
 
-
 const RecordPage: FunctionComponent = () => {
-
   return (
     <>
       <Template title="Records">
@@ -106,7 +103,7 @@ const RecordPage: FunctionComponent = () => {
             scoreboard={'https://www.acmicpc.net/contest/spotboard/586'}
           ></RecordContent>
           <TableWrapper>
-              <CreateHeader></CreateHeader>
+            <CreateHeader></CreateHeader>
             <TableTemplate
               prize="11"
               team="불건전한 소환사명 123 "
@@ -127,12 +124,11 @@ const RecordPage: FunctionComponent = () => {
           </TableWrapper>
         </RecordWrapper>
         <TableDivider></TableDivider>
-         
-         {/*UCPC 2021 예선
+
+        {/*UCPC 2021 예선
          업데이트 예정*/}
-         <RecordWrapper>
-          <RecordContent
-            title={'UCPC 2021 예선'}></RecordContent>
+        <RecordWrapper>
+          <RecordContent title={'UCPC 2021 예선'}></RecordContent>
           <TableWrapper>
             <CreateHeader></CreateHeader>
 
@@ -154,7 +150,7 @@ const RecordPage: FunctionComponent = () => {
             title={'SUAPC 2021 Summer'}
             problem={'https://archive.suapc.kr/2021s/problem/'}
             scoreboard={'https://www.acmicpc.net/contest/spotboard/678'}
-            ></RecordContent>
+          ></RecordContent>
           <TableWrapper>
             <CreateHeader></CreateHeader>
             <TableTemplate
@@ -170,12 +166,138 @@ const RecordPage: FunctionComponent = () => {
             <TableTemplate
               prize="28"
               team="엄마야 누나야 강변 살려면 20억"
-              member="고민재, 이지은 전지수"
+              member="고민재, 이지은, 전지수"
             ></TableTemplate>
           </TableWrapper>
         </RecordWrapper>
-        
-        <br/><br/>
+
+        {/*홍익대학교 프로그래밍 경진대회*/}
+        <RecordWrapper>
+          <RecordContent
+            title={'교내 프로그래밍 경진대회 - 2021'}
+            problem={'https://www.acmicpc.net/contest/view/685'}
+            scoreboard={'https://www.acmicpc.net/contest/scoreboard/685'}
+          ></RecordContent>
+          <TableWrapper>
+            <CreateHeaderSolo></CreateHeaderSolo>
+            <TableTemplate
+              prize="1"
+              team="대상"
+              member="김재헌"
+            ></TableTemplate>
+            <TableTemplate
+              prize="3"
+              team="금상"
+              member="정재현"
+            ></TableTemplate>
+            <TableTemplate
+              prize="4"
+              team=" "
+              member="유준환"
+            ></TableTemplate>
+            <TableTemplate
+              prize="7"
+              team="은상"
+              member="김희수"
+            ></TableTemplate>
+            <TableTemplate
+              prize="12"
+              team="동상"
+              member="정혜원"
+            ></TableTemplate>
+            <TableTemplate
+              prize="13"
+              team=" "
+              member="금세현"
+            ></TableTemplate>
+            <TableTemplate
+              prize="16"
+              team=" "
+              member="김지은"
+            ></TableTemplate>
+            <TableTemplate
+              prize="17"
+              team="저학년 1등상"
+              member="안재현"
+            ></TableTemplate>
+            <TableTemplate
+              prize="18"
+              team=" "
+              member="이지은"
+            ></TableTemplate>
+            <TableTemplate
+              prize="19"
+              team="저학년 2등상"
+              member="천성호"
+            ></TableTemplate>
+            <TableTemplate
+              prize="20"
+              team="저학년 2등상"
+              member="박준서"
+            ></TableTemplate>
+            <TableTemplate
+              prize="30"
+              team="저학년 3등상"
+              member="한창희"
+            ></TableTemplate>
+            <TableTemplate
+              prize="45"
+              team="저학년 3등상"
+              member="권보민"
+            ></TableTemplate>
+          </TableWrapper>
+        </RecordWrapper>
+
+        {/*ACM-ICPC Seoul Regional 예선*/}
+        <RecordWrapper>
+          <RecordContent
+            title={'ACM-ICPC Seoul Regional 예선'}
+            problem={'http://static.icpckorea.net/20211009/problems.pdf'}
+            scoreboard={'http://static.icpckorea.net/2021/scoreboard_preliminary/'}
+          ></RecordContent>
+          <TableWrapper>
+            <CreateHeader></CreateHeader>
+            <TableTemplate
+              prize="65"
+              team="7 solve"
+              member="김도현, 김희수, 이지은"
+            ></TableTemplate>
+            <TableTemplate
+              prize="71"
+              team="wow3H"
+              member="김재헌,	김길호,	허수민"
+            ></TableTemplate>
+            <TableTemplate
+              prize="90"
+              team="fresh water"
+              member="김기선, 김효원, 정재현"
+            ></TableTemplate>
+            <TableTemplate
+              prize="175"
+              team="Mr.Kim’s HamPark Steak"
+              member="박준서,	함윤주,	김재현"
+            ></TableTemplate>
+          </TableWrapper>
+        </RecordWrapper>
+
+      {/*ACM-ICPC Seoul Regional 본선*/}
+        <RecordWrapper>
+          <RecordContent
+            title={'ACM-ICPC Seoul Regional 본선'}
+            problem={'http://static.icpckorea.net/20211113/problems.pdf'}
+            scoreboard={'http://static.icpckorea.net/2021/scoreboard_regional/'}
+          ></RecordContent>
+          <TableWrapper>
+            <CreateHeader></CreateHeader>
+            <TableTemplate
+              prize="60"
+              team="wow3H"
+              member="김재헌,	김길호,	허수민"
+            ></TableTemplate>
+          </TableWrapper>
+        </RecordWrapper>
+        <br />
+        <br />
       </Template>
     </>
   );
