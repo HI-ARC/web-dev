@@ -1,15 +1,15 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "hiarc-org",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Hong-Ik Algorithm Research Club homepage.",
+  "version": "1.0.0",
+  "author": "HI-ARC <hiarc.official@gmail.com>",
   "dependencies": {
     "@emotion/react": "11.4.0",
     "@emotion/styled": "11.3.0",
     "@fortawesome/fontawesome-svg-core": "1.2.35",
     "@fortawesome/free-brands-svg-icons": "5.15.3",
-    "@fortawesome/free-solid-svg-icons": "5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "0.1.14",
     "@fullpage/react-fullpage": "^0.1.19",
     "@material-ui/core": "^4.12.2",
@@ -41,6 +41,7 @@
     "styled-components": "5.3.0"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.5",
     "@typescript-eslint/eslint-plugin": "4.28.3",
     "@typescript-eslint/parser": "4.28.3",
     "eslint": "7.30.0",
@@ -52,7 +53,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -64,9 +65,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/HI-ARC/web-dev.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/HI-ARC/web-dev/issues"
   }
 }

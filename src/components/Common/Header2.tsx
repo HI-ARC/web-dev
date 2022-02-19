@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Logo from 'components/Main/Logo';
 import LogoHoriz from 'components/Main/LogoHoriz';
 import Menu2 from 'components/Main/Menu2';
+import Head from 'components/Common/Head';
 import GlobalFonts from '../../fonts/fonts';
 
 const Slogan = styled.div`
@@ -45,6 +46,7 @@ const HeaderWrapper = styled.div`
 const Header2: FunctionComponent = () => {
   return (
     <>
+      <Head />
       <GlobalFonts />
       <HeaderWrapper>
         <Logo />
