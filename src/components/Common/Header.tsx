@@ -7,6 +7,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MenuData } from 'components/Main/MenuData';
 import Menu from 'components/Main/Menu';
+import Head from 'components/Common/Head';
 import GlobalFonts from '../../fonts/fonts';
 
 const Slogan = styled.div`
@@ -162,7 +163,8 @@ const Header: FunctionComponent = () => {
 
   return (
     <>
-      <GlobalFonts/>
+      <Head />
+      <GlobalFonts />
       <HeaderWrapper className={hide && 'hide'}>
         <Logo />
         <LogoHoriz />

@@ -129,7 +129,7 @@ const Icpc: FunctionComponent = () => {
               등을 진행하고 있습니다.
             </Shown>
             <Shown>
-              이외에도 Slack 등을 통하여 다양한 정보와 지식을 함께 교류해 나가고
+              이외에도 Discord 등을 통하여 다양한 정보와 지식을 함께 교류해 나가고
               있습니다.
             </Shown>
           </IcpcIntro>
