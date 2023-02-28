@@ -174,7 +174,7 @@ const RecordPage: FunctionComponent = () => {
         {/*홍익대학교 프로그래밍 경진대회*/}
         <RecordWrapper>
           <RecordContent
-            title={'교내 프로그래밍 경진대회 - 2021'}
+            title={'2021 홍익대학교 프로그래밍 경진대회'}
             problem={'https://www.acmicpc.net/contest/view/685'}
             scoreboard={'https://www.acmicpc.net/contest/scoreboard/685'}
           ></RecordContent>

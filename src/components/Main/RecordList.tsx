@@ -64,11 +64,11 @@ const Button = styled.button`
     color: #ffffff;
   }
   @media (max-width: 750px) {
-    font-size: 24px;
+    font-size: 18px;
     padding: 0.75vh 1vw;
   }
   @media (max-width: 375px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -76,7 +76,7 @@ const RecordListWrapper = styled.div`
   width: 80vw;
   height: 12vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
   margin-left: 10vw;
   margin-top: 3vh;
@@ -135,6 +135,9 @@ const RecordList: FunctionComponent = function () {
       </DescriptionWrapper>
       <br />
       <RecordListWrapper>
+        <Button id="2022">
+          <Link to="/records2022">2022</Link>
+        </Button>
         <Button id="2021">
           <Link to="/records2021">2021</Link>
         </Button>
