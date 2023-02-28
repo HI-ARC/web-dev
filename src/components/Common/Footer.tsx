@@ -103,8 +103,8 @@ const Footer: FunctionComponent = function () {
           <InfoRegular>hiarc.official@gmail.com</InfoRegular>
         </Info>
         <Info style={{ gridArea: 'b' }}>
-          <InfoBold>학회장&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;김효원</InfoBold>
-          <InfoRegular>hwon233@g.hongik.ac.kr</InfoRegular>
+          <InfoBold>학회장&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;이지은</InfoBold>
+          <InfoRegular>leeju1013@gmail.com</InfoRegular>
         </Info>
         <IconWrapper>
           <Icon onClick={goToGithub}>
